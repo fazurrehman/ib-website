@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="eng">
+
+<head>
+  {% include "../components/header.twig" %}
+</head>
+
+<body class="nav-on-left">
+  {% include "../components/navbar.twig" %}
+
+  <main>
+    
+    {% block content %}
+    {% endblock %}
+
+    
+  </main>
+
+  <!-- Footer -->
+  {% include "../components/footer.twig" %}
+  {% include "../components/country.twig" %}
+  {% include "../components/cart-empty.twig" %}
+  {{ block('included_content') }}
+</body>
+
+</html>

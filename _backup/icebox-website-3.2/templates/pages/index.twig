@@ -1,0 +1,150 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+<!-- header addtional -->
+{% block included_content_header %}
+{% include "../components/promo1.twig" %}
+{% endblock %}
+
+{% block content %}
+{% include "../components/homepage/storycarousel.twig" %}
+
+
+
+<div class="banner">
+  <div class="o-container">
+    <div class="banner-content">
+      <p class="banner-summary">Weekly New Collection</p>
+      <h2 class="banner-heading">Gold Chains</h2>
+      <a href="#" class="btnLink">Shop Now</a>
+    </div>
+  </div>
+  <div class="bg-image image-wrapper">
+    <img data-sizes="auto"
+      data-src="https://www.icebox.com/unsafe/1600x400/icebox-jewelry.s3.amazonaws.com/categories/ICEBOX_Header_Pendants_1.jpg"
+      data-srcset="https://www.icebox.com/unsafe/800x300/icebox-jewelry.s3.amazonaws.com/categories/ICEBOX_Header_Pendants_1.jpg 1080w"
+      class="lazyload" />
+  </div>
+</div>
+<div class="products homepage--feature-products">
+  <div class="owl-carousel owl-carousel-products o-container" id="js-products-1">
+    {% for i in 1..10 %}
+    {% include '../pages/components/productcard/productcard-default.twig' with {'objects':i} %}
+    {% endfor %}
+  </div>
+</div>
+
+<section>
+  <div class="banner">
+    <div class="o-container">
+      <div class="banner-content">
+        <p class="banner-summary">Gold & Diamond</p>
+        <h2 class="banner-heading">Necklaces</h2>
+        <a href="#" class="btnLink">Shop Now</a>
+      </div>
+    </div>
+    <div class="bg-image image-wrapper">
+      <img data-sizes="auto" data-src="img/homepage/banner-2-thumbnail.jpg"
+        data-srcset="img/homepage/banner-2.jpg 1080w" class="lazyload" />
+    </div>
+  </div>
+  <div class="products homepage--feature-products">
+    <div class="owl-carousel owl-carousel-products o-container" id="js-products-2">
+      {% for i in 1..10 %}
+      {% include '../pages/components/productcard/productcard-default.twig' with {'objects':i} %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<div class="banner">
+  <div class="o-container">
+    <div class="banner-content">
+      <p class="banner-summary">Luxury Style</p>
+      <h2 class="banner-heading">Custom Rolex Watches</h2>
+      <a href="#" class="btnLink">Shop Now</a>
+    </div>
+  </div>
+  <div class="bg-image image-wrapper">
+    <img data-sizes="auto"
+      data-src="https://www.icebox.com/unsafe/1600x400/icebox-jewelry.s3.amazonaws.com/categories/ICEBOX_Header_Necklaces_1.jpg"
+      data-srcset="https://www.icebox.com/unsafe/800x300/icebox-jewelry.s3.amazonaws.com/categories/ICEBOX_Header_Necklaces_1.jpg 1080w"
+      class="lazyload" />
+  </div>
+</div>
+
+<div class="products homepage--feature-products">
+  <div class="owl-carousel owl-carousel-products o-container" id="js-products-3">
+    {% for i in 1..10 %}
+    {% include '../pages/components/productcard/productcard-default.twig' with {'objects':i} %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="banner">
+  <div class="o-container">
+    <div class="banner-content">
+      <p class="banner-summary">Look for futur design</p>
+      <h2 class="banner-heading">Latest Pendants</h2>
+      <a href="#" class="btnLink">Shop Now</a>
+    </div>
+  </div>
+  <div class="bg-image image-wrapper">
+    <img data-sizes="auto"
+      data-src="https://www.icebox.com/unsafe/1600x400/icebox-jewelry.s3.amazonaws.com/categories/ICEBOX_Header_Rings_1.jpg"
+      data-srcset="https://www.icebox.com/unsafe/800x300/icebox-jewelry.s3.amazonaws.com/categories/ICEBOX_Header_Rings_1.jpg 1080w"
+      class="lazyload" />
+  </div>
+</div>
+
+<div class="products homepage--feature-products">
+  <div class="owl-carousel owl-carousel-products o-container" id="js-products-4">
+    {% for i in 1..10 %}
+    {% include '../pages/components/productcard/productcard-default.twig' with {'objects':i} %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="banner">
+  <div class="o-container">
+    <div class="banner-content">
+      <p class="banner-summary">This Summer Looks</p>
+      <h2 class="banner-heading">Earrings Collection</h2>
+      <a href="#" class="btnLink">Shop Now</a>
+    </div>
+  </div>
+  <div class="bg-image image-wrapper">
+    <img data-sizes="auto"
+      data-src="https://www.icebox.com/unsafe/1600x400/icebox-jewelry.s3.amazonaws.com/categories/ICEBOX_Header_Earrings_3.jpg"
+      data-srcset="https://www.icebox.com/unsafe/800x300/icebox-jewelry.s3.amazonaws.com/categories/ICEBOX_Header_Earrings_3.jpg 1080w"
+      class="lazyload" />
+  </div>
+</div>
+
+<div class="products homepage--feature-products">
+  <div class="owl-carousel owl-carousel-products o-container" id="js-products-5">
+    {% for i in 1..10 %}
+    {% include '../pages/components/productcard/productcard-default.twig' with {'objects':i} %}
+    {% endfor %}
+  </div>
+</div>
+
+{% include "../components/homepage/categories.twig" %}
+{% include "../components/homepage/celebrities.twig" %}
+{% endblock %}
+
+{% block included_content %}
+{% include "../components/login/credentials.twig" %}
+<script src="js/homepage.min.js"></script>
+<script
+  src="https://www.jqueryscript.net/demo/jQuery-International-Telephone-Input-With-Flags-Dial-Codes/build/js/intlTelInput.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.search-query').on("focus", function () {
+      $('.btn-search').toggleClass('is-hidden')
+    });
+  });
+</script>
+
+
+{% endblock %}

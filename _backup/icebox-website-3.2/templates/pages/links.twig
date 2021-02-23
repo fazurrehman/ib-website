@@ -1,0 +1,461 @@
+<!-- layout -->
+{% extends "../layouts/empty.twig" %}
+{% block content %}
+<!-- link css -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+<style>
+  .container-full {
+    max-width: 1800px;
+    padding: 0 40px;
+    margin: 80px auto;
+  }
+
+  .tag {
+    background-color: #f1f2f5;
+    padding: 10px 16px;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .--done {
+    background-color: rgba(190, 255, 205, 0.2);
+    color: #28a745;
+  }
+
+  .--working {
+    background-color: rgba(255, 243, 190, 0.24);
+    color: orange;
+  }
+
+  .dataTables_filter input {
+    width: 600px !important
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  .table td:nth-child(1) {
+    font-weight: 500;
+  }
+</style>
+
+
+
+<div class="container-full">
+  <table id="example" class="table table-bordered" style="width:100%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>URL</th>
+        <th>Version</th>
+        <th>Task Status</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Homepage</td>
+        <td><a href="https://frontend.icebox.com/" target="_blank">https://frontend.icebox.com/</a>
+        </td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Result</td>
+        <td><a href="https://frontend.icebox.com/results.html"
+            target="_blank">https://frontend.icebox.com/results.html</a>
+        </td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Result</td>
+        <td><a href="https://frontend.icebox.com/result-page.html"
+            target="_blank">https://frontend.icebox.com/result-page.html</a></td>
+        <td><span class="tag --red">New — v2.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Product View</td>
+        <td><a href="https://frontend.icebox.com/product.html"
+            target="_blank">https://frontend.icebox.com/product.html</a>
+        </td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Product View</td>
+        <td><a href="https://frontend.icebox.com/product-page.html"
+            target="_blank">https://frontend.icebox.com/product-page.html</a></td>
+        <td><span class="tag --red">New — v2.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Contact</td>
+        <td><a href="https://frontend.icebox.com/contact.html"
+            target="_blank">https://frontend.icebox.com/contact.html</a></td>
+        <td><span class="tag --red">New — v2.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Whales</td>
+        <td><a href="https://frontend.icebox.com/whale.html" target="_blank">https://frontend.icebox.com/whale.html</a>
+          (Chou implementions left)</td>
+        <td><span class="tag --red">New — v2.0</span></td>
+        <td><span class="tag --working">working</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>My Account</td>
+        <td><a href="https://frontend.icebox.com/myaccount.html"
+            target="_blank">https://frontend.icebox.com/myaccount.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>404 Page</td>
+        <td><a href="https://frontend.icebox.com/404.html" target="_blank">https://frontend.icebox.com/404.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Cart Page</td>
+        <td><a href="https://frontend.icebox.com/cart.html" target="_blank">https://frontend.icebox.com/cart.html</a>
+        </td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Checkout Page</td>
+        <td><a href="https://frontend.icebox.com/cart-step1.html"
+            target="_blank">https://frontend.icebox.com/cart-step1.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Follow Page</td>
+        <td><a href="https://frontend.icebox.com/follow.html"
+            target="_blank">https://frontend.icebox.com/follow.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Forget Password</td>
+        <td><a href="https://frontend.icebox.com/forget.html"
+            target="_blank">https://frontend.icebox.com/forget.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Login</td>
+        <td><a href="https://frontend.icebox.com/login.html" target="_blank">https://frontend.icebox.com/login.html</a>
+        </td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Signup</td>
+        <td><a href="https://frontend.icebox.com/create-account.html"
+            target="_blank">https://frontend.icebox.com/create-account.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>We Buys Diamonds</td>
+        <td><a href="https://frontend.icebox.com/we-buy-diamonds.html"
+            target="_blank">https://frontend.icebox.com/we-buy-diamonds.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>We Buy Bullion</td>
+        <td><a href="https://frontend.icebox.com/we-buy-bullion.html"
+            target="_blank">https://frontend.icebox.com/we-buy-bullion.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>We Rolex Watches</td>
+        <td><a href="https://frontend.icebox.com/we-pawn-rolex.html"
+            target="_blank">https://frontend.icebox.com/we-pawn-rolex.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>We buy Engagement Rings</td>
+        <td><a href="https://frontend.icebox.com/we-buy-engagement-rings.html"
+            target="_blank">https://frontend.icebox.com/we-buy-engagement-rings.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>We Buys Gold</td>
+        <td><a href="https://frontend.icebox.com/we-buy-gold.html"
+            target="_blank">https://frontend.icebox.com/we-buy-gold.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Privacy</td>
+        <td><a href="https://frontend.icebox.com/privacy.html"
+            target="_blank">https://frontend.icebox.com/privacy.html</a>
+        </td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Terms & Condition</td>
+        <td><a href="https://frontend.icebox.com/terms-and-condition.html"
+            target="_blank">https://frontend.icebox.com/terms-and-condition.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>YouTube Feeds</td>
+        <td><a href="https://frontend.icebox.com/youtube-feeds.html"
+            target="_blank">https://frontend.icebox.com/youtube-feeds.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+      <tr>
+        <td>Instagram Feeds</td>
+        <td><a href="https://frontend.icebox.com/instagram-feeds.html"
+            target="_blank">https://frontend.icebox.com/instagram-feeds.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Page</td>
+      </tr>
+
+      <tr>
+        <td>birthday</td>
+        <td><a href="https://frontend.icebox.com/emailers/birthday.html"
+            target="_blank">https://frontend.icebox.com/emailers/birthday.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Emailer</td>
+      </tr>
+      <tr>
+        <td>order-forget</td>
+        <td><a href="https://frontend.icebox.com/emailers/order-forget.html"
+            target="_blank">https://frontend.icebox.com/emailers/order-forget.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Emailer</td>
+      </tr>
+      <tr>
+        <td>whales-alt-stops</td>
+        <td><a href="https://frontend.icebox.com/emailers/whales-alt-stops.html"
+            target="_blank">https://frontend.icebox.com/emailers/whales-alt-stops.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Emailer</td>
+      </tr>
+      <tr>
+        <td>transactions-report</td>
+        <td><a href="https://frontend.icebox.com/emailers/transactions-report.html"
+            target="_blank">https://frontend.icebox.com/emailers/transactions-report.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Emailer</td>
+      </tr>
+      <tr>
+        <td>socialstats</td>
+        <td><a href="https://frontend.icebox.com/emailers/socialstats.html"
+            target="_blank">https://frontend.icebox.com/emailers/socialstats.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Emailer</td>
+      </tr>
+      <tr>
+        <td>question</td>
+        <td><a href="https://frontend.icebox.com/emailers/question.html"
+            target="_blank">https://frontend.icebox.com/emailers/question.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Emailer</td>
+      </tr>
+      <tr>
+        <td>order-confirmation</td>
+        <td><a href="https://frontend.icebox.com/emailers/order-confirmation.html"
+            target="_blank">https://frontend.icebox.com/emailers/order-confirmation.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Emailer</td>
+      </tr>
+      <tr>
+        <td>new-inquiry</td>
+        <td><a href="https://frontend.icebox.com/emailers/new-inquiry.html"
+            target="_blank">https://frontend.icebox.com/emailers/new-inquiry.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Emailer</td>
+      </tr>
+      <tr>
+        <td>New Emailers</td>
+        <td>
+          <a href="https://frontend.icebox.com/emailers/templates/emailer-1.html"
+            target="_blank">https://frontend.icebox.com/emailers/templates/emailer-1.html</a><br>
+          <a href="https://frontend.icebox.com/emailers/templates/emailer-2.html"
+            target="_blank">https://frontend.icebox.com/emailers/templates/emailer-2.html</a><br>
+          <a href="https://frontend.icebox.com/emailers/templates/emailer-3.html"
+            target="_blank">https://frontend.icebox.com/emailers/templates/emailer-3.html</a><br>
+          <a href="https://frontend.icebox.com/emailers/templates/emailer-4.html"
+            target="_blank">https://frontend.icebox.com/emailers/templates/emailer-4.html</a>
+        </td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>Emailer</td>
+      </tr>
+
+      <tr>
+        <td>admin-bar</td>
+        <td><a href="https://frontend.icebox.com/elements/admin-bar.html"
+            target="_blank">https://frontend.icebox.com/elements/admin-bar.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>UI</td>
+      </tr>
+      <tr>
+        <td>typography</td>
+        <td><a href="https://frontend.icebox.com/elements/typography.html"
+            target="_blank">https://frontend.icebox.com/elements/typography.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>UI</td>
+      </tr>
+      <tr>
+        <td>stripes</td>
+        <td><a href="https://frontend.icebox.com/elements/stripes.html"
+            target="_blank">https://frontend.icebox.com/elements/stripes.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>UI</td>
+      </tr>
+      <tr>
+        <td>product</td>
+        <td><a href="https://frontend.icebox.com/elements/product.html"
+            target="_blank">https://frontend.icebox.com/elements/product.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>UI</td>
+      </tr>
+      <tr>
+        <td>pagination</td>
+        <td><a href="https://frontend.icebox.com/elements/pagination.html"
+            target="_blank">https://frontend.icebox.com/elements/pagination.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>UI</td>
+      </tr>
+      <tr>
+        <td>newsletter signup</td>
+        <td><a href="https://frontend.icebox.com/elements/nl-signup.html"
+            target="_blank">https://frontend.icebox.com/elements/nl-signup.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>UI</td>
+      </tr>
+      <tr>
+        <td>navbar</td>
+        <td><a href="https://frontend.icebox.com/elements/navbar.html"
+            target="_blank">https://frontend.icebox.com/elements/navbar.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>UI</td>
+      </tr>
+      <tr>
+        <td>Warning Labels</td>
+        <td><a href="https://frontend.icebox.com/elements/warning-labels.html"
+            target="_blank">https://frontend.icebox.com/elements/warning-labels.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>UI</td>
+      </tr>
+      <tr>
+        <td>icons</td>
+        <td><a href="https://frontend.icebox.com/elements/icons.html"
+            target="_blank">https://frontend.icebox.com/elements/icons.html</a></td>
+        <td><span class="tag --red">v2.0</span></td>
+        <td><span class="tag --working">working</span></td>
+        <td>UI</td>
+      </tr>
+      <tr>
+        <td>forms</td>
+        <td><a href="https://frontend.icebox.com/elements/forms.html"
+            target="_blank">https://frontend.icebox.com/elements/forms.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>UI</td>
+      </tr>
+      <tr>
+        <td>askquestion</td>
+        <td><a href="https://frontend.icebox.com/elements/askquestion.html"
+            target="_blank">https://frontend.icebox.com/elements/askquestion.html</a></td>
+        <td><span class="tag">v1.0</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>UI</td>
+      </tr>
+      <tr>
+        <td>appraisal-report</td>
+        <td><a href="https://frontend.icebox.com/elements/appraisal-report.html"
+            target="_blank">https://frontend.icebox.com/elements/appraisal-report.html</a></td>
+        <td><span class="tag">v1.1</span></td>
+        <td><span class="tag --done">done</span></td>
+        <td>UI</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script src="js/staticpages.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#example').DataTable(
+      {
+        "scrollX": true,
+        "paging": false,
+        "info": false,
+        "ordering": false,
+        "columnDefs": [
+          { "width": "20%", "targets": 0 },
+          { "width": "40%", "targets": 1 },
+          { "width": "10%", "targets": 2 },
+          { "width": "10%", "targets": 3 },
+          { "width": "10%", "targets": 4 },
+        ],
+      }
+    );
+  });
+</script>
+{% endblock %}

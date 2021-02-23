@@ -1,0 +1,217 @@
+// input style
+.line--style
+  border: 0
+  border-radius: 0
+  border-bottom: 1px solid $grey
+  height: 44px
+  padding: 0 0 0 8px
+  box-shadow: none!important
+  margin-bottom: 8px
+  background: #ffffff
+  color: #151822
+  letter-spacing: 0.5px
+  font-weight: var(--fontmedium)
+  transition: background 400ms $animation-cubic, border 200ms $animation-cubic, border-radius 200ms $animation-cubic
+  &:focus
+    background: $softgrey
+    border: 0
+    border-radius: 4px
+  
+  
+// login
+.credential__padding
+  padding: 20px
+.credential__height
+  @include mobile
+    height: 100vh
+
+.credential__header
+  position: absolute
+  z-index: 4
+  top: 20px
+  left: 0
+  right: 0
+  margin: 0 auto
+  width: calc( 100% - 40px )
+  display: flex
+  justify-content: space-between
+  &-logo
+    position: relative
+  &-action
+    position: relative
+    top: -20px
+    right: -20px
+    width: 60px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    @include tablet
+      top: 0
+      right: 0
+      &:hover
+        transform: scale(1.2)
+
+
+
+.credential
+  display: flex
+  flex-wrap: wrap
+  height: 100%
+  margin-top: 120px
+  @include mobile
+    margin-top: 0
+  &__layout
+    width: 100%
+    margin: 0 auto
+    position: relative
+    padding: 0 20px 0 20px
+    flex: 1 0 100%
+    max-width: 480px
+    @include tablet
+      flex: 1 0 40%
+      max-width: 40%
+      padding:  0 40px 0 20px
+    @include desktop
+      flex: 1 0 30%
+      max-width: 30%
+    &-wrapper
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: center
+      height: 100%
+      text-align: center
+      @include mobile
+        text-align: left
+      // formating
+      h3
+        @include font-size($title-3)
+        font-weight: var(--fontbold)
+        letter-spacing: -0.5px
+      p
+        @include font-size($text-4)
+      // switch
+      &-switch
+        margin: 8px 0 16px 0
+        span
+          font-weight: var(--fontmedium)
+        a
+          margin-left: 8px
+          font-weight: var(--fontbold)
+          @include hover-line
+      .form-row
+        margin: 0
+        .invalid-feedback
+          margin-bottom: 8px
+      .gender--choose
+        margin-top: 16px
+        flex-direction: row
+        margin-bottom: 24px
+        h6
+          font-family: var(--body)
+          display: block
+          width: 100%
+          opacity: 0.7
+          margin-bottom: 16px
+          text-align: left
+        .gender--wrapper
+          .form-check-inline label
+            margin-bottom: -6px
+      .btn-primary
+        width: 100%
+        margin-top: 16px
+      
+      // socialmedia
+      &-socialmedia
+        position: relative
+        p
+          overflow: hidden
+          text-align: center
+          margin: 16px 0
+          &:before,
+          &:after
+            background-color: $softgrey
+            content: ""
+            display: inline-block
+            height: 1px
+            position: relative
+            vertical-align: middle
+            width: 50%
+          &:before
+            right: 0.5em
+            margin-left: -50%
+          &:after
+            left: 0.5em
+            margin-right: -50%
+        .btn-border
+          margin-bottom: 8px
+          display: flex
+          justify-content: center
+          border: 1px solid $grey
+          width: 100%
+          span
+            position: absolute
+            left: 24px
+          &:hover
+            border: 1px solid $secondary
+
+
+  &__slider
+    display: none
+    @include tablet
+      display: block
+      flex: 1 0 60%
+      max-width: 60%
+      position: relative
+      overflow: hidden
+      background: $primary
+    @include desktop
+      display: block
+      flex: 1 0 60%
+      max-width: 60%
+    &-wrapper
+      margin: 0
+      padding: 0
+      width: 100%
+      position: relative
+      height: calc( 100vh - 40px )
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      // slider class
+    .slider-slide
+      position: absolute
+      width: 100%
+      height: 100%
+      transition: opacity 2s ease-in-out
+      opacity: 0
+      z-index: 1
+      &.is-visible
+        opacity: 1
+        z-index: 2
+
+.forget-password
+  margin-top: 0
+  height: 100vh
+  .credential__layout-wrapper
+    text-align: center
+    .home-btn
+      text-align: center
+      display: inline-block
+      margin: 40px auto 0 auto
+      .icon
+        display: inline-block
+        transform: rotate(90deg)
+        margin-right: 8px
+        position: relative
+        top: 2px
+
+
+.page-icon-wrapper
+  margin: 0 auto 60px auto
+  display: flex
+  justify-content: center
+

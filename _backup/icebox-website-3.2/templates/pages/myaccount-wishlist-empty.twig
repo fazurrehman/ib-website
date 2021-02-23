@@ -1,0 +1,53 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+{% set page = 'wishlist' %}
+
+{% block content %}
+
+<div class="container">
+  <!-- my account -->
+  <section class="myaccount">
+    <div class="myaccount__header">
+      <div class="myaccount__header-wrapper">
+        <h2 class="title-3">Wishlist</h2>
+        <span class="myaccount-info">Saved item 40</span>
+      </div>
+      <!-- breadcrums -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <!-- <li class="breadcrumb-item"><a href="#">Home</a></li> -->
+          <li class="breadcrumb-item" aria-current="page">My Account</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- __wrapper"> -->
+    <div class="myaccount__wrapper">
+      {% include "../components/myaccount-navbar.twig" %}
+      <!-- dashboard -->
+      <div class="myaccount__wrapper-container">
+      
+      
+        <!-- address -->
+        <div class="account__wishlist-empty">
+          <div class="icon--wishlist"></div>
+          <div class="page__status">
+            <h4>Your wishlist is empty</h4>
+            <p class="nopage__status">Explore more & Shortlist some items</p>
+            <a class="btn btn-border" href="index.html">Start Shopping</a>
+          </div>
+        </div>
+      
+      
+      </div><!-- end container -->
+
+    </div><!-- end myaccount__wrapper -->
+  </section>
+</div><!-- end container -->
+
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script src="js/categories.min.js"></script>
+{% endblock %}

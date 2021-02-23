@@ -1,0 +1,113 @@
+// colors
+$primary: #101e5a;
+$secondary: #eacb91;
+$white: #ffffff;
+$primary-100: #97a1c6;
+$primary-200: #51619f;
+$primary-300: #2d4088;
+$primary-400: #1d2e70;
+$text: #080808;
+$hover: #909ab0;
+$link: #001d99;
+$link-hover: lighten($link, 10%);
+
+// Shades
+$darknight: #151822;
+$nightsky: #4a597c;
+$grey: #909ab0;
+$softgrey: #e4e6eb;
+$snowwhite: #f9fafc;
+$contained-bg: rgba(#275efe, 0.2);
+// Shades
+$black-500: #151822;
+$black-400: #5B5D64;
+$black-300: #8D99A7;
+$black-200: #C9D0DA;
+$black-100: #F1F2F5;
+$border: #eeeeee;
+
+// accents
+$green: #2cca73;
+$yellow: #feb44c;
+$red: #d1191c;
+
+// graident
+$graident-primary: linear-gradient(133deg, #101e5a 0%, #2d4088 100%);
+
+// animation ease
+$animation-cubic: cubic-bezier(0.165, 0.84, 0.44, 1);
+$spacing: 60px;
+
+// colors
+.bg-golden {
+  background-color: rgba(#ddc99e, 0.6);
+}
+
+.bg-silver {
+  background-color: rgba(#c1c1c1, 0.6);
+}
+
+.bg-rosegold {
+  background-color: rgba(#ddaf9c, 0.6);
+}
+
+// global
+$g-border: 1px solid #dfe0eb;
+$g-radius: 8px;
+
+// zindex
+$z-navbar: 15;
+$z-cart: 1;
+$z-promotion: 0;
+$z-modal: 100;
+
+:root {
+  --primary: #{$primary};
+  --primary-1: #f44336;
+  --primary-2: #1e88e5;
+  --primary-3: #fdd835;
+  --border: #cdd9ed;
+  --border-hover: #99a3ba;
+  --text-color: #6c7486;
+  --text-color-headline: #3f4656;
+  --shadow: rgba(22, 30, 50, 0.04);
+  --font: 1rem/1.2 'helvetica', sans-serif;
+  --bg-hover: linear-gradient(to right,
+      #bf953f,
+      #fcf6ba,
+      #b38728,
+      #fbf5b7,
+      #aa771c);
+  --social: #97a1c6;
+  --black-500: #{$black-500};
+  --black-400: #{$black-400};
+  --black-300: #{$black-300};
+  --black-200: #{$black-200};
+  --black-100: #{$black-100};
+
+  // padding
+  --gridspace: 3%;
+  --mobile: 480px;
+  --tablet: 720px;
+  --desktop: 1080px;
+  --retina: 1280px;
+  --bigger: 1800px;
+
+  // typography
+  --body: 'HelveticaNowDisplay', 'Helvetica Neue', Arial, Sans-Serif;
+  --heading: 'SharpSansNo2', Georgia, serif;
+  --navbar: 'SharpSansNo2', Georgia, serif;
+  --fontlight: 300;
+  --fontnormal: 400;
+  --fontmedium: 500;
+  --fontbold: 600;
+
+  --bg: rgba(228, 230, 235, 0.3);
+
+  // hover
+  --color-theme-button: #{$primary};
+  --color-theme-link: #{$link};
+  --color-theme-link-hover: #{$link-hover};
+  --color-theme-hover: #{$hover};
+  --backdrop: rgba(0, 0, 0, 0.6);
+}

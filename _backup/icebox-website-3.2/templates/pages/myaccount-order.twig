@@ -1,0 +1,389 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+{% set page = 'order' %}
+
+{% block content %}
+
+<div class="container">
+  <!-- my account -->
+  <section class="myaccount">
+    <div class="myaccount__header">
+      <div class="myaccount__header-wrapper">
+        <h2 class="title-3">Orders</h2>
+        <span class="myaccount-info">Track, return, or buy things again</span>
+      </div>
+      <!-- breadcrums -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="myaccount.html">My Account</a></li>
+          <li class="breadcrumb-item" aria-current="page">Orders</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- __wrapper"> -->
+    <div class="myaccount__wrapper">
+      {% include "../components/myaccount-navbar.twig" %}
+      <!-- dashboard -->
+      <div class="myaccount__wrapper-container">
+        <!-- order -->
+        <div class="ordercard ordercard-accordion card-block">
+          <!-- header -->
+          <div class="ordercard-header">
+            <div class="ordercard-header-section col-6 p-0">
+              <div class="order-block order-block-m">
+                <label class="order-label">Order Date</label>
+                <span class="order-style">Jan 20, 2020</span>
+              </div>
+              <div class="order-block order-block-m">
+                <label class="order-label">Total</label>
+                <span class="order-style">$56000</span>
+              </div>
+            </div>
+            <div class="ordercard-header-section col-6 p-0 justify-content-end">
+              <div class="order-block">
+                <label class="order-label text-right">Order id: #7468</label>
+                <div class="order-action">Order Details<i class="icon--arrowdown"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- products inside this -->
+          <div class="ordercard-container">
+            <div class="orderproduct">
+              <div class="product-image full-media">
+                <img src="img/demo-sample.jpg" alt="" title="">
+              </div>
+              <div class="orderproduct-summary">
+                <span class="product-title">Diamond and Square Ring in 18k</span>
+                <ul class="order-attributes">
+                  <li class="product-color">Color: Yellow</li>
+                  <li class="product-qty">Qty: 1</li>
+                </ul>
+                <div class="order-value">
+                  <div class="order-price">$600</div>
+                  <div class="order-oldprice">$656</div>
+                  <div class="order-discount">20% OFF</div>
+                </div>
+                <div class="order-block order-block-flex">
+                  <div class="order-status status-current">Shipped (Jun 2, 2019)</div>
+                  <div class="order-tracking">Tracking No: <a href="#" target="_blank" class="link-bold">2520045172</a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- end orderproduct -->
+            <div class="orderproduct">
+              <div class="product-image full-media">
+                <img src="img/demo-sample.jpg" alt="" title="">
+              </div>
+              <div class="orderproduct-summary">
+                <span class="product-title">Diamond and Square Ring in 18k</span>
+                <ul class="order-attributes">
+                  <li class="product-color">Color: Yellow</li>
+                  <li class="product-qty">Qty: 1</li>
+                </ul>
+                <div class="order-value">
+                  <div class="order-price">$600</div>
+                  <div class="order-oldprice">$656</div>
+                  <div class="order-discount">20% OFF</div>
+                </div>
+                <div class="order-block order-block-flex">
+                  <div class="order-status status-current">Shipped (Jun 2, 2019)</div>
+                  <div class="order-tracking">Tracking No: <a href="#" target="_blank" class="link-bold">2520045172</a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- end orderproduct -->
+          </div>
+          <!-- content -->
+          <div class="ordercard__block">
+            <!-- timeline -->
+            <div class="ordercard__block-timeline">
+              <ul id="progressbar">
+                <li class="step0 active" id="step1"><span>Order today</span></li>
+                <li class="step0 active text-center" id="step2"><span>Shipped today</span></li>
+                <li class="step0 text-muted text-right" id="step3"><span>Delivery on Jan, 24</span></li>
+              </ul>
+            </div>
+            <!-- content -->
+            <div class="ordercard-information">
+              <div class="ordercard__block-wrapper">
+                <div class="order-details-block">
+                  <h5 class="title-5 myaccount-heading">Contact Information</h5>
+                  <div class="card__section-list">3255 Peachtree Road Northeast
+                    Fulton County</div>
+                  <div class="card__section">
+                    <div class="card__section-list">Atlanta</div>
+                    <div class="card__section-list">Georgia</div>
+                    <div class="card__section-list">30305</div>
+                    <div class="card__section">(404) 991-8540</div>
+                  </div>
+                </div>
+                <div class="order-details-block">
+                  <h5 class="title-5 myaccount-heading">Contact Information</h5>
+                  <div>Rihanna Willson</div>
+                  <div>404-991-8540</div>
+                </div>
+                <div class="order-details-block">
+                  <h5 class="title-5 myaccount-heading">Payment Method</h5>
+                  <div class="card__section-list">Net Banking: <span>Kotak Bank</span></div>
+                </div>
+              </div>
+              <!-- payment -->
+              <div class="ordercard__block-payment">
+                <h5 class="title-5 myaccount-heading">Order Summary</h5>
+                <ul class="payment__total">
+                  <li>
+                    <label>Subtotal</label>
+                    <p>$600</p>
+                  </li>
+                  <li>
+                    <label>Shipping</label>
+                    <p>Free</p>
+                  </li>
+                  <li class="payment__total-discount">
+                    <label>Special Discount</label>
+                    <p>$56</p>
+                  </li>
+                  <li class="payment__total-final">
+                    <label>Total Business</label>
+                    <p>$600</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      
+      
+          </div>
+        </div><!-- end ordercard -->
+        <!-- order -->
+        <div class="ordercard ordercard-accordion card-block">
+          <!-- header -->
+          <div class="ordercard-header">
+            <div class="ordercard-header-section col-6 p-0">
+              <div class="order-block order-block-m">
+                <label class="order-label">Order Date</label>
+                <span class="order-style">Jan 20, 2020</span>
+              </div>
+              <div class="order-block order-block-m">
+                <label class="order-label">Total</label>
+                <span class="order-style">$56000</span>
+              </div>
+            </div>
+            <div class="ordercard-header-section col-6 p-0 justify-content-end">
+              <div class="order-block">
+                <label class="order-label text-right">Order id: #7468</label>
+                <div class="order-action">Order Details<i class="icon--arrowdown"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- products inside this -->
+          <div class="ordercard-container">
+            <div class="orderproduct">
+              <div class="product-image full-media">
+                <img src="img/demo-sample.jpg" alt="" title="">
+              </div>
+              <div class="orderproduct-summary">
+                <span class="product-title">Diamond and Square Ring in 18k</span>
+                <ul class="order-attributes">
+                  <li class="product-color">Color: Yellow</li>
+                  <li class="product-qty">Qty: 1</li>
+                </ul>
+                <div class="order-value">
+                  <div class="order-price">$600</div>
+                  <div class="order-oldprice">$656</div>
+                  <div class="order-discount">20% OFF</div>
+                </div>
+                <div class="order-block order-block-flex">
+                  <div class="order-status status-delivered">Delivered (July 2, 2020)</div>
+                  <div class="order-tracking">Tracking No: <a href="#" target="_blank" class="link-bold">2520045172</a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- end orderproduct -->
+          </div>
+          <!-- content -->
+          <div class="ordercard__block">
+            <!-- content -->
+            <div class="ordercard-information">
+              <div class="ordercard__block-wrapper">
+                <div class="order-details-block">
+                  <h5 class="title-5 myaccount-heading">Contact Information</h5>
+                  <div class="card__section-list">3255 Peachtree Road Northeast
+                    Fulton County</div>
+                  <div class="card__section">
+                    <div class="card__section-list">Atlanta</div>
+                    <div class="card__section-list">Georgia</div>
+                    <div class="card__section-list">30305</div>
+                    <div class="card__section">(404) 991-8540</div>
+                  </div>
+                </div>
+                <div class="order-details-block">
+                  <h5 class="title-5 myaccount-heading">Contact Information</h5>
+                  <div>Rihanna Willson</div>
+                  <div>404-991-8540</div>
+                </div>
+                <div class="order-details-block">
+                  <h5 class="title-5 myaccount-heading">Payment Method</h5>
+                  <div class="card__section-list">Net Banking: <span>Kotak Bank</span></div>
+                </div>
+              </div>
+              <!-- payment -->
+              <div class="ordercard__block-payment">
+                <h5 class="title-5 myaccount-heading">Order Summary</h5>
+                <ul class="payment__total">
+                  <li>
+                    <label>Subtotal</label>
+                    <p>$600</p>
+                  </li>
+                  <li>
+                    <label>Shipping</label>
+                    <p>Free</p>
+                  </li>
+                  <li class="payment__total-discount">
+                    <label>Special Discount</label>
+                    <p>$56</p>
+                  </li>
+                  <li class="payment__total-final">
+                    <label>Total Business</label>
+                    <p>$600</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      
+      
+          </div>
+        </div><!-- end ordercard -->
+        <!-- order -->
+        <div class="ordercard ordercard-accordion card-block">
+          <!-- header -->
+          <div class="ordercard-header">
+            <div class="ordercard-header-section col-6 p-0">
+              <div class="order-block order-block-m">
+                <label class="order-label">Order Date</label>
+                <span class="order-style">Jan 20, 2020</span>
+              </div>
+              <div class="order-block order-block-m">
+                <label class="order-label">Total</label>
+                <span class="order-style">$56000</span>
+              </div>
+            </div>
+            <div class="ordercard-header-section col-6 p-0 justify-content-end">
+              <div class="order-block">
+                <label class="order-label text-right">Order id: #7468</label>
+                <div class="order-action">Order Details<i class="icon--arrowdown"></i>
+                </div>
+              </div>
+              <div class="order-block">
+                <div class="dropdown order-pay-btn">
+                  <button class="btn btn-primary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Pay Now</button>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item pay-link" target="_blank"
+                      href="/new-payment/wire-transfer/go/19172?chase=true">Wire
+                      Transfer</a>
+                    <a class="dropdown-item pay-link" target="_blank"
+                      href="/new-payment/paypal/go/19172?chase=true">PayPal</a>
+                    <a class="dropdown-item pay-link" target="_blank"
+                      href="/new-payment/stripe/go/19172?chase=true">Stripe</a>
+                    <a class="dropdown-item pay-link" target="_blank" href="/new-payment/amex/go/19172?chase=true">Amex</a>
+                    <a class="dropdown-item pay-link" target="_blank"
+                      href="/new-payment/bitpay/go/19172?chase=true">Bitpay</a>
+                    <a class="dropdown-item pay-link" target="_blank" href="/new-payment/amazon/go/19172?chase=true">Amazon
+                      Pay</a>
+                    <a class="dropdown-item pay-link" target="_blank" href="/new-payment/apple-pay/go/19172?chase=true">Apple
+                      Pay</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- products inside this -->
+          <div class="ordercard-container">
+            <div class="orderproduct">
+              <div class="product-image full-media">
+                <img src="img/demo-sample.jpg" alt="" title="">
+              </div>
+              <div class="orderproduct-summary">
+                <span class="product-title">Diamond and Square Ring in 18k</span>
+                <ul class="order-attributes">
+                  <li class="product-color">Color: Yellow</li>
+                  <li class="product-qty">Qty: 1</li>
+                </ul>
+                <div class="order-value">
+                  <div class="order-price">$600</div>
+                </div>
+                <div class="order-block order-block-flex">
+                  <div class="order-status status-failed">Failed (March 2, 2019)</div>
+                </div>
+              </div>
+            </div><!-- end orderproduct -->
+          </div>
+          <!-- content -->
+          <div class="ordercard__block">
+            <!-- content -->
+            <div class="ordercard-information">
+              <div class="ordercard__block-wrapper">
+                <div class="order-details-block">
+                  <h5 class="title-5 myaccount-heading">Contact Information</h5>
+                  <div class="card__section-list">3255 Peachtree Road Northeast
+                    Fulton County</div>
+                  <div class="card__section">
+                    <div class="card__section-list">Atlanta</div>
+                    <div class="card__section-list">Georgia</div>
+                    <div class="card__section-list">30305</div>
+                    <div class="card__section">(404) 991-8540</div>
+                  </div>
+                </div>
+                <div class="order-details-block">
+                  <h5 class="title-5 myaccount-heading">Contact Information</h5>
+                  <div>Rihanna Willson</div>
+                  <div>404-991-8540</div>
+                </div>
+                <div class="order-details-block">
+                  <h5 class="title-5 myaccount-heading">Payment Method</h5>
+                  <div class="card__section-list">Net Banking: <span>Kotak Bank</span></div>
+                </div>
+              </div>
+              <!-- payment -->
+              <div class="ordercard__block-payment">
+                <h5 class="title-5 myaccount-heading">Order Summary</h5>
+                <ul class="payment__total">
+                  <li>
+                    <label>Subtotal</label>
+                    <p>$600</p>
+                  </li>
+                  <li>
+                    <label>Shipping</label>
+                    <p>Free</p>
+                  </li>
+                  <li class="payment__total-discount">
+                    <label>Special Discount</label>
+                    <p>$56</p>
+                  </li>
+                  <li class="payment__total-final">
+                    <label>Total Business</label>
+                    <p>$600</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      
+      
+          </div>
+        </div><!-- end ordercard -->
+      </div><!-- end myaccount__wrapper -->
+
+    </div><!-- end myaccount__wrapper -->
+  </section>
+</div><!-- end container -->
+
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script src="js/categories.min.js"></script>
+
+{% endblock %}

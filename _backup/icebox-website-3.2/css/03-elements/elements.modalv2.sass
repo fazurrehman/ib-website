@@ -1,0 +1,351 @@
+// setting
+
+$mp-desktop: 32px
+$mp-mobile: 24px
+
+
+// style
+.i-modal
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  display: flex
+  z-index: 1050
+  opacity: 0
+  visibility: hidden
+  background-color: var(--backdrop)
+  transition: opacity 0.3s, visibility 0s linear 0.5s
+  overflow: auto
+  &.is-active
+    opacity: 1
+    visibility: visible
+    transition: opacity 0.3s, visibility 0s
+
+  .wrap
+    position: relative
+    display: block
+    width: 100%
+    transition: transform .4s ease, opacity .2s
+    border-radius: 4px
+    background: #fff
+    margin: auto
+    opacity: 0
+    pointer-events: none
+    transition-delay: .2s
+    transform: translateY(0)
+    @include clearfix2
+    &.is-active
+      transform: translateY(-30px)
+      opacity: 1
+      pointer-events: all
+      transition: transform .6s ease,opacity .2s
+   
+  .btn-close
+    position: absolute
+    right: 0
+    top: 0
+    padding: 16px
+    opacity: 0.7
+    z-index: 2
+    &:hover
+      opacity: 1
+    .svgIcon-root
+      font-size: 1.25rem
+      padding: 8px
+      box-sizing: content-box
+      border-radius: 100px
+      @include media('<720px')
+        background-color: rgba($primary, 0.5)
+        color: #ffffff
+
+  &-content
+    position: relative
+
+    &__header
+      @include media('<720px')
+        padding: 0 16px
+        
+    &__inner
+      margin-top: $mp-desktop
+      @include media('<720px')
+        margin-top: $mp-mobile
+  
+    &__footer
+      margin-top: $mp-desktop
+      @include media('<720px')
+        margin-top: $mp-mobile
+      .btn-group
+        width: 100%
+        display: flex
+        margin-left: -6px
+        margin-right: -6px
+        .btn
+          margin: 6px
+          flex: 1 0 auto
+          border-radius: 4px
+
+  .i-modal-content
+    display: flex
+    flex-wrap: wrap
+    .main
+      width: 100%
+      position: relative
+      padding: 60px 40px
+      padding-bottom: 40px
+      @include media('<720px')
+        padding: 24px
+        padding-top: 40px
+
+  .modal-title
+    font-weight: var(--fontbold)
+    margin: 0
+    line-height: 1.2
+    
+      
+  .modal-subtitle
+    font-size: 1.025rem
+    margin-bottom: 12px
+      
+
+  .modal-row
+    position: relative
+    display: block
+    margin-top: $mp-desktop
+    @include clearfix2
+    @include media('<720px')
+      margin-top: $mp-mobile
+    ~.modal-row
+      margin-top: 24px
+
+  
+
+// Styling
+.i-modal-is--newsletter
+  .wrap
+    max-width: 720px
+    @include media('<720px')
+      width: 92%
+  .i-modal-content
+    flex-direction: row
+    @include media('<720px')
+      display: block
+    aside
+      flex: 1 0 300px
+    .image
+      height: 100%
+      pointer-events: none
+      @include media('<720px')
+        height: 260px
+    .image-wrapper
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      object-fit: cover
+    .main
+      flex: 1 0 calc(100% - 300px)
+    
+
+.i-modal-is--filter-listing
+  .wrap
+    max-width: 520px
+    @include media('<720px')
+      width: 92%
+
+
+
+// classes
+.i-modal
+  .radio-group
+    display: flex
+    align-items: center
+    &__btn
+      flex: 1 0 auto
+      margin: 6px
+      border: $g-border
+      border-radius: $g-radius
+      display: flex
+      align-items: center
+      justify-content: center
+      font-weight: var(--fontbold)
+      height: 48px
+      padding: 8px 16px
+      position: relative
+      &.is-selected
+        @include hover-bg-border
+        color: $primary
+    .radio__input
+      position: absolute
+      left: 16px
+      @include media('<720px')
+        left: 8px
+
+    .radio__label
+      margin-bottom: 0
+      width: 100%
+      display: block
+      text-align: center
+      font-size: 0.8125rem
+
+  // quality vs
+  .diamondQuality .diamondQuality-option
+    margin: 6px
+
+  .itemLengthSize .itemLengthSize-item
+    height: 42px
+    padding: 8px
+    @include media('<720px')
+      flex: 1 0 auto
+    
+  .diamondQuality .diamondQuality-option,
+  .itemLengthSize .itemLengthSize-item
+    &.active
+      @include hover-bg-border
+      color: $primary
+
+  
+// default modal for notifcations
+.i-modal-is--default
+  .wrap
+    max-width: 550px
+    @include media('<720px')
+      width: 92%
+  .modal-title
+    margin-bottom: 16px
+
+
+// i-modal-is--product-recommendation
+.i-modal-is--product-recommendation
+  background-color: rgba(0, 0, 0, 0.8)
+  .wrap
+    max-width: 1000px
+    @include media('<720px')
+      width: 98%
+  
+  .i-modal-content .main
+    padding-top: 32px
+
+  .product-card__image
+    min-height: 180px
+
+  .btn--recommendation
+    position: absolute
+    bottom: 4%
+    left: 0
+    right: 0
+    z-index: 100
+    width: 92%
+    margin: 0 auto
+    opacity: 0
+
+  .product-card:hover .product-card__details
+    transform: none
+  .product-card:hover .btn--recommendation
+    opacity: 1
+
+  .owl-carousel .owl-nav
+    margin: 0
+    position: absolute
+    top: 36%
+    width: 100%
+
+
+  .owl-carousel .owl-nav button.owl-next,
+  .owl-carousel .owl-nav button.owl-prev
+    background: white!important
+    border: 1px solid $grey
+    width: 48px
+    height: 48px
+    border-radius: 100px
+    svg
+      width: 18px
+      height: 18px
+      display: inline
+  
+  .owl-carousel .owl-nav button.owl-prev
+    float: left
+    margin-left: -20px
+    
+  .owl-carousel .owl-nav button.owl-next
+    float: right
+    margin-right: -20px
+
+
+
+// i-modal-is--product-recommendation
+.i-modal-is--filter-search
+  background-color: rgba(0, 0, 0, 0.8)
+  .wrap
+    max-width: 1000px
+    overflow: hidden
+    @include media('<1080px')
+      width: 98%
+
+  .i-modal-content__header
+    padding: 0
+
+  .radio-group__btn
+    flex: 0 0 30%
+    @include media('<720px')
+      flex: 1 0 50%
+
+  .btn-close .svgIcon-root
+    background-color: rgba(16,30,90,1)
+    color: #fff
+
+
+
+  .radio-group .radio__label
+    text-align: left
+    padding-left: 40px
+
+  .main
+    display: flex
+    flex-direction: column-reverse
+    padding: 0!important
+    @include media('>720px')
+      flex-direction: row
+
+    &__content
+      position: relative
+      padding: 24px
+      @include media('>720px')
+        width: 70%
+      @include media('>1080px')
+        width: 60%
+        padding: 40px
+        padding-right: 60px
+        padding-bottom: 24px
+
+      
+    &__media
+      overflow: hidden
+      height: 200px
+      position: relative
+      @include clearfix2
+      @include media('>720px')
+        height: 100%
+        width: 30%
+      @include media('>1080px')
+        width: 40%
+
+
+
+  .image-cover
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    object-fit: cover
+
+  .i-modal-content__footer
+    margin-top: 16px
+
+
+
+
+  

@@ -1,0 +1,144 @@
+{% extends "../layouts/checkout-layout.twig" %}
+{% set page_title = "Checkout - Information" %}
+{% set pageClass = "checkoutpage" %}
+{% set checkoutPageState = "information" %}
+
+{% block express_checkout %}
+{% include "../components/checkout-express.twig" %}
+{% endblock %}
+
+{% block content %}
+<div class="step">
+  <form action="/step-2.html" class="checkout-edit" id="signupForm">
+    <div class="step__sections">
+      <div class="section section--information">
+        <div class="section__header">
+          <div class="column-flex">
+            <h5 class="column-flex__item section__header-title">Contact information</h5>
+            <div class="column-flex__item section__header-wrapper">
+              <span>Already have an account?</span>
+              <a href="#" class="button-has-icon ml-1">
+                <span class="text-3 bold">Sign in</span>
+                <span>
+                  <aside class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path fill="#1D2E70" fill-rule="evenodd"
+                        d="M.082 1.49L3.592 5 .082 8.51l.775.776L5.143 5 .857.714l-.775.776z" clip-rule="evenodd" />
+                    </svg>
+                  </aside>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="field field--half">
+            <div class="field__wrapper">
+              <label for="emailField" class="field__label">Email</label>
+              <input type="text" id="emailField" placeholder="Email" class="field__input">
+            </div>
+          </div>
+          <div class="field field--half">
+            <div class="field__wrapper">
+              <input type="tel" class="field__input" id="phone" placeholder="202-555-0168">
+            </div>
+          </div>
+          <div class="field field--half">
+            <div class="field__wrapper">
+              <label for="instagramField" class="field__label">Instagram account</label>
+              <input type="text" id="instagramField" placeholder="Instagram" class="field__input">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section--shipping-address">
+        <div class="section__header">
+          <div class="column-flex">
+            <div class="column-flex__item">
+              <h5 class="section__header-title">Shipping address</h5>
+            </div>
+          </div>
+        </div>
+        <div class="section__content">
+
+          <div class="field field--half">
+            <div class="field__wrapper">
+              <label for="firstNameField" class="field__label">First Name</label>
+              <input type="text" id="firstNameField" name="firstname" placeholder="First Name" class="field__input"
+                required>
+            </div>
+          </div>
+          <div class="field field--half">
+            <div class="field__wrapper">
+              <label for="lastNameField" class="field__label">Last Name</label>
+              <input type="text" id="lastNameField" placeholder="Last Name" class="field__input" required>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__wrapper">
+              <label for="addressField" class="field__label">Address</label>
+              <input type="text" id="addressField" placeholder="Address" class="field__input">
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__wrapper">
+              <label for="cityField" class="field__label">City</label>
+              <input type="text" id="cityField" placeholder="City" class="field__input">
+            </div>
+          </div>
+
+
+          <div class="field-dropdown field--third field-has-label">
+            <div class="field__wrapper">
+              <label for="countryField" class="field__label">Country/region</label>
+              <select class="field__dropdown" id="countryField">
+                <option value=" selected disabled hidden">USA</option>
+                <option>USA</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-dropdown field--third field-has-label">
+            <div class="field__wrapper">
+              <label for="stateField" class="field__label">State/territory</label>
+              <select class="field__dropdown" id="stateField">
+                <option value=" selected disabled hidden">New York</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field field--third">
+            <div class="field__wrapper">
+              <label for="postelCodeField" class="field__label">Zip code</label>
+              <input type="text" id="postelCodeField" placeholder="Zip code" class="field__input">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- end step__sections -->
+    <div class="step__footer">
+      <a href="cart.html" class="button-has-icon ml-1 btn--back">
+        <span>
+          <aside class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path fill="#646C76" fill-rule="evenodd"
+                d="M5.143 8.51L1.633 5l3.51-3.51-.776-.776L.082 5l4.285 4.286.776-.776z" clip-rule="evenodd" /></svg>
+          </aside>
+        </span>
+        <span class="text-3">Return to bag</span>
+      </a>
+      <button class="btn btn-primary btn-checkout mr-1">Continue to
+        shipping</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

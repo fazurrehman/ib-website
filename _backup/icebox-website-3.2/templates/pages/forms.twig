@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="eng">
+
+<head>
+  {% include "../components/header.twig" %}
+</head>
+
+<body class="nav-on-left">
+  {{ block('included_content_header') }}
+  <!-- HEADER -->
+  {% include "../components/navbar.twig" %}
+
+  <main>
+    
+    {% block content %}
+    <div class="container">
+      <div class="demo">
+
+        <div class="demo-col">
+          <label class="demo-col-label">Input Type: Label Inside</label>
+          <div class="input__wrapper input__wrapper-space">
+            <input type="text" class="input__default" id="lastName">
+            <label for="lastName">Last Name</label>
+          </div>
+        </div>
+
+        <div class="demo-col">
+          <label class="demo-col-label">Input Type: Label Visible</label>
+          <div class="input__wrapper input__wrapper-space">
+            <label for="lastName" class="input__normal-label">Email Address</label>
+            <input type="text" class="input__normal" id="lastName" placeholder="john@gmail.com">
+          </div>
+        </div>
+
+        <div class="demo-col">
+          <label class="demo-col-label">Input Type: Line (Box hover)</label>
+          <div class="form-row input__wrapper input__wrapper-space">
+            <input type="email" class="form-control line--style" placeholder="Email" required="">
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+        </div>
+
+        <div class="demo-col">
+          <label class="demo-col-label">Default Dropbown</label>
+          <select class="dropdown__custom" id="ringSize">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <select class="dropdown__custom input__normal" style="width: 100%; margin-top: 24px;" id="ringSize">
+            <option selected="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Unisex</option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="demo">
+        <form class="needs-validation" novalidate>
+
+          <div class="input__wrapper input__wrapper-space">
+            <input type="text" class="input__default form-control" id=" firstName" required>
+            <label for="firstName">First Name</label>
+          </div>
+          <div class="input__wrapper input__wrapper-space">
+            <input type="text" class="input__default form-control" id=" lastName" required>
+            <label for="lastName">Last Name</label>
+          </div>
+          <div class="input__wrapper input__wrapper-space">
+            <input type="email" class="input__default form-control" id=" myEmail" required>
+            <label for="myEmail">Email</label>
+            <div class="invalid-feedback">Please enter your valid email</div>
+          </div>
+          <div class="input__wrapper input__wrapper-space">
+            <input type="number" class="form-control line--style" placeholder="Phone No" required>
+            <div class="invalid-feedback">Please enter phone number.</div>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </form>
+      </div>
+      {% endblock %}
+
+  </main>
+
+  <!-- Footer -->
+  {% include "../components/footer.twig" %}
+  {% include "../components/country.twig" %}
+  {% include "../components/cart-empty.twig" %}
+  {{ block('included_content') }}
+  <!-- scripts -->
+  <script src="js/homepage.min.js"></script>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+</body>
+
+</html>

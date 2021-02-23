@@ -1,0 +1,231 @@
+// media query classes
+.hide-on-mobile
+  @include mobile
+    display: none!important
+  @include tablet
+    display: block!important
+
+.hide-on-desktop
+  display: none!important
+  @include tablet
+    display: block!important
+
+.visible-no
+  display: none
+
+// custom classes
+section
+  position: relative
+  display: block
+  
+.np
+  padding: 0!important
+
+.text-white
+  color: #ffffff
+
+// full screen lin
+.link
+  display: inline-block
+  cursor: pointer
+  text-decoration: none
+  outline: none
+  position: relative
+  line-height: 1.6
+  background-repeat: no-repeat
+  background-position: 0 100%
+  background-size: 0 1px
+  font-weight: var(--fontmedium)
+  font-size: 1rem
+  &--overlap
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%!important
+    height: 100%!important
+    z-index: 1000
+    text-indent: 200%
+    white-space: nowrap
+    font-size: 0
+    opacity: 0
+    
+// Hover line
+.link-line-hover
+  @mixin hover-line
+
+.btnLink
+  border-bottom: 1px solid $primary
+
+
+// section-header
+.section-header
+  margin-bottom: 8px
+  position: relative
+  &--flex
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &--center
+    text-align: center
+  @include desktop
+    margin-bottom: 16px
+  h3
+    @include font-size($title-4)
+    font-weight: var(--fontbold)
+    letter-spacing: -0.3px
+  h2
+    @include font-size($title-2)
+    font-weight: var(--fontbold)
+    letter-spacing: -0.3px
+  a
+    @include hover-line
+    font-weight: var(--fontmedium)
+
+.section-header--big
+  margin-bottom: 8px
+  position: relative
+  &--flex
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &--center
+    text-align: center
+  @include desktop
+    margin-bottom: 16px
+  h2
+    @include font-size($title-3)
+    font-weight: var(--fontbold)
+    letter-spacing: -0.3px
+  a
+    @include hover-line
+    font-weight: var(--fontmedium)
+
+img.lazy
+  transition: opacity 1s cubic-bezier(.16, 1.08, .38, .98)
+  opacity: 0
+  will-change: opacity
+
+img.lazy.loaded
+  opacity: 1
+
+// image ratio
+[class*='aspect-ratio-']
+  display: block
+  position: relative
+  overflow: hidden
+  background: $softgrey
+  object-fit: cover
+
+[class*='aspect-ratio-'] > *
+  display: block
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  object-fit: cover
+
+.aspect-ratio-wide
+  padding-top: 56.25%
+
+.aspect-ratio-square
+  padding-top: 100%
+
+
+.color-warning
+  background: #ffebf0
+.color-text-warning
+  color: #D20032
+.color-sucess
+  background: #e4f8eb
+.color-text-sucess
+  color: #0c8c46
+
+.--green
+  color: $green
+.--red,
+.--discount,
+.sale-active a
+  color: $red
+
+  
+// line-height: 
+.l-1
+  line-height: 1
+
+.color-white
+  color: #ffffff
+
+.t-contain
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.label-heading
+  font-size: 0.875rem
+  font-weight: var(--fontbold)
+  margin-bottom: 1rem
+  letter-spacing: 0.5px
+  font-family: var(--body)
+
+// message alert
+.alert
+  font-size: 13px
+  font-weight: var(--fontmedium)
+  display: flex
+  align-items: center
+  margin-bottom: 0
+  .alert-icon
+    display: flex
+    opacity: 0.9
+    padding: 4px 0
+    margin-right: 12px
+  .alert-message
+    line-height: 1.4
+  
+  &--error
+    background-color: rgb(253, 236, 234)
+    color: #f44336
+  &--warning
+    color: #ff9800
+    background-color: rgb(255, 244, 229)
+  &--info
+    color: #2196f3
+    background-color: rgb(232, 244, 253)
+  &--success
+    color: #4caf50
+    background-color: rgb(237, 247, 237)
+
+.svgIcon-root
+  fill: currentColor
+  width: 1em
+  height: 1em
+  display: inline-block
+  font-size: 18px
+  flex-shrink: 0
+  user-select: none
+
+.alert-message
+  color: #000000
+  opacity: 0.9
+  
+
+// Responsive utilities
+.visible-on
+  &-tablet
+    @include media('>desktop')
+      display: none
+      
+  &-small-tablet
+    @include media('>tablet')
+      display: none
+
+  &-desktop
+    display: none!important
+    @include media('>desktop')
+      display: block!important
+
+
+.locked
+  overflow: hidden
+  // position: fixed

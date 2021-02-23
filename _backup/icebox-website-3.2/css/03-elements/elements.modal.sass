@@ -1,0 +1,191 @@
+.ib-modal
+  overflow: auto
+  display: flex
+  z-index: 1050
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  opacity: 0
+  visibility: hidden
+  background-color: var(--backdrop)
+  transition: opacity 0.3s, visibility 0s linear 0.5s
+  &.active
+    opacity: 1
+    visibility: visible
+    transition: opacity 0.3s, visibility 0s
+
+.ib-modal-wrapper
+  position: relative
+  width: 100%
+  max-width: 480px
+  display: block
+  transition: transform .4s ease, opacity .2s
+  border-radius: 4px
+  background: #fff
+  margin: auto
+  opacity: 0
+  pointer-events: none
+  transition-delay: .2s
+  transform: translateY(0)
+  &.active
+    transform: translateY(-30px)
+    opacity: 1
+    pointer-events: all
+    transition: transform .6s ease,opacity .2s
+
+.ib-modal-btn-close
+  position: absolute
+  right: 0
+  top: 0
+  padding: 24px
+  opacity: 0.7
+  &:hover
+    opacity: 1
+  .svgIcon-root
+    font-size: 1.5rem
+
+.modal-container
+  display: block
+
+  // setting fonts
+  .fs, .fl
+    color: rgba(#080808, 0.6)
+    vertical-align: middle
+  .fs
+    font-size: 12px
+  .fl
+    font-size: 14px
+
+// Main Container
+.ib-modal
+  &-view
+    padding: 40px
+    padding-bottom: 24px
+    margin: 0 auto
+    max-width: 440px
+    header
+      text-align: center
+      max-width: 400px
+      margin: 0 auto
+      margin-bottom: 32px
+    .headline
+      line-height: 1
+      font-weight: var(--fontbold)
+      margin-bottom: 16px
+    .subhead
+      font-size: 1rem
+      letter-spacing: 0.3px
+      font-weight: var(--fontmedium)
+
+.toggle-password
+  position: absolute
+  right: 16px
+  top: 12px
+  cursor: pointer
+  opacity: 0.7
+  &:hover
+    opacity: 1
+
+.gender-list
+  display: flex
+  .gender-list-type
+    flex: 1 0 auto
+    text-align: center
+    border: 1px solid #C9D0DA
+    margin-right: 16px
+    border-radius: 4px
+    padding: 8px 4px 6px 4px
+    &:last-child
+      margin-right: 0
+    &:hover
+      cursor: pointer
+      @include hover-bg-border
+    &.selected
+      @include hover-bg-border
+      font-weight: var(--fontbold)
+
+.ib-modal-oneline
+  position: relative
+  width: 100%
+  margin: 16px 0 24px 0
+  @include clearfix
+  @include checkbox
+
+.ib-keep-login,
+.ib-login-option
+  width: 50%
+  display: inline-block
+  
+.ib-keep-login
+  label
+    margin-bottom: 0
+
+.ib-login-option
+  float: right
+  text-align: right
+
+.btn-forget-password
+  &:hover
+    color: $primary
+
+.ib-modal-checkbox
+  float: left
+  &-desribe
+    padding-left: 8px
+    display: table
+
+.ib-modal-cta
+  display: block
+  width: 100%
+  margin-top: 16px
+  margin-bottom: 24px
+  .btn
+    display: block
+    width: 100%
+
+.ib-modal-footer
+  display: block
+  position: relative
+  text-align: center
+
+.ib-modal-media
+  margin-bottom: 40px
+
+
+.forget-update-page
+  position: relative
+  min-height: 700px
+  display: flex
+  justify-content: center
+  flex-direction: column
+
+#ib-login,
+#ib-signup,
+#ib-forgetpassword,
+#ib-forgetpassword-update,
+#ib-phoneNumber,
+#ib-phoneNumberConfirm
+  display: none
+
+
+.side-lines
+  position: relative
+  width: 100%
+  display: block
+  text-align: center
+  margin: 16px 0 0 0
+  &:before, &:after
+    position: absolute
+    width: 46%
+    height: 3px
+    content: ''
+    border-top: 1px solid $softgrey
+    margin-top: 8px
+  &:before
+    left: 0
+  &:after
+    right: 0
+
+

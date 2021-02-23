@@ -1,0 +1,42 @@
+:root {
+  // colors
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --color-brand: #101E5A;
+  --color-brand-100: #B2BFEB;
+  --color-brand-200: #16307C;
+  --color-brand-300: #213F99;
+
+  --color-gold: #FCD99F;
+  --color-blue: #2342C6;
+
+  --color-accent-green: #36D37A;
+  --color-accent-yellow: #FDDB60;
+  --color-accent-red: #E34049;
+  --color-black-100: #F4F6FC;
+
+  --color-black-200: #E7EAF9;
+  --color-black-300: #68687D;
+  --color-black-400: #292947;
+
+  // brand colors
+  --color-primary: var(--color-brand);
+  --color-secondary: var(--color-gold);
+  --color-btn: var(--color-blue);
+  --color-btn-hover: var(--color-brand-300);
+  --color-btn-secondary-hover: var(--color-brand-100);
+  --color-validation-error: var(--color-red);
+  --color-validation-success: var(--color-green);
+  --color-bg-body: var(--color-white);
+  --color-border: var(--color-black-200);
+
+  // typography
+  --heading: 'SharpSansNo2', Georgia, serif;
+  --body: 'HelveticaNowDisplay', 'Helvetica Neue', Arial, Sans-Serif;
+  --meta: 'SharpSansNo2', Georgia, serif;
+  --regular: 400;
+  --medium: 500;
+  --bold: 600; 
+
+}

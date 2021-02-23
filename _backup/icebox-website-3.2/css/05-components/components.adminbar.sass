@@ -1,0 +1,76 @@
+.adminControl
+  width: 100%
+  padding: 24px 32px
+  background: #ffffff
+  border-radius: 36px
+  position: absolute
+  bottom: 16px
+  left: 0
+  right: 0
+  margin: 0 auto
+  border: 1px solid rgba($border, 0.2)
+  z-index: 8
+  box-shadow: 0 10px 36px rgba(0,0,0,0.19)
+  border-collapse: collapse
+  border-radius: 30px
+  transform: scale(0.7)
+  @include tablet
+    max-width: 880px
+  &--small
+    max-width: 300px
+  .wrapper
+    display: flex
+    align-items: center
+    position: relative
+    width: 100%
+  &-col
+    display: flex
+    flex: 0 1 auto
+    position: relative
+    justify-content: center
+    margin: 0 12px
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+    @include tabletsmall
+      flex: 1 0 auto
+  &-btn
+    a
+      margin: 0 8px
+      font-weight: var(--fontmedium)
+
+  &-page
+    border: 0
+    .pagination
+      background: #f9fafc
+      padding: 8px
+      border-radius: 100px
+    .page-link
+      border: 0
+      background: none
+      font-weight: var(--fontmedium)
+      padding: .5rem
+
+  .icon-big
+    width: 40px!important
+    height: 40px!important
+    &:hover
+      opacity: 0.7
+
+
+.table-investory
+  font-size: 0.875rem
+  margin-bottom: 0
+  border: 0
+  th, td
+    padding: 3px 1px 1px 1px
+  td
+    text-align: center
+    border: 1px solid #ffffff
+    width: 30px
+    font-weight: var(--fontmedium)
+  th
+    border: 0
+    vertical-align: bottom
+  

@@ -1,0 +1,110 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+{% block included_content_header %}
+{% include "../components/promo1.twig" %}
+{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="css/lightslider.min.css">
+<link rel="stylesheet" href="https://www.icebox.com/assets/public-2020/css/style-fixes.css?v=5eb48bb68a7ab">
+
+<section class="wrap">
+  <div class="productpage">
+    <div class="productpage__gallery" id="slider_container">
+      {% include "../components/productpage/product-gallery.twig" %}
+    </div>
+    <div class="productpage__details">
+      <div class="productpage__details-wrapper">
+        {% include "../components/productpage/title.twig" %}
+        <div class="space-block divider-border divider-fixed-margin"></div>
+        {% include "../components/productpage/product-colors.twig" %}
+        <div class="space-block divider-border divider-fixed-margin"></div>
+        {% include "../components/productpage/diamond-quality.twig" %}
+        <div class="space-block divider-border divider-fixed-margin"></div>
+        {% include "../components/productpage/letters-input.twig" %}
+        <div class="space-block divider-border divider-fixed-margin"></div>
+        {% include "../components/productpage/select-length.twig" %}
+        <div class="space-block divider-border divider-fixed-margin"></div>
+        {% include "../components/productpage/select-size.twig" %}
+        <div class="space-block divider-border divider-fixed-margin"></div>
+        {% include "../components/productpage/select-option.twig" %}
+        <!-- button -->
+        <button class="btn btn-primary cartBtn" id="ajax-button" onclick="loadAjax()" role="cart-button">
+          <span class="cartBtn-icon">
+            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 19">
+              <path
+                d="M15.6 17.6H1.4V5.7h2.8v2.1a.7.7 0 101.4 0V5.7h5.7v2.1a.7.7 0 101.4 0V5.7h2.8v11.9h.1zM8.5 1.4c1.6 0 2.8 1.3 2.8 2.8H5.7c0-1.5 1.2-2.8 2.8-2.8zm4.3 2.8c0-2.3-1.9-4.2-4.2-4.2-2.4 0-4.4 1.9-4.4 4.2H0v13.3c0 .9.6 1.5 1.4 1.5h14.2c.8 0 1.4-.6 1.4-1.4V4.2h-4.2z"
+                fill="#ffffff"></path>
+            </svg>
+          </span>
+          <span class="cartBtn-title">Add to Cart</span>
+          <span class="cartBtn-amount" id="js-cartBtn-animated">$700</span>
+          <div class="loaderSpinner" id="ajax-cardBtn-loading"></div>
+        </button>
+        {% include "../components/productpage/product-information.twig" %}
+      </div>
+    </div>
+
+    <!-- productImportant Links -->
+    <div class="productFulfillment">
+      <div class="productFulfillment-column">
+        <i class="productFulfillment-icon icon--order"></i>
+        <h5 class="productFulfillment-title">Shipping & Returns</h5>
+        <p class="productFulfillment-content">Purchases made online can be returned or exchanged within 60 days, plus
+          shipping is on us.</p>
+        <a class="productFulfillment-link btnLink" href="myaccount-order.html" id="js-slidebarContentTrigger">Learn
+          More.</a>
+      </div>
+      <div class="productFulfillment-column">
+        <i class="productFulfillment-icon icon--order"></i>
+        <h5 class="productFulfillment-title">Have question?</h5>
+        <p class="productFulfillment-content">If you have question before buy, you can ask right way, simple click on
+          ask question button</p>
+        <a class="productFulfillment-link btnLink" href="myaccount-order.html">Ask Question</a>
+      </div>
+      <div class="productFulfillment-column">
+        <i class="productFulfillment-icon icon--order"></i>
+        <h5 class="productFulfillment-title">Visit Store</h5>
+        <p class="productFulfillment-content">If you wish to buy from icebox store, let us know, we will help you to
+          choose best option.</p>
+        <a class="productFulfillment-link btnLink" href="myaccount-order.html">Book Appointment</a>
+      </div>
+      <div class="productFulfillment-column">
+        <i class="productFulfillment-icon icon--order"></i>
+        <h5 class="productFulfillment-title">Know more</h5>
+        <p class="productFulfillment-content">Feel free to ask anything about our product,
+          we’d love to help you.</p>
+        <a class="productFulfillment-link btnLink" href="myaccount-order.html">Call Us: (404) 803-6554</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% include "../components/productpage/product-detail.twig" %}
+{% include "../components/productpage/productcustomer-reviews.twig" %}
+{% include "../components/productpage/product-suggestion.twig" %}
+
+
+
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script>
+  var device = 'desktop';
+</script>
+<script src="js/development/development.min.js"></script>
+<script src="js/product.min.js"></script>
+<script>
+  $(".js-diamond-header").click(function () {
+    $(this).parent().find('.js-diamond-header').removeClass('radio-wrapper-bg');
+    $(this).addClass('radio-wrapper-bg');
+    var $target = $($(this).data('target'));
+    $(".js-diamond-container").not($target).hide();
+    $target.show();
+  });
+
+</script>
+
+{% endblock %}

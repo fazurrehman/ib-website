@@ -1,0 +1,65 @@
+{% extends "../../../layouts/component-layout.twig" %}
+{% set page_title = 'Alert for result page | Component' %}
+{% block content %}
+
+<style>
+  .new-container {
+    max-width: 1600px;
+    margin: 100px auto;
+  }
+
+  .ib-productgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  @media (min-width: 1080px) {
+    .ib-productgrid {
+      grid-template-columns: repeat(3, 33.333%);
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .ib-productgrid {
+      grid-template-columns: repeat(4, 25%);
+    }
+  }
+
+  .ib-productsgrid__item {
+    position: relative;
+  }
+</style>
+
+<div class="new-container">
+  <div class="ib-productgrid">
+    <div class="ib-productsgrid__item">
+      {% include 'productcard-default.twig' %}
+    </div>
+    <div class="ib-productsgrid__item">
+      {% include 'productcard-admin.twig' %}
+    </div>
+    <div class="ib-productsgrid__item">
+      {% include 'productcard-admin-watches.twig' %}
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+<!-- scripting -->
+{% block included_content %}
+<script src="https://cdn.jsdelivr.net/npm/lazysizes-umd@3.0.1/lazysizes.min.js"></script>
+<script>
+  $(document).ready(function () {
+    var jsProductCard = $('.js-productcard');
+    jsProductCard.hover(
+      function () {
+        $(this).addClass('is-active');
+      }, function () {
+        $(this).removeClass('is-active');
+      }
+    );
+  });
+</script>
+{% endblock %}

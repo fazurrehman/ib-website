@@ -1,0 +1,42 @@
+<!-- layout -->
+{% extends "../../layouts/elements.twig" %}
+{% block content %}
+<style>
+  body {
+    background: #f1f2f5;
+  }
+
+  .button-groups {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  .btn {
+    margin-bottom: 16px
+  }
+</style>
+
+<div class="button-groups">
+  <button class="btn">Just a Button</button>
+  <button class="btn btn-primary">I'm Primary Button</button>
+  <button class="btn btn-secondary">I'm Secondary Button</button>
+  <button class="btn btn-border">I'm Line Button</button>
+  <button class="btn btn-border btn-border-white">I'm Line Button</button>
+  <button class="btn btn-border btn-border-primary">I'm Line Button Primary Hover </button>
+  <button class="btn btn-border btn-border-secondary">I'm Line Button Secondary Hover</button>
+  <button class="btn btn-border btn-border-white btn-animated"><span>View Collection</span></button>
+
+  <button class="btn btn-primary add__cart_btn" href="#" target="_blank" role="button">
+    <span class="add__cart_btn_action">Add to Cart</span>
+    <span class="add__cart_btn_value">$700</span>
+    <span class="add__cart_btn_icon icon--cart-white">bag</span>
+  </button>
+</div>
+
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<script src="js/homepage.min.js"></script>
+{% endblock %}

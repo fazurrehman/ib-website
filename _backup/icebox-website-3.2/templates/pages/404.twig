@@ -1,0 +1,24 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+
+{% block content %}
+<section class="nopage container">
+  <div class="nopage__wrapper">
+    <div class="page__status">
+      <h1>404</h1>
+      <p class="nopage__status">We couldn't find any result!</p>
+      <a href="index.html">Back to Homepage</a>
+    </div>
+    <div class="objects">
+      <div class="objects__box"><img src="img/icebox-box.svg" alt=""></div>
+      <div class="objects__diamonds"><img src="img/icebox-jewellry.svg" alt=""></div>
+    </div>
+  </div>
+  </div>
+</section>
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script src="js/staticpages.min.js"></script>
+{% endblock %}

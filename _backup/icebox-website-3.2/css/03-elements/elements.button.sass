@@ -1,0 +1,212 @@
+// default button setting
+$btn-primary: $primary
+$btn-secondary: $secondary
+$btn-line: $darknight
+$btn-graident: $graident-primary
+$btn-white: $white
+
+
+.btn
+  // text-transform: uppercase
+  position: relative
+  backface-visibility: hidden
+  border-radius: 4px
+  color: $btn-primary
+  cursor: pointer
+  display: table
+  font-size: 0.9375rem
+  font-weight: var(--fontbold)
+  height: 48px
+  letter-spacing: 0.5px
+  padding: 12px 24px
+  text-align: center
+  // text-transform: uppercase
+  transition: all 300ms ease
+  box-shadow: none!important
+  border: 0
+  &:hover
+    color: lighten($btn-primary, 5%)
+    
+
+// button primary
+.btn-primary
+  color: $btn-white
+  background: $btn-primary
+  &:hover
+    color: $btn-white
+    background: lighten($btn-primary, 5%)
+    
+// button secondary
+.btn-secondary
+  background: $btn-secondary
+  &:hover
+    background: lighten($btn-secondary, 5%)
+
+// line button
+.btn-border
+  border: 1px solid $grey
+  color: #4a597c
+  &:hover, &:focus
+    border: 1px solid $btn-primary
+  // White button
+  &-white
+    color: #ffffff
+    border: 1px solid $btn-white
+  // secondary button
+  &-secondary
+    color: #ffffff
+    border: 1px solid $btn-white
+    &:hover, &:focus
+      background: $btn-secondary
+      border: 1px solid $btn-secondary
+  &-primary:hover,
+  &-primary:focus
+    background: $btn-primary
+    border: 1px solid $btn-primary
+    color: $btn-white
+
+.btn-disable
+  background: $snowwhite
+  color: $grey
+
+
+    
+
+// btn-animated
+.btn-animated
+  overflow: hidden
+  &:after
+    width: 100%
+    height: 100%
+    position: absolute
+    content: ''
+    background: $primary
+    right: 0
+    top: 0
+    transform: translateX(100%)
+    transition: 400ms transform $animation-cubic
+  &:hover:after
+    right: 0
+    transform: translateX(0)
+  span
+    position: relative
+    z-index: 1
+    font-size: 0.875rem
+    font-weight: var(--fontbold)
+    letter-spacing: 0.5px
+    transition: .55s color cubic-bezier(.165,.84,.44,1)
+  &:hover span
+    color: #ffffff
+  
+
+.hero-split
+  .--animated
+    transition: all 1s
+    position: relative
+    overflow: hidden
+
+    span
+      position: relative
+      z-index: 9
+      color: #000000
+
+    &:after
+      height: 100%
+      width: 2000px
+      transition: all 1s
+      background: var(--bg-hover)
+      animation: slidegraident infinite alternate 5s 1s
+
+    &:before
+      height: 26px
+      width: 100%
+      top: -50px
+      z-index: 10
+      opacity: 0
+      background-color: rgba(255, 255, 255, 0.15)
+
+    &:hover
+      &:before
+        top: 0
+        opacity: 1
+
+      &:after
+        left: -1400px
+
+    &:before
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 7
+      display: block
+      content: ""
+
+  a:after
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 7
+    display: block
+    content: ""
+
+  .--animated:active
+    &:before
+      height: 100%
+      background-color: rgba(255, 255, 255, 0.8)
+
+    transform: scale(0.95)
+    transition: all 200ms
+
+@keyframes slidegraident
+  from
+    left: -1400px
+  to
+    left: 0
+
+
+.btn-full
+  width: 100%
+
+// button-group
+.button-group
+  display: flex
+  align-items: center
+  .icon
+    width: 24px!important
+    height: 24px!important
+    display: block
+
+.btn--row
+  flex-direction: column
+  width: 100%
+
+.btn--has-icon
+  background: #FFFFFF
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24)!important
+  width: 100%
+  border: 1px solid rgba($grey, 0.2)
+  margin-bottom: 16px
+  transition: all 200ms
+  &:hover
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24)!important
+    border: 1px solid $primary
+  .icon
+    display: inline-block
+    margin-right: 16px
+    height: 24px
+    width: 24px
+    line-height: 24px
+    vertical-align: top
+
+
+.button-has-icon
+  position: relative
+  span
+    display: inline-flex
+    align-items: center
+  aside
+    position: relative
+    top: -1px
+    svg
+      width: 100%
+      height: 100%

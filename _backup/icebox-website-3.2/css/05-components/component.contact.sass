@@ -1,0 +1,177 @@
+.contact-block
+  max-width: 800px
+  margin: 0 auto
+  .grid-item
+    padding: 16px
+  .text-1
+    font-size: 20px
+
+
+// linkblock-icon
+.block-icon
+  display: flex
+  flex-wrap: wrap
+  max-width: 800px
+  margin: 0 auto
+  .block-item
+    width: 100%
+    flex-grow: 1
+    width: calc(25% - 8px)
+    border: 2px solid rgba(0, 0, 0, 0.4)
+    margin: 4px
+    padding: 8px
+    transition: all 200ms ease-in
+    cursor: pointer
+    display: flex
+    flex-flow: column wrap
+    justify-content: flex-end
+    @include tablet
+      padding: 16px
+    &.active,
+    &:hover
+      border-color: $black
+      box-shadow: inset 0 -8px 0 $black
+      h4
+        font-weight: var(--fontbold)
+    .icon
+      width: 32px!important
+      height: 32px!important
+      margin: 0 auto 16px auto
+    h4
+      font-size: 0.75rem
+      letter-spacing: 0.30px
+      word-break: break-word
+
+.contact--faq
+  max-width: 1000px
+  margin-top: 40px
+  .product-subtitle
+    font-size: 20px
+  p
+    font-size: 15px
+    @include tablet
+      font-size: 18px
+
+  .accordion-header
+    opacity: 0.8
+    font-weight: var(--fontmedium)
+    padding-right: 40px
+    &::after
+      right: -32px
+  .accordion__item.active .accordion-header
+    opacity: 1
+
+
+// storeContact
+.store-contact
+  position: relative
+  overflow: hidden
+  .section-header
+    margin-bottom: 60px
+
+.storeSection
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  &__information
+    flex: 0 0 50%
+  &__grid
+    flex: 0 0 50%
+
+  &__grid
+    position: absolute
+    width: 50%
+    max-width: 6.875em
+    max-width: 100%
+    bottom: 0
+    right: 0
+
+.storeimages-wrapper
+  position: absolute
+  width: 100%
+  height: 100%
+  bottom: 0
+  left: 0
+
+.storeimages-container
+  width: 300px
+  height: 608px
+  bottom: -40px
+  left: 0
+  position: absolute
+  display: flex
+  flex-flow: column wrap
+  justify-content: flex-end
+
+
+.storeImages-col
+  margin: 8px
+    
+
+
+
+
+
+
+
+.block-info
+  display: grid
+  grid-gap: 40px
+  max-width: 440px
+  @include tablet
+    grid-template-columns: repeat(2,1fr)
+
+
+
+
+    
+.promotion-banner
+  position: relative
+  width: 100%
+  position: relative
+  min-height: 400px
+  display: flex
+  align-items: center
+  overflow: hidden
+
+.promotion--contact
+  max-width: 1200px
+  background: #EBEBEB
+  margin: 40px auto
+  @include tablet
+    margin: 80px auto
+  .section-content
+    z-index: 2
+    max-width: 400px
+    @include tablet
+      max-width: 520px
+
+  .background-image
+    background-position: center center
+    @include mobile
+      background-position: right center
+      right: 20px
+    @include tablet
+      right: 100px
+
+  .section-content
+    display: none
+    @include mobile
+      display: block
+
+.section-content-outer
+  margin-bottom: 40px
+  padding-left: 16px
+  @include mobile
+    display: none
+
+.background-image
+  position: absolute
+  width: 100%
+  height: 100%
+  display: block
+  right: 0
+  top: 0
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: contain

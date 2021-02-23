@@ -1,0 +1,260 @@
+
+.hero
+  position: relative
+  overflow: hidden
+  width: 100%
+  margin-bottom: $spacing / 3
+  @include mobile
+    margin-bottom: $spacing / 2
+  @include desktop
+    margin-bottom: $spacing
+  &--image
+    position: relative
+    img
+      width: 100%
+  &--content
+    position: absolute
+    width: 100%
+    background: rgba(16, 30, 80, 0.8)
+    padding: 16px
+    left: 0
+    bottom: 0
+    @include mobile
+      top: 50%
+      transform: translateY(-50%)
+      max-width: 400px
+      bottom: auto
+      left: auto
+      background: transparent
+  .lazy
+    opacity: 0
+    transition: 0.5s opacity ease-in
+  .loaded
+    opacity: 1
+
+// productline
+.productline
+  .container-lg
+    @include desktop
+      padding-left: 40px
+      padding-right: 40px
+  .pheader
+    position: relative
+    margin-bottom: $spacing / 3
+    .breadcrumb
+      padding: 0
+    &__wrapper
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &-title
+        @include font-size($title-4)
+        margin-bottom: 0
+        @include tablet
+          @include font-size($title-3)
+      &-action
+        justify-content: flex-end
+        &-sort
+          display: inline-block
+        &-filter
+          display: inline-block
+          .cd-filter-trigger
+            display: flex
+            align-items: center
+            label
+              margin-right: 4px
+              margin-bottom: 0
+              font-size: 1rem
+              font-weight: var(--fontmedium)
+              margin-top: 1px
+              transition: color 200ms
+              cursor: pointer
+              &.is-active
+                color: $grey
+
+
+        
+
+// results
+.results
+  position: relative
+  display: flex
+  margin-top: $spacing / 3
+  &--products
+    width: 100%
+  .results--filter-wrapper
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: 2
+    overflow: hidden
+    opacity: 0
+    visibility: hidden
+    background-color: rgba($primary, .8)
+    pointer-events: none
+    @include tablet
+      background-color: transparent
+      position: unset
+      overflow: auto
+    &.is-active
+      opacity: 1
+      visibility: visible
+      pointer-events: all
+    
+  
+  &--filter
+    position: fixed
+    height: 100%
+    overflow: auto
+    background: #ffffff
+    width: 300px
+    z-index: 4
+    top: 0
+    left: 0
+    visibility: hidden
+    opacity: 0
+    transition: all 0.3s
+    transform: translateX(-100%)
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3)
+    width: 70%
+    @include tablet
+      position: relative
+      box-shadow: none
+      width: 280px
+      margin-left: -280px
+      z-index: 0
+      transform: none
+    &.filter-is-visible
+      opacity: 1
+      margin-left: 0
+      transform: none
+      visibility: visible
+    &-container
+      padding: 20px 32px
+      overflow: auto
+      height: 100%
+      -webkit-overflow-scrolling: touch
+      @include tablet 
+        padding: 0 40px 0 0
+  &--products
+    @include tablet
+      flex: 1 1 0%
+      z-index: 4
+      transition: all 0.3s
+
+  // colors
+  .product__color-filter
+    flex-wrap: wrap
+  .filter-modifier
+    text-align: center
+    flex-basis: calc(100%/3)
+    margin-bottom: 16px
+    @include mobile
+      flex-grow: 1
+      flex-basis: auto
+    @include tablet
+      flex-basis: calc(100%/3)
+      flex-grow: unset
+    label
+      margin-right: 0
+    .check
+      margin-right: 0
+      left: 0
+      right: 0
+      margin: 0 auto
+
+    .color--value
+      display: block
+      margin-top: 8px
+      font-size: $text-4
+      text-align: center
+      font-weight: var(--fontmedium)
+
+  // .accordion-header
+  .accordion-header
+    font-weight: var(--fontmedium)
+    padding: 18px 0
+  .product-subtitle
+    margin-bottom: 0
+  
+.circle-1,
+.circle-2,
+.line-1,
+.line-2
+  transition: all 200ms ease-in
+  z-index: 2
+
+
+
+.circle-1.is-active
+  transform: translateX(10px)
+  fill: $primary
+.circle-2.is-active
+  transform: translateX(-10px)
+  fill: $primary
+
+.line-1.is-active
+  fill: $grey
+.line-2.is-active
+  fill: $grey
+
+
+
+.search-results
+  padding-top: 40px
+  .pheader__wrapper
+    margin-bottom: 16px
+  .pheader__results-counter
+    font-size: 1rem
+    span
+      font-weight: var(--fontbold)
+      padding: 0 2px
+
+
+.drag-scroll
+  overflow-y: auto
+  height: 100vh
+  position: relative
+  padding-bottom: 120px
+  
+
+.hidden-items
+  display: none
+
+.fixed
+  position: fixed
+
+
+// other css
+.filter--apply
+  .btn
+    padding: 8px
+    height: 36px
+    color: #001D99
+    &:hover
+      background-color: $primary
+      color: #ffffff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

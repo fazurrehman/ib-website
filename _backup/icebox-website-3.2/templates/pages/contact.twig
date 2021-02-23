@@ -1,0 +1,277 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+<!-- header addtional -->
+{% block included_content_header %}
+{% include "../components/promo1.twig" %}
+{% endblock %}
+
+{% block content %}
+
+<section class="section page-hero contactpage--hero text-center" style="background-color: #F5F6F9;">
+  <div class="container">
+    <h1 class="hero-title title-2 bold">How can we help?</h1>
+    <div class="contact-block grid grid--three">
+      <div class="grid-item">
+        <h5 class="label-heading">Email Us</h5>
+        <a href="mailto:contact@icebox.com" class="text-1 link-bold btnLink">contact@icebox.com</a>
+      </div>
+      <div class="grid-item">
+        <h5 class="label-heading">Got a question?</h5>
+        <a href="#" class="text-1 link-bold btnLink" id="jscontactAskQuestionTrigger">Send Us Message</a>
+      </div>
+      <div class="grid-item">
+        <h5 class="label-heading">Call Us Now</h5>
+        <a href="#" class="text-1 link-bold btnLink">404.803.6554</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <h2 class="title-2">FAQs</h2>
+      <p>Most frequently asked questions</p>
+      <div class="block block-icon mt-4" id="initFaqActiveIcon">
+        <div class="block-item active">
+          <svg class="icon svgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M21.9 11.248l2.1 2.799h-6.634c.937 5.161-3.044 9.9-8.265 9.9H0l2.451-3.266a8.381 8.381 0 01-1.75-5.13c0-4.704 3.883-8.503 8.598-8.394V7.05c0-3.858 3.14-6.997 7-6.997s7 3.139 7 6.997c0 1.52-.493 2.99-1.4 4.198zm-5.6-9.795c-3.089 0-5.6 2.51-5.6 5.597v.258a8.429 8.429 0 016.283 5.339h4.216l-1.091-1.455.38-.427A5.587 5.587 0 0021.9 7.05a5.605 5.605 0 00-5.6-5.597zM2.8 22.547h6.3c3.86 0 7-3.139 7-6.996 0-3.858-3.14-6.996-7-6.996s-7 3.138-7 6.996c0 1.714.626 3.363 1.764 4.643l.38.428-1.444 1.925zm2.1-9.095h4.2v1.4H4.9v-1.4zm0 2.8h8.4v1.4H4.9v-1.4z">
+            </path>
+          </svg>
+          <h4>General</h4>
+        </div>
+        <div class="block-item">
+          <svg class="icon svgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 18">
+            <path fill-rule="evenodd"
+              d="M23.841 8.94l-1.41-1.817h.001L20.163 2.61a.757.757 0 00-.676-.417H16.26v-.756a.756.756 0 00-.756-.756H2.9a.756.756 0 100 1.512h11.849v5.294c0 .418.338.757.756.757h5.882l1.101 1.418v3.9h-1.425a3.03 3.03 0 00-2.936-2.293 3.03 3.03 0 00-2.936 2.294h-4.464A3.03 3.03 0 007.79 11.27a3.03 3.03 0 00-2.936 2.294H2.899a.756.756 0 100 1.513h1.968a3.03 3.03 0 002.923 2.243 3.03 3.03 0 002.923-2.243h4.49a3.03 3.03 0 002.923 2.243 3.03 3.03 0 002.923-2.243h2.195a.756.756 0 00.756-.757V9.403a.758.758 0 00-.159-.464zm-4.82-5.234l1.52 3.025h-4.28V3.706h2.76zM7.79 15.806a1.514 1.514 0 01-1.513-1.512c0-.834.679-1.513 1.513-1.513.834 0 1.512.679 1.512 1.513 0 .834-.678 1.513-1.512 1.513zm10.336 0a1.514 1.514 0 01-1.513-1.512c0-.834.679-1.513 1.513-1.513.834 0 1.513.679 1.513 1.513 0 .834-.679 1.513-1.513 1.513zM1.992 9.732H5.47a.756.756 0 110 1.513H1.99a.756.756 0 110-1.513zM7.21 6.756H.756a.756.756 0 100 1.513H7.21a.756.756 0 100-1.513zM1.992 3.781h6.453a.756.756 0 110 1.513H1.992a.756.756 0 110-1.513z">
+            </path>
+          </svg>
+          <h4>Shipping/Billing</h4>
+        </div>
+        <div class="block-item">
+          <svg class="icon svgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 14 24">
+            <path fill-rule="evenodd"
+              d="M4.54 0h4.895c.412 0 .745.334.745.745v2.187a.745.745 0 01-.745.745h-1.69v.808a3.21 3.21 0 012.46 3.117c0 1.196-.658 2.241-1.631 2.792l3.489 2.799h.8c.412 0 .746.333.746.745v9.317a.745.745 0 01-.746.745H1.137a.745.745 0 01-.746-.745v-9.317c0-.412.334-.745.746-.745h.8l3.49-2.8a3.207 3.207 0 01-1.632-2.79.745.745 0 111.49 0c0 .96.754 1.714 1.715 1.714.961 0 1.714-.753 1.714-1.715 0-.96-.753-1.714-1.714-1.714a.745.745 0 01-.745-.745V3.677H4.54a.745.745 0 01-.746-.745V.745c0-.411.334-.745.746-.745zM7 11.042l2.68 2.15H4.32L7 11.043zM5.286 2.186H8.69v-.695H5.286v.695zm6.832 20.323H1.882v-7.826h2.534v1.988c0 .411.334.745.746.745h3.677a.745.745 0 00.745-.745v-1.988h2.534v7.826zm-4.025-7.826v1.242H5.907v-1.242h2.186z">
+            </path>
+          </svg>
+          <h4>Returns</h4>
+        </div>
+        <div class="block-item">
+          <svg class="icon svgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+              d="M22.533.251A.883.883 0 0124 .911v18.736a4.21 4.21 0 01-4.412 4.201v.005H4.06v-.003A4.211 4.211 0 010 19.648V17.5c0-.487.395-.882.882-.882h3V.912A.882.882 0 015.35.25L7.82 2.437 10.294.225c.335-.3.841-.3 1.176 0l2.471 2.21 2.47-2.21c.336-.3.842-.3 1.177 0l2.474 2.212L22.533.25zM4.188 22.088h12.183a4.184 4.184 0 01-.783-2.44v-1.265H1.765v1.264a2.444 2.444 0 002.423 2.441zm15.606 0a2.444 2.444 0 002.441-2.44V2.87L20.644 4.28a.883.883 0 01-1.173-.004L17 2.066l-2.472 2.21c-.335.3-.841.3-1.176 0l-2.47-2.21-2.471 2.21a.882.882 0 01-1.173.003L5.647 2.87v13.748h10.824c.487 0 .882.395.882.882v2.147a2.444 2.444 0 002.441 2.441zM9.177 7.882h5.44a.882.882 0 110 1.765h-5.44a.882.882 0 110-1.765zM18.735 12H9.177a.882.882 0 100 1.765h9.558a.882.882 0 100-1.765z">
+            </path>
+          </svg>
+          <h4>Payments</h4>
+        </div>
+      </div>
+    </div>
+    <div class="accordion js-accordion contact--faq">
+      <div class="accordion__item js-accordion-item active">
+        <h4 class="accordion-header js-accordion-header product-subtitle">I have a diamond to sell, will you consider
+          buying it?</h4>
+        <div class="accordion-body js-accordion-body" style="display: none;">
+          <div class="accordion-body__contents">
+            <p class="text-2">Yes, we do buy diamonds. If you have an item to sell, please call our store at
+              404-842-0266 and ask to speak to the
+              buying department. We only buy diamonds over 1.00 carats. We also buy watches, gold, and diamond jewelry.
+              You do not
+              need an appointment to sell your jewelry.</p>
+          </div>
+        </div>
+      </div>
+      <!-- end of accordion item -->
+      <div class="accordion__item js-accordion-item">
+        <h4 class="accordion-header js-accordion-header product-subtitle">Will a signature be required for delivery?
+        </h4>
+        <div class="accordion-body js-accordion-body">
+          <div class="accordion-body__contents">
+            <p class="text-2">Yes, we do buy diamonds. If you have an item to sell, please call our store at
+              404-842-0266 and ask to
+              speak to the
+              buying department. We only buy diamonds over 1.00 carats. We also buy watches, gold, and diamond jewelry.
+              You do not
+              need an appointment to sell your jewelry.</p>
+          </div>
+        </div>
+      </div>
+      <!-- end of accordion item -->
+      <div class="accordion__item js-accordion-item">
+        <h4 class="accordion-header js-accordion-header product-subtitle">Can I pay with 2 or more different credit
+          cards?</h4>
+        <div class="accordion-body js-accordion-body">
+          <div class="accordion-body__contents">
+            <p class="text-2">Yes, we do buy diamonds. If you have an item to sell, please call our store at
+              404-842-0266 and ask to
+              speak to the
+              buying department. We only buy diamonds over 1.00 carats. We also buy watches, gold, and diamond jewelry.
+              You do not
+              need an appointment to sell your jewelry.</p>
+          </div>
+        </div>
+      </div>
+      <!-- end of accordion item -->
+      <div class="accordion__item js-accordion-item">
+        <h4 class="accordion-header js-accordion-header product-subtitle">Do I need to make an appointment to visit
+          Icebox?</h4>
+        <div class="accordion-body js-accordion-body">
+          <div class="accordion-body__contents">
+            <p class="text-2">Yes, we do buy diamonds. If you have an item to sell, please call our store at
+              404-842-0266 and ask to
+              speak to the
+              buying department. We only buy diamonds over 1.00 carats. We also buy watches, gold, and diamond jewelry.
+              You do not
+              need an appointment to sell your jewelry.</p>
+          </div>
+        </div>
+      </div>
+      <!-- end of accordion item -->
+      <div class="accordion__item js-accordion-item">
+        <h4 class="accordion-header js-accordion-header product-subtitle">I want my order delivered on Saturday, what
+          should I do?</h4>
+        <div class="accordion-body js-accordion-body">
+          <div class="accordion-body__contents">
+            <p class="text-2">Yes, we do buy diamonds. If you have an item to sell, please call our store at
+              404-842-0266 and ask to
+              speak to the
+              buying department. We only buy diamonds over 1.00 carats. We also buy watches, gold, and diamond jewelry.
+              You do not
+              need an appointment to sell your jewelry.</p>
+          </div>
+        </div>
+      </div>
+      <!-- end of accordion item -->
+    </div>
+  </div>
+</section>
+
+
+<section class="store-contact feature--contact" style="background-color: #EDF6FF;">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="title-2">Our store location</h2>
+      <p class="text-2">We like love to invite you in our story</p>
+    </div>
+    <div class="storeSection">
+      <div class="storeSection__information">
+
+        <div class="block-info">
+          <div class="block-info-item">
+            <h5 class="label-heading">Store Address</h5>
+            <p>3255 Peachtree Rd NE <br>
+              Suite #2,<br>
+              Atlanta, GA 30305</p>
+          </div>
+          <div class="block-info-item">
+            <h5 class="label-heading">Opening hours/days</h5>
+            <p>1AM — 7PM EST</p>
+            <p>Monday — Friday</p>
+            <p class="--red"><s>Weekends Closed</s></p>
+          </div>
+          <div class="block-info-item">
+            <h5 class="label-heading">Contact Us</h5>
+            <p>(404) 803-6554)</p>
+            <p><a class="btnLink" href="mailto:contact@icebox.com">contact@icebox.com</a></p>
+          </div>
+          <div class="block-info-item">
+            <h5 class="label-heading">View Location on</h5>
+            <p><a class="btnLink" href="#">Open Googlemap</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="storeSection__grid">
+        <div class="storeimages-wrapper">
+          <div class="storeimages-container">
+            <figure class="storeImages-col store-image--1">
+              <img src="img/store.jpg" alt="">
+            </figure>
+            <figure class="storeImages-col store-image--2">
+              <img src="img/store-outside.jpg" alt="">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="promotion-section">
+  <div class="container promotion-banner promotion--contact">
+    <div class="section-content">
+      <h2 class="title-2 bold" style="line-height: 1;">Icebox also <br> buy gold</h2>
+      <p class="text-2 pb-4">We are buying gold watches, necklase, rings and other accessories!</p>
+      <a href="#" class="btn btn-primary">Know more</a>
+    </div>
+    <div class="background-image" style="background-image: url('../img/gold-promotion.png');"></div>
+  </div>
+  <div class="section-content section-content-outer">
+    <h2 class="title-2 bold" style="line-height: 1;">Icebox also <br> buy gold</h2>
+    <p class="text-2 pb-4">We are buying gold watches, necklase, rings and other accessories!</p>
+    <a href="#" class="btn btn-primary">Know more</a>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade default-modal ask-question" id="contactAskQuestion" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="icon-b icon--close-rounded btn-modal" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true"></span>
+      </button>
+      <div class="modal-header">
+        <span class="modal-title">Ask a Question</span>
+        <p class="text-4">Sign up for our newsletter and you’ll receive exclusive offers, &amp; updated products</p>
+      </div>
+
+      <div class="modal-content-wrapper">
+        <form action="" class="newsletter-form">
+          <div class="input__wrapper">
+            <label for="fullName" class="input__normal-label">Your Name</label>
+            <input type="text" class="input__normal" id="fullName" placeholder="john">
+          </div>
+          <div class="input__wrapper">
+            <label for="yourEmail" class="input__normal-label">Your Email</label>
+            <input type="text" class="input__normal" id="yourEmail" placeholder="john@email.com">
+          </div>
+          <div class="input__wrapper">
+            <label for="yourEmail" class="input__normal-label">What's your query?</label>
+            <textarea type="text" class="input__normal" rows="3" id="yourEmail"
+              placeholder="Write your message in details"></textarea>
+          </div>
+          <div class="buttonGroups">
+            <button type="button" class="btn btn-primary">Send Message</button>
+          </div>
+        </form>
+        <div class="modal-footer">
+          <p class="text-5">We'll send message in your email within 24 hours! To know more <a href="#">Frequently
+              Asked Questions</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+{% block included_content %}
+<script src="js/staticpages.min.js"></script>
+<script>
+  // ask question popup
+  function initialAskQuestionModal() {
+    $('#jscontactAskQuestionTrigger').click(function () {
+      $('#contactAskQuestion').modal('show');
+    });
+  }
+
+  $(document).ready(function () {
+    initialAskQuestionModal();
+
+    $('.block-item').click(function () {
+      $(this).addClass('active').siblings().removeClass('active');
+    });
+  })
+</script>
+{% endblock %}

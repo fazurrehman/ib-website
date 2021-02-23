@@ -1,0 +1,265 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+{% set pageClass = "mybag-page" %}
+
+<!-- header addtional -->
+{% block included_content_header %}
+{% include "../components/promo1.twig" %}
+{% endblock %}
+
+{% block content %}
+<div class="mybag-wrapper">
+  <div class="mybag o-container">
+    <div class="col-left">
+      <div class="mybag-card">
+        <div class="mybag-card-header">
+          <h4 class="card-headline title-5">Your bag (3 items)</h4>
+        </div>
+        <div class="mybag-card-body">
+
+          <article class="cart-item cart-item--mybag">
+            <div class="cart-item-left">
+              <div class="thumbnail-wrapper">
+                <img class="thumbnail"
+                  src="https://www.icebox.com/unsafe/100x100/icebox-jewelry.s3.amazonaws.com/products/a1a2081dd2e14c71bd6da6581958c596.jpg">
+              </div>
+              <div class="wrapper">
+                <div class="cart-item-details">
+                  <h5 class="item-heading">Super Star Ring 14k 8.43ctw</h5>
+                  <span><b>Color</b> : <i>Yellow Gold</i></span>
+                  <span><b>Diamond Quality</b> : SI</span>
+                  <span><b>Size</b> : <i>4.5</i></span>
+                </div>
+                <div class="cart-item-buttons">
+                  <button class="btn--has-icon">
+                    <aside class="icon">
+                      <svg class="svgIcon-root" viewBox="0 0 18 18">
+                        <path
+                          d="M14.262 1.926h-1.985C12.18.852 11.228 0 10.07 0H7.926C6.768 0 5.82.852 5.719 1.926H3.734c-1.22 0-2.234.952-2.234 2.115v1.618c0 .348.315.637.68.637h.796v9.59c0 1.162.975 2.114 2.2 2.114h7.649c1.22 0 2.199-.952 2.199-2.115V6.296h.796c.365 0 .68-.289.68-.637V4.041c-.004-1.163-1.018-2.115-2.238-2.115zm-6.336-.667h2.144a.9.9 0 01.874.667H7.052a.9.9 0 01.874-.667zm5.773 14.626c0 .47-.385.856-.878.856H5.175a.863.863 0 01-.878-.856V6.296H13.7v9.59zm1.476-10.848H2.821v-.996c0-.47.42-.856.913-.856h10.528c.494 0 .913.385.913.856v.996zm-4.196 9.652c.366 0 .66-.282.66-.63V8.504c0-.348-.294-.63-.66-.63-.365 0-.66.282-.66.63v5.555c0 .348.295.63.66.63zm-3.302-.63c0 .348-.295.63-.66.63-.365 0-.66-.282-.66-.63V8.504c0-.348.295-.63.66-.63.365 0 .66.282.66.63v5.555z" />
+                        <path
+                          d="M14.262 1.926h-1.985C12.18.852 11.228 0 10.07 0H7.926C6.768 0 5.82.852 5.719 1.926H3.734c-1.22 0-2.234.952-2.234 2.115v1.618c0 .348.315.637.68.637h.796v9.59c0 1.162.975 2.114 2.2 2.114h7.649c1.22 0 2.199-.952 2.199-2.115V6.296h.796c.365 0 .68-.289.68-.637V4.041c-.004-1.163-1.018-2.115-2.238-2.115zm-6.336-.667h2.144a.9.9 0 01.874.667H7.052a.9.9 0 01.874-.667zm5.773 14.626c0 .47-.385.856-.878.856H5.175a.863.863 0 01-.878-.856V6.296H13.7v9.59zm1.476-10.848H2.821v-.996c0-.47.42-.856.913-.856h10.528c.494 0 .913.385.913.856v.996zm-4.196 9.652c.366 0 .66-.282.66-.63V8.504c0-.348-.294-.63-.66-.63-.365 0-.66.282-.66.63v5.555c0 .348.295.63.66.63zm-3.302-.63c0 .348-.295.63-.66.63-.365 0-.66-.282-.66-.63V8.504c0-.348.295-.63.66-.63.365 0 .66.282.66.63v5.555z" />
+                      </svg>
+                    </aside>
+                    <span>Delete item</span>
+                  </button>
+                  <button class="btn--has-icon">
+                    <aside class="icon">
+                      <svg class="svgIcon-root" viewBox="0 0 18 18">
+                        <path
+                          d="M9 17.935l-1.617-1.617c-2.303-2.037-4.03-3.598-5.274-5.11C.67 9.455 0 7.877 0 6.242c0-1.426.539-2.75 1.517-3.726C2.495 1.54 3.819 1 5.243 1 6.618 1 7.977 1.539 9 2.467A5.645 5.645 0 0112.754 1c1.426 0 2.75.539 3.726 1.517.977.978 1.52 2.3 1.52 3.726 0 1.635-.67 3.213-2.11 4.964-1.243 1.512-2.97 3.074-5.273 5.11L9 17.936zM5.245 2.308C3 2.308 1.309 4 1.309 6.243c0 2.817 2.514 5.177 6.957 9.106l.029.027.705.707.72-.72.015-.013c4.443-3.93 6.956-6.29 6.956-9.105 0-2.244-1.692-3.935-3.935-3.935-1.215 0-2.461.582-3.256 1.52l-.5.59-.5-.591C7.707 2.89 6.46 2.308 5.245 2.308z" />
+                      </svg>
+
+                    </aside>
+                    <span>Move to the wishlist</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="cart-item-right">
+              <div class="cart-item-amount">
+                <div class="cart-item-qty">
+                  <div class="cart-dropdown">
+                    <label for="dropdownLength">Qty: </label>
+                    <select name="lenght" id="dropdownLength">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="price">
+                  <p class="product-price" data-orig-price="34.00">$350.00</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="cart-item cart-item--mybag">
+            <div class="cart-item-left">
+              <div class="thumbnail-wrapper">
+                <img class="thumbnail"
+                  src="https://www.icebox.com/unsafe/100x100/icebox-jewelry.s3.amazonaws.com/products/86cf2e9bb29e168cf3bded49c2a7e298.jpg">
+              </div>
+              <div class="wrapper">
+                <div class="cart-item-details">
+                  <h5 class="item-heading">3 Row Huggie Hoop Earrings 14k 0.25ctw</h5>
+                  <span><b>Color</b> : <i>Yellow Gold</i></span>
+                  <span><b>Diamond Quality</b> : SI</span>
+                  <span><b>Earring</b> : <i>Pair</i></span>
+                </div>
+                <div class="cart-item-buttons">
+                  <button class="btn--has-icon">
+                    <aside class="icon">
+                      <svg class="svgIcon-root" viewBox="0 0 18 18">
+                        <path
+                          d="M14.262 1.926h-1.985C12.18.852 11.228 0 10.07 0H7.926C6.768 0 5.82.852 5.719 1.926H3.734c-1.22 0-2.234.952-2.234 2.115v1.618c0 .348.315.637.68.637h.796v9.59c0 1.162.975 2.114 2.2 2.114h7.649c1.22 0 2.199-.952 2.199-2.115V6.296h.796c.365 0 .68-.289.68-.637V4.041c-.004-1.163-1.018-2.115-2.238-2.115zm-6.336-.667h2.144a.9.9 0 01.874.667H7.052a.9.9 0 01.874-.667zm5.773 14.626c0 .47-.385.856-.878.856H5.175a.863.863 0 01-.878-.856V6.296H13.7v9.59zm1.476-10.848H2.821v-.996c0-.47.42-.856.913-.856h10.528c.494 0 .913.385.913.856v.996zm-4.196 9.652c.366 0 .66-.282.66-.63V8.504c0-.348-.294-.63-.66-.63-.365 0-.66.282-.66.63v5.555c0 .348.295.63.66.63zm-3.302-.63c0 .348-.295.63-.66.63-.365 0-.66-.282-.66-.63V8.504c0-.348.295-.63.66-.63.365 0 .66.282.66.63v5.555z" />
+                        <path
+                          d="M14.262 1.926h-1.985C12.18.852 11.228 0 10.07 0H7.926C6.768 0 5.82.852 5.719 1.926H3.734c-1.22 0-2.234.952-2.234 2.115v1.618c0 .348.315.637.68.637h.796v9.59c0 1.162.975 2.114 2.2 2.114h7.649c1.22 0 2.199-.952 2.199-2.115V6.296h.796c.365 0 .68-.289.68-.637V4.041c-.004-1.163-1.018-2.115-2.238-2.115zm-6.336-.667h2.144a.9.9 0 01.874.667H7.052a.9.9 0 01.874-.667zm5.773 14.626c0 .47-.385.856-.878.856H5.175a.863.863 0 01-.878-.856V6.296H13.7v9.59zm1.476-10.848H2.821v-.996c0-.47.42-.856.913-.856h10.528c.494 0 .913.385.913.856v.996zm-4.196 9.652c.366 0 .66-.282.66-.63V8.504c0-.348-.294-.63-.66-.63-.365 0-.66.282-.66.63v5.555c0 .348.295.63.66.63zm-3.302-.63c0 .348-.295.63-.66.63-.365 0-.66-.282-.66-.63V8.504c0-.348.295-.63.66-.63.365 0 .66.282.66.63v5.555z" />
+                      </svg>
+                    </aside>
+                    <span>Delete item</span>
+                  </button>
+                  <button class="btn--has-icon">
+                    <aside class="icon">
+                      <svg class="svgIcon-root" viewBox="0 0 18 18">
+                        <path
+                          d="M9 17.935l-1.617-1.617c-2.303-2.037-4.03-3.598-5.274-5.11C.67 9.455 0 7.877 0 6.242c0-1.426.539-2.75 1.517-3.726C2.495 1.54 3.819 1 5.243 1 6.618 1 7.977 1.539 9 2.467A5.645 5.645 0 0112.754 1c1.426 0 2.75.539 3.726 1.517.977.978 1.52 2.3 1.52 3.726 0 1.635-.67 3.213-2.11 4.964-1.243 1.512-2.97 3.074-5.273 5.11L9 17.936zM5.245 2.308C3 2.308 1.309 4 1.309 6.243c0 2.817 2.514 5.177 6.957 9.106l.029.027.705.707.72-.72.015-.013c4.443-3.93 6.956-6.29 6.956-9.105 0-2.244-1.692-3.935-3.935-3.935-1.215 0-2.461.582-3.256 1.52l-.5.59-.5-.591C7.707 2.89 6.46 2.308 5.245 2.308z" />
+                      </svg>
+
+                    </aside>
+                    <span>Move to the wishlist</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="cart-item-right">
+              <div class="cart-item-amount">
+                <div class="cart-item-qty">
+                  <div class="cart-dropdown">
+                    <label for="dropdownLength">Qty: </label>
+                    <select name="lenght" id="dropdownLength">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="price">
+                  <p class="product-price product-price--old" data-orig-price="550.00">$630</p>
+                  <p class="product-price product-price--new" data-orig-price="350.00">$550</p>
+                  <span class="product-price-saving">You save 3%</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+      <div class="mybag-card">
+        <div class="mybag-card-header">
+          <h4 class="card-headline title-5">More accessories</h4>
+        </div>
+        <div class="mybag-card-body">
+          <article class="cart-item cart-item--accessories">
+            <div class="cart-item-left">
+              <div class="thumbnail-wrapper">
+                <img class="thumbnail"
+                  src="https://www.icebox.com/unsafe/100x100/icebox-jewelry.s3.amazonaws.com/products/301efa9f2e717d11bc9ddf23a7df68fa.jpg">
+              </div>
+              <div class="wrapper">
+                <div class="cart-item-details">
+                  <h5 class="item-heading">Icebox Jewelry Cleaner & Cloth</h5>
+                  <p class="text-5">This Icebox brand jewelry cleaner kit is the same solution we use in our store and
+                    factory.</p>
+                  <div class="price">
+                    <p class="product-price" data-orig-price="34.00">$50.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart-item-right">
+              <div class="cart-item-buttons">
+                <button class="btn btn-border">Add to cart</button>
+
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="mybag-card">
+        <div class="mybag-card-header">
+          <h4 class="card-headline title-5">Estimated delivery</h4>
+        </div>
+        <div class="mybag-card-body">
+          <p>Wednesday, 24 — Friday 28, 2020</p>
+        </div>
+      </div>
+      <div class="mybag-card">
+        <div class="mybag-card-header">
+          <h4 class="card-headline title-5">We accept</h4>
+        </div>
+        <div class="mybag-card-body">
+          <div class="payment-types">
+            <i class="icon-wrap icon--googlepay"></i>
+            <i class="icon-wrap icon--applepay"></i>
+            <i class="icon-wrap icon--paypal"></i>
+            <i class="icon-wrap icon--visa"></i>
+            <i class="icon-wrap icon--mastercard"></i>
+            <i class="icon-wrap icon--americanexpress"></i>
+            <i class="icon-wrap icon--wiretransfer"></i>
+            <i class="icon-wrap icon--bitcoin"></i>
+            <i class="icon-wrap icon--amazonpay"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-right">
+      <div class="mybag-summery">
+        <h4 class="mybag-summery-header title-5">Order summary</h4>
+        <ul class="mybag-summery-list">
+          <li>
+            <span>Sub Total</span>
+            <span>$350</span>
+          </li>
+          <li>
+            <span>Shipping Charge</span>
+            <span>Free</span>
+          </li>
+          <li>
+            <span>Discount</span>
+            <span class="--discount">150$</span>
+          </li>
+          <li class="total">
+            <span>Total (Included VAT)</span>
+            <span>$350</span>
+          </li>
+        </ul>
+        <button class="btn btn-primary btn-checkout" onclick="location.href='/step-1.html';">
+          Go to Checkout
+        </button>
+        <span class="delivery-status">We deliver free shipping with Insured delivery</span>
+      </div>
+      <div class="mybag-information">
+        <div class="mybag-information-block">
+          <aside>
+            <svg class="svgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+              <path fill-rule="evenodd"
+                d="M13.183 12.604a.703.703 0 01-.434-.65v-2.23a2.113 2.113 0 01-1.406-1.99V2.11c0-1.164.946-2.11 2.11-2.11h8.438C23.053 0 24 .946 24 2.11v5.625c0 1.163-.946 2.11-2.11 2.11h-5.334L13.95 12.45a.703.703 0 01-.767.152zm.27-11.198a.704.704 0 00-.704.704v5.625c0 .388.316.703.704.703.388 0 .703.315.703.703v1.115l1.612-1.612a.703.703 0 01.497-.206h5.626a.704.704 0 00.703-.703V2.11a.704.704 0 00-.703-.704h-8.438zM14.123 24a9.144 9.144 0 01-6.475-2.676l-4.972-4.972C-.412 13.264-.884 8.399 1.555 4.784c.337-.5.881-.821 1.492-.88a2.133 2.133 0 011.719.616l2.882 2.882c.823.823.823 2.16 0 2.983l-.994.995a.703.703 0 000 .994l4.972 4.972c.274.274.72.274.994 0l.995-.994a2.112 2.112 0 012.983 0l2.882 2.882c.453.453.677 1.08.616 1.718a2.025 2.025 0 01-.88 1.493A9.093 9.093 0 0114.122 24zM3.182 5.304a.62.62 0 00-.462.266 7.743 7.743 0 00.95 9.787l4.971 4.973a7.743 7.743 0 009.788.95.62.62 0 00.266-.463.731.731 0 00-.21-.588l-2.883-2.883a.704.704 0 00-.994 0l-.994.995a2.112 2.112 0 01-2.984 0L5.66 13.369a2.108 2.108 0 010-2.984l.995-.994a.704.704 0 000-.995L3.77 5.514a.73.73 0 00-.589-.21zm12.379-.382a.703.703 0 11-1.406 0 .703.703 0 011.406 0zm2.11.703a.703.703 0 100-1.406.703.703 0 000 1.406zm3.515-.703a.703.703 0 11-1.406 0 .703.703 0 011.406 0z">
+              </path>
+            </svg>
+          </aside>
+          <div class="contact-details">
+            <span>Need last minute help?</span>
+            <span class="phone-no">Call us at <a href="tel:+17708285540">
+                (770) 828-5540</a>.</span>
+          </div>
+        </div>
+        <div class="mybag-information-block">
+          <aside>
+            <svg class="svgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 20">
+              <path fill-rule="evenodd"
+                d="M14.644.929H.778A.778.778 0 000 1.706v14.359c0 .43.348.777.778.777h1.968a3.012 3.012 0 002.904 2.23 3.012 3.012 0 002.905-2.23h7.616a3.012 3.012 0 002.905 2.23c1.389 0 2.56-.947 2.904-2.23h1.242c.43 0 .778-.348.778-.777V9.793a.777.777 0 00-.086-.356l-2.177-4.225a.778.778 0 00-.692-.421h-5.624V1.706a.777.777 0 00-.777-.777zm.777 5.417h5.15l1.39 2.695h-6.54V6.346zm7.024 8.941v-4.69H15.42v4.69h.75a3.012 3.012 0 012.905-2.229c1.389 0 2.56.947 2.904 2.23h.465zm-8.579 0H8.555a3.012 3.012 0 00-2.905-2.229c-1.39 0-2.561.947-2.905 2.23h-1.19V2.483h12.311v12.803zm5.21 2.23c.8 0 1.451-.652 1.451-1.452 0-.8-.651-1.452-1.451-1.452s-1.452.652-1.452 1.452c0 .8.651 1.451 1.452 1.451zm-13.426 0c.8 0 1.451-.652 1.451-1.452 0-.8-.65-1.452-1.451-1.452-.8 0-1.452.652-1.452 1.452 0 .8.652 1.451 1.452 1.451zm4.771-11.908a.777.777 0 111.033 1.162l-4.406 3.914a.774.774 0 01-1.07-.035L3.931 8.576a.778.778 0 011.106-1.092l1.53 1.548L10.42 5.61z">
+              </path>
+            </svg>
+          </aside>
+          <div class="contact-details">
+            <span>Free shipping & returns, you can find more details about <a href="#">shipping delivery time</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script src="js/staticpages.min.js"></script>
+
+{% endblock %}

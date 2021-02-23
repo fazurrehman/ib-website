@@ -1,0 +1,92 @@
+{% extends "../../../layouts/component-layout.twig" %}
+{% set page_title = 'Modal Default for notifcation, Alert and more | Component' %}
+{% block content %}
+
+
+
+
+<div class="i-modal i-modal-is--default is-active">
+  <div class="wrap is-active">
+    <button class="btn-close">
+      <svg class="svgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 18 18">
+        <path
+          d="M14.25 2.25L9 7.5 3.75 2.25l-1.5 1.5L7.5 9l-5.25 5.25 1.5 1.5L9 10.5l5.25 5.25 1.5-1.5L10.5 9l5.25-5.25-1.5-1.5z">
+        </path>
+      </svg>
+    </button>
+    <div class="i-modal-content">
+
+      <div class="main">
+        <div class="i-modal-content__header">
+          <h2 class="title-4 modal-title text-center">Are you sure?</h2>
+          <p class="text-2 text-center">All details will be lost if click on OK button</p>
+        </div>
+        <div class="i-modal-content__inner">
+          <div class="i-modal-content__footer">
+            <div class="btn-group">
+              <button type="submit" class="btn btn-primary">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+<!-- scripting -->
+{% block included_content %}
+<script>
+  // this code already in comman.js don't use this code
+  // this is for just email label
+  const FloatLabel = (() => {
+    // add active class and placeholder 
+    const handleFocus = e => {
+      const target = e.target;
+      target.parentNode.classList.add('field--active');
+      // target.setAttribute ('placeholder', target.getAttribute ('data-placeholder'));
+    };
+
+    // remove field--active class and placeholder
+    const handleBlur = e => {
+      const target = e.target;
+      if (!target.value) {
+        target.parentNode.classList.remove('field--active');
+      }
+      // target.removeAttribute ('placeholder');
+    };
+
+    // register events
+    const bindEvents = element => {
+      const floatField = element.querySelector('input');
+      floatField.addEventListener('focus', handleFocus);
+      floatField.addEventListener('blur', handleBlur);
+    };
+
+    // get DOM elements
+    const init = () => {
+      const floatContainers = document.querySelectorAll('.field');
+
+      floatContainers.forEach(element => {
+        if (element.querySelector('input').value) {
+          element.classList.add('field--active');
+        }
+
+        bindEvents(element);
+      });
+    };
+    return {
+      init: init
+    };
+  })();
+  $(document).ready(function () {
+    FloatLabel.init();
+  });
+</script>
+{% endblock %}

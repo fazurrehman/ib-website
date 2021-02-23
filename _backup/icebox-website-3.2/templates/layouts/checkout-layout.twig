@@ -1,0 +1,112 @@
+<html lang="en" class="{% if pageClass is defined %}{{ pageClass }}{% else %}{% endif %}">
+
+<head>
+  {% include "../components/header.twig" %}
+</head>
+
+<body>
+  <!-- branding-header -->
+  <header class="brand-logo">
+    <div class="logo">
+      <a href="\">
+        <img src="../img/logo.svg" alt="Logo">
+      </a>
+    </div>
+  </header>
+
+  <aside class="summery-accordion">
+    <button class="summery-accordion-toggle" aria-expanded="true">
+      <div class="order-container">
+        <div class="order-container__inner">
+          <span class="summery-accordion-toggle__icon">
+            <aside class="icon-svg">
+              <svg class="svgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 17 19">
+                <path
+                  d="M15.6 17.6H1.4V5.7h2.8v2.1a.7.7 0 101.4 0V5.7h5.7v2.1a.7.7 0 101.4 0V5.7h2.8v11.9h.1zM8.5 1.4c1.6 0 2.8 1.3 2.8 2.8H5.7c0-1.5 1.2-2.8 2.8-2.8zm4.3 2.8c0-2.3-1.9-4.2-4.2-4.2-2.4 0-4.4 1.9-4.4 4.2H0v13.3c0 .9.6 1.5 1.4 1.5h14.2c.8 0 1.4-.6 1.4-1.4V4.2h-4.2z">
+                </path>
+              </svg>
+            </aside>
+          </span>
+          <span class="summery-accordion-toggle__label summery-accordion-toggle__show">
+            <span><span class="changetext">Show</span> order summary</span>
+            <span class="summery-accordion-toggle__arrow">
+              <svg viewBox="0 0 10 6">
+                <path fill="#646C76" d="M8.51.857L5 4.367 1.49.857l-.776.776L5 5.918l4.286-4.285L8.51.857z" /></svg>
+            </span>
+          </span>
+          <span class="summery-accordion-toggle__total">$25000000.00</span>
+        </div>
+      </div>
+    </button>
+  </aside>
+
+
+  <main class="content">
+    <div class="wrap">
+      <div class="main">
+        <header class="main__header">
+          <div class="logo">
+            <a href="\">
+              <img src="../img/logo.svg" alt="Logo">
+            </a>
+          </div>
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <li class="breadcrumb-item">
+              Cart
+            </li>
+            <li class="breadcrumb-item  {% if checkoutPageState=='information'%}is-active--breadcrumb{% endif %}">
+              Information
+            </li>
+            <li class="breadcrumb-item  {% if checkoutPageState=='shipping'%}is-active--breadcrumb{% endif %}">
+              Shipping</li>
+            <li class="breadcrumb-item  {% if checkoutPageState=='payment'%}is-active--breadcrumb{% endif %}">Payment
+            </li>
+          </nav>
+          {% block express_checkout %}
+          {% endblock %}
+
+        </header>
+
+        <div class="main__content">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div><!-- end main -->
+
+      <div class="sidebar">
+        {% include "../components/checkout-sidebar.twig" %}
+      </div><!-- end sidebar -->
+    </div><!-- end content -->
+  </main>
+
+  <script src="js/checkout.min.js"></script>
+  <script>
+    // added tooltip in credit card
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    // true by default credit card
+    $(".js-payment-header").click(function () {
+      var $target = $($(this).data('target'));
+      $(".js-payment-container").not($target).hide();
+      $target.show();
+    });
+    $(".js-address-header").click(function () {
+      var $target = $($(this).data('target'));
+      $(".js-address-container").not($target).hide();
+      $target.show();
+    });
+
+    // sidebar on mobile click active
+    $('.summery-accordion-toggle').on('click', function (e) {
+      $('.checkoutpage .sidebar .sidebar__content').toggleClass("sidebar__content-is--collapsed").delay(2000);
+      $(".changetext").text(($(".changetext").text() == 'Show') ? 'Hide' : 'Show');
+      e.preventDefault();
+    });
+
+  </script>
+
+</body>
+
+</html>

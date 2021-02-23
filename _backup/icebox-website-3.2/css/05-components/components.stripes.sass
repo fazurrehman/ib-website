@@ -1,0 +1,79 @@
+.icebox__promo
+  position: relative
+  width: 100%
+  background: $primary
+  // background: $darknight
+  display: block
+  will-change: transform
+  transform: translateY(0)
+  transition: transform 0.2s ease-out, opacity 0.4s 0.2s ease-out
+  opacity: 1
+  &.is-hidden--promo
+    transform: translateY(-100%)
+    opacity: 0
+
+  .promo
+    position: relative
+    display: flex
+    flex-direction: column
+    padding: 14px 40px
+    align-items: center
+    justify-content: center
+    width: 100%
+    overflow: hidden
+    text-align: center
+    @include tablet
+      flex-direction: row
+
+    &__button
+      position: absolute
+      right: 16px
+      opacity: 0.8
+      &:hover
+        opacity: 1
+
+    &__message
+      p
+        color: #ffffff
+        font-weight: var(--fontmedium)
+        font-size: $text-5
+        @include mobile
+          font-size: $text-4
+
+
+      .promo__action
+        color: $secondary
+        border-bottom: 1px solid $secondary
+        font-size: $text-4
+        font-weight: var(--fontbold)
+        line-height: 1
+        margin-left: 8px
+        &:hover
+          border: 0
+    
+  // promo-code
+  .promo-code
+    color: $yellow
+    text-transform: uppercase
+    font-weight: var(--fontbold)
+    letter-spacing: 1px
+
+  
+// country__change
+.country__change
+  .promo
+    justify-content: flex-start
+
+  
+
+// chirstmas seasons
+.season
+  &__chirstmas
+    background: #BB2528
+  &__holiday
+    background: url('../img/promo-bg.jpg') center center no-repeat
+    background-size: cover
+
+// message
+.warning__message
+  background: $red

@@ -1,0 +1,34 @@
+<div id="ib-login" class="ib-modal-view" style="display: none;">
+  <header>
+    <h4 class="title-4 headline">Login your icebox <br> account</h4>
+  </header>
+  <form class="needs-validation" novalidate>
+    <div class="form-item form-item--with-scaling-label js-form-item">
+      <label class="form-item__label">Email</label>
+      <input class="form-text form-item__input" type="email" id="userEmail" placeholder="&nbsp;">
+    </div>
+    <div class="form-item form-item--with-scaling-label js-form-item">
+      <label class="form-item__label">Password</label>
+      <input type="password" id="userPassword" class="form-text form-item__input js-passwordToggle"
+        placeholder="&nbsp;">
+      <div id="showPassword" class="toggle-password icon-m icon-eye"></div>
+    </div>
+    <div class="ib-modal-oneline">
+      <div class="ib-keep-login">
+        <input class="ib-modal-checkbox" type="checkbox" id="keepInLogin">
+        <label class="ib-modal-checkbox-desribe fl" for="keepInLogin">Keep me signed in</label>
+      </div>
+      <div class="ib-login-option">
+        <a href="#" class="btn-forget-password fl js-btn-forgetPassword">Forgot password?</a>
+      </div>
+    </div>
+    <div class="ib-modal-cta">
+      <button type="submit" class="btn btn-primary mb-2">Sign In</button>
+      <button type="submit" class="btn btn-border js-btn-login-phone">Login with Phone No.</button>
+    </div>
+  </form>
+  <div class="ib-modal-footer fl">
+    Not a member?
+    <a href="#" class="btnLink bold js-btn-signup">Create Account</a>
+  </div>
+</div>

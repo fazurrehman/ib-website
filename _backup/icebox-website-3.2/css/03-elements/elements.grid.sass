@@ -1,0 +1,127 @@
+// container
+.o-container
+  max-width: 1600px
+  margin-left: auto
+  margin-right: auto
+  padding-left: var(--gridspace)
+  padding-right: var(--gridspace)
+    
+  
+.layout--grid
+  display: grid
+
+.layout--products
+  @media (max-width: 320px)
+    display: block
+    grid-gap: 8px
+  @media (min-width: 325px)
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 8px
+  @include tabletsmall
+    grid-template-columns: repeat(3, 1fr)
+  @include desktop
+    grid-template-columns: repeat(4, 1fr)
+  @media (min-width: 1800px)
+    grid-template-columns: repeat(5, 1fr)
+
+
+.layout--products-bigger
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 8px
+
+.container,
+.container-lg
+  width: 100%
+  padding: 0 16px
+  @include tablet
+    padding: 0 24px
+  @include desktop
+    padding: 0 40px
+  @include bigger
+    max-width: 1600px
+
+.container-lg
+  width: 100%
+  margin: 0 auto
+  padding-right: 16px
+  padding-left: 16px
+  @include bigger
+    max-width: 1600px
+
+
+.container-fluid
+  @include tablet
+    padding-left: 40px
+    padding-right: 40px
+
+.demo
+  display: flex
+  margin: 80px 0
+  flex-direction: column
+  flex: 1 0 50%
+  &-col
+    width: 40%
+    margin-bottom: 24px
+    &-label
+      display: block
+      font-size: 0.8rem
+      font-weight: var(--fontbold)
+
+
+// grid
+.grid
+  display: grid
+  &--three
+    @include mobile
+      grid-template-columns: repeat(3, 1fr)
+
+
+// grid
+.grid
+  &-container
+    padding-left: var(--gridspace)
+    padding-right: var(--gridspace)
+  &--flex
+    display: flex
+    flex-wrap: wrap
+
+  &--flex-desktop
+    @include tablet
+      display: flex
+      flex-wrap: wrap
+      
+  &--col-desktop
+    @include tablet
+      width: 50%
+      flex: 0 0 50%
+  &--col
+    width: 50%
+    flex: 0 0 50%
+  
+  &--vcenter
+    align-items: center
+
+  &--hcenter
+    justify-content: center
+
+  
+.column
+  width: 100%
+  &--two
+    flex: 0 0 50%
+  &-group
+    display: flex
+    flex-wrap: wrap
+  &--center
+    margin: 0 auto
+
+
+.column-flex
+  align-items: baseline
+  display: flex
+  flex-wrap: wrap
+  &__item
+    padding: 2px 8px
+    flex: 1 0 auto
+
+

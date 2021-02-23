@@ -1,0 +1,47 @@
+.i-alert
+  position: relative
+  background-color: pink
+  width: 100%
+
+  .wrap
+    @include clearfix2
+    margin: 0
+  .btn-close
+    position: absolute
+    right: 12px
+    top: 0
+    bottom: 0
+    opacity: 0.7
+    z-index: 2
+    &:hover
+      opacity: 1
+    .svgIcon-root
+      font-size: 1.25rem
+
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 12px
+    padding-right: 56px
+    .svgIcon-root
+      font-size: 1.25rem
+
+    aside
+      margin-right: 16px
+
+    .message
+      font-size: 0.875rem
+      font-weight: var(--fontmedium)
+      color: inherit
+
+
+
+// modifier
+.i-alert
+  &--is-important
+    background-color: #FFEBEA
+    border: 1px solid #fedfdf
+    border-radius: $g-radius
+    color: darken(#f00, 36%)
+

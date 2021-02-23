@@ -1,0 +1,83 @@
+<!-- layout -->
+{% extends "../../layouts/elements.twig" %}
+{% block content %}
+
+<div class="adminControl">
+  <div class="wrapper">
+    <div class="adminControl-col">
+      <table class="table-investory table">
+        <tr>
+          <th>Stock</th>
+          <td class="bg-golden">1</td>
+          <td class="bg-silver">0</td>
+          <td class="bg-rosegold">0</td>
+        </tr>
+        <tr>
+          <th>Sold</th>
+          <td class="bg-golden">1</td>
+          <td class="bg-silver">0</td>
+          <td class="bg-rosegold">0</td>
+        </tr>
+      </table>
+    </div>
+    <div class="adminControl-col">
+      <label class="cl-switch ios">
+        <input type="checkbox" id="clSwitch" >
+        <span class="switcher"></span>
+        <span class="label">Disable</span>
+      </label>
+    </div>
+    <div class="adminControl-col">
+      <nav class="adminControl-btn">
+        <a href="#">Backend</a>
+        <a href="#">Manual Order</a>
+      </nav>
+    </div>
+    <div class="adminControl-col">
+      <nav class="adminControl-page">
+        <ul class="pagination justify-content-center">
+          <li class="page-item"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="adminControl-col">
+      <a href="#"><i class="icon-big icon--admin"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="adminControl adminControl--small" style="bottom: 200px;">
+  <div class="wrapper">
+    <div class="adminControl-col">
+      <label class="cl-switch ios">
+        <input type="checkbox" id="clSwitch">
+        <span class="switcher"></span>
+        <span class="label">Disable</span>
+      </label>
+    </div>
+    <div class="adminControl-col">
+      <a href="#"><i class="icon-big icon--admin"></i></a>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<script src="../js/homepage.min.js"></script>
+<script>
+  $(function () {
+      $('#clSwitch').change(function () {
+        if ($(this).is(':checked')) {
+          // Do something...
+          $(".label").text('enable');
+        } else{
+          $(".label").text('Disable');
+        }
+      });
+    });
+
+</script>
+{% endblock %}

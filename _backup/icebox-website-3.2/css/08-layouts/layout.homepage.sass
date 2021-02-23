@@ -1,0 +1,63 @@
+.homepage--feature
+  &-products
+    padding: 16px 0 24px 0
+    @include media('>tablet')
+      padding: 40px 0
+
+// section-celebrites
+.section-celebrites
+  @include margin-content
+  z-index: 2
+  .section-header
+    margin-bottom: 20px
+    @include desktop
+      margin-bottom: 60px
+  .owl-item:nth-child(odd)
+    @include desktop
+      padding-top: 16px
+  
+#celebrites
+  figure
+    position: relative
+    width: 100%!important
+    height: 100%
+    margin-bottom: 16px
+    padding-bottom: 125.8438%
+    background: $softgrey
+    .media-wrapper
+      width: 100%
+      position: absolute
+      overflow: hidden
+      height: 100%
+      img
+        max-width: none
+        transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1)
+    figcaption
+      position: absolute
+      bottom: 8px
+      left: 8px
+      display: none
+      font-size: 14px
+      color: #ffffff
+      @include tablet
+        display: block
+      &::before
+        content: '— '
+  .owl-nav,
+  .owl-dots
+    display: none
+
+#celebrites figure:hover .media-wrapper img
+  transform: scale(1.050)
+
+
+
+// homepage grid
+.owl-carousel-products
+  &.owl-carousel.off
+    display: grid
+    grid-gap: 12px
+    @include media('>340px')
+      grid-template-columns: repeat(2, 1fr)
+    @include tablet
+      grid-template-columns: repeat(3, 1fr)

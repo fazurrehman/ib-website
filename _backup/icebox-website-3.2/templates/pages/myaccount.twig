@@ -1,0 +1,92 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+{% set page = 'overview' %}
+
+{% block content %}
+
+<div class="container">
+  <!-- my account -->
+  <section class="myaccount">
+    <div class="myaccount__header">
+      <div class="myaccount__header-wrapper">
+        <h2 class="title-3">Hello Jessica</h2>
+        <span class="myaccount-info">jessicajes@gmail.com</span>
+      </div>
+      <!-- breadcrums -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <!-- <li class="breadcrumb-item"><a href="#">Home</a></li> -->
+          <li class="breadcrumb-item" aria-current="page">My Account</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- __wrapper"> -->
+    <div class="myaccount__wrapper">
+      {% include "../components/myaccount-navbar.twig" %}
+      <!-- dashboard -->
+      <div class="myaccount__wrapper-container">
+        <!-- header -->
+        <div class="account__header">
+          <div class="account__header-wrapper">
+            <div class="account-picture">
+              <img src="img/userprofile.png" alt="">
+            </div>
+            <a href="#" class="upload-btn">Upload Photo</a>
+            <button class="btn btn-secondary edit-btn"
+              onclick="window.location.href='/myaccount-profile-edit.html'">Edit Profile</button>
+          </div>
+        </div>
+
+        <!-- dashboard -->
+        <div class="account__dashboard">
+          <div class="account__dashboard-link">
+            <i class="icon icon--order"></i>
+            <h5 class="title-5">Orders</h5>
+            <span>Check order status</span>
+            <a href="myaccount-order.html" class="link--overlap"></a>
+          </div>
+          <div class="account__dashboard-link">
+            <i class="icon icon--wishlist"></i>
+            <h5 class="title-5">Wishlist</h5>
+            <span>Saved products</span>
+            <a href="myaccount-wishlist.html" class="link--overlap"></a>
+          </div>
+          <div class="account__dashboard-link">
+            <i class="icon icon--address"></i>
+            <h5 class="title-5">Address Information</h5>
+            <span>Shipping & Address</span>
+            <a href="myaccount-address.html" class="link--overlap"></a>
+          </div>
+          <div class="account__dashboard-link">
+            <i class="icon icon--account"></i>
+            <h5 class="title-5">Account</h5>
+            <span>Personal Information</span>
+            <a href="myaccount-profile.html" class="link--overlap"></a>
+          </div>
+          <div class="account__dashboard-link">
+            <i class="icon icon--newsletter"></i>
+            <h5 class="title-5">Newsletter</h5>
+            <span>Signup updates</span>
+            <a href="myaccount-newsletter.html" class="link--overlap"></a>
+          </div>
+          <div class="account__dashboard-link">
+            <i class="icon icon--offers"></i>
+            <h5 class="title-5">New Offers</h5>
+            <span>Checkout new offers</span>
+            <a href="results-v2.html" target="_blank" class="link--overlap"></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- end myaccount__wrapper -->
+  </section>
+</div><!-- end container -->
+
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script src="js/categories.min.js"></script>
+{% endblock %}

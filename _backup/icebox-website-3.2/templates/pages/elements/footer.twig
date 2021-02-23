@@ -1,0 +1,194 @@
+<!-- layout -->
+{% extends "../../layouts/elements.twig" %}
+{% block content %}
+
+
+<footer>
+  <div class="container">
+    <nav class="footer-nav footer-nav--main ">
+      <div class="footer-nav-list">
+        <h5 class="footer-nav-heading"><a href="#footer-content-1" class="footer-toggle">Products</a></h5>
+        <div class="footer-nav-content accordion-footer" id="footer-content-1">
+          <a class="footer-nav-link" href="#">Diamond Pendants</a>
+          <a class="footer-nav-link" href="#">Gold & Diamond Necklaces</a>
+          <a class="footer-nav-link" href="#">Mens & Ladies Diamond Rings</a>
+          <a class="footer-nav-link" href="#">Best Selling Bracelets</a>
+          <a class="footer-nav-link" href="#">Pre-owned Rolex Watches</a>
+          <a class="footer-nav-link" href="#">Best Selling Accessories</a>
+        </div>
+      </div>
+      <div class="footer-nav-list">
+        <h5 class="footer-nav-heading"><a href="#footer-content-2" class="footer-toggle">Shop By Category</a></h5>
+        <div class="footer-nav-content accordion-footer" id="footer-content-2">
+          <a class="footer-nav-link" href="#">Pendants</a>
+          <a class="footer-nav-link" href="#">Rings</a>
+          <a class="footer-nav-link" href="#">Necklaces</a>
+          <a class="footer-nav-link" href="#">Earrings</a>
+          <a class="footer-nav-link" href="#">Necklaces</a>
+          <a class="footer-nav-link" href="#">Earrings</a>
+          <a class="footer-nav-link" href="#">Bracelets</a>
+          <a class="footer-nav-link" href="#">Watches</a>
+          <a class="footer-nav-link" href="#">Accessories</a>
+          <a class="footer-nav-link" href="#">Custom</a>
+          <a class="footer-nav-link" href="#">Glasses</a>
+        </div>
+      </div>
+      <div class="footer-nav-list">
+        <h5 class="footer-nav-heading"><a href="#footer-content-3" class="footer-toggle">Customer Care</a></h5>
+        <div class="footer-nav-content accordion-footer" id="footer-content-3">
+          <a class="footer-nav-link" href="#">Need Help?</a>
+          <a class="footer-nav-link" href="#">Track My Order</a>
+          <a class="footer-nav-link" href="#">FAQ</a>
+          <a class="footer-nav-link" href="#">Shoping & Returns</a>
+          <a class="footer-nav-link" href="#">Payment terms</a>
+          <a class="footer-nav-link" href="#">My Account</a>
+        </div>
+      </div>
+      <div class="footer-nav-list">
+        <h5 class="footer-nav-heading"><a href="#footer-content-4" class="footer-toggle">Icebox</a></h5>
+        <div class="footer-nav-content accordion-footer" id="footer-content-4">
+          <a class="footer-nav-link" href="#">About Us</a>
+          <a class="footer-nav-link" href="#">Contact Us</a>
+          <a class="footer-nav-link" href="#">Privacy Policy</a>
+          <a class="footer-nav-link" href="#">Terms & Conditions</a>
+          <a class="footer-nav-link" href="#">Shipping Policy</a>
+          <a class="footer-nav-link" href="#">Return Policy</a>
+        </div>
+      </div>
+    </nav>
+    <div class="footer-newsletter">
+      <h5 class="footer-nav-heading">Newsletter</h5>
+      <div class="email-cta">
+        <label class="caption">Sign up for our newsletter below for all Icebox
+          updates!</label>
+        <div class="input-wrapper">
+          <input type="email" placeholder="Email" id="klaviyo-input" class="input__default">
+          <button type="submit" class="newsletter-submit-btn">
+            <span class="btn">Join</span>
+            <svg viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.701 0L9.418 1.283l4.109 4.109H0v1.814h13.527l-4.109 4.109 1.283 1.282L17 6.3 10.701 0z"
+                fill="#101e5a" />
+            </svg>
+          </button>
+          <p id="klaviyo-error" style="opacity: 0; display: none;"></p>
+          <p id="klaviyo-success" style="opacity: 0; display: none"></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- footer block action -->
+  <div class="container">
+    <div class="footer-block-action">
+      <a class="footer-btn-country" data-toggle="modal" data-target="#countryModal">
+        <span class="footer-payment-symbol">$</span>
+        <span class="footer-payment-type">USD</span>
+        <i class="icon icon--arrow-down"></i>
+      </a>
+      <div class="footer-block-payment">
+        <span class="text-5">WE ACCEPT</span>
+        <i class="icon-wrap icon--googlepay"></i>
+        <i class="icon-wrap icon--applepay"></i>
+        <i class="icon-wrap icon--paypal"></i>
+        <i class="icon-wrap icon--visa"></i>
+        <i class="icon-wrap icon--mastercard"></i>
+        <i class="icon-wrap icon--americanexpress"></i>
+        <i class="icon-wrap icon--wiretransfer"></i>
+        <i class="icon-wrap icon--bitcoin"></i>
+        <i class="icon-wrap icon--amazonpay"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer information -->
+  <div class="container">
+    <div class="footer-information">
+      <div class="footer-logo">
+        <a href="\">
+          <img src="../img/logo.svg" alt="Logo">
+        </a>
+        <div class="footer-socialmedia">
+          <a href="https://www.instagram.com/icebox/" target="_blank" class="footer-socialmedia-link">
+            <title>instagram</title>
+            <svg viewBox="0 0 16 16">
+              <path
+                d="M11 0a5 5 0 015 5v6a5 5 0 01-5 5H5a5 5 0 01-5-5V5a5 5 0 015-5zm0 1.5H5C3.07 1.5 1.5 3.07 1.5 5v6c0 1.93 1.57 3.5 3.5 3.5h6c1.93 0 3.5-1.57 3.5-3.5V5c0-1.93-1.57-3.5-3.5-3.5zM8 4a4 4 0 110 8 4 4 0 010-8zm0 1.5A2.503 2.503 0 005.5 8c0 1.378 1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5c0-1.379-1.122-2.5-2.5-2.5zm4.3-2.333a.533.533 0 110 1.066.533.533 0 010-1.066z"
+                fill="var(--social)" /></svg>
+          </a>
+          <a href="https://www.facebook.com/Icebox" target="_blank" class="footer-socialmedia-link">
+            <svg viewBox="0 0 16 16">
+              <title>facebook</title>
+              <path
+                d="M14 0c1.103 0 2 .897 2 2v12c0 1.103-.897 2-2 2h-3v-5.5h1.5l1-2.5H11V6c0-.552.448-.5 1-.5h1V3h-2a3 3 0 00-3 3v2H6v2.5h2V16H2c-1.103 0-2-.897-2-2V2C0 .897.897 0 2 0z"
+                fill="var(--social)" />
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCv8gFyATae1x0VmDHmNbIhg?sub_confirmation=1" target="_blank"
+            class="footer-socialmedia-link">
+            <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title>youtube</title>
+              <path
+                d="M23.506 2.817C23.229 1.715 22.418.847 21.39.55 19.512 0 12 0 12 0S4.488 0 2.61.53C1.6.826.77 1.715.493 2.817 0 4.828 0 9 0 9s0 4.193.494 6.184c.277 1.1 1.087 1.969 2.116 2.265C4.507 18 12 18 12 18s7.512 0 9.39-.53c1.028-.296 1.839-1.164 2.116-2.265C24 13.193 24 9.02 24 9.02s.02-4.193-.494-6.204z"
+                fill="var(--social)" />
+              <path d="M9.607 12.855L15.854 9 9.607 5.146v7.709z" fill="#fff" />
+            </svg>
+          </a>
+          <a href="https://twitter.com/icebox" target="_blank" class="footer-socialmedia-link">
+            <svg viewBox="0 0 20 16">
+              <title>twitter</title>
+              <path
+                d="M20 1.894a8.653 8.653 0 01-2.362.638A4.026 4.026 0 0019.44.3a8.272 8.272 0 01-2.6.978A4.139 4.139 0 0013.846 0C11.576 0 9.75 1.814 9.75 4.038c0 .32.027.628.095.92A11.666 11.666 0 011.393.737a4.017 4.017 0 00-.562 2.04c0 1.399.732 2.638 1.822 3.356A4.098 4.098 0 01.8 5.634v.045C.8 7.64 2.221 9.27 4.085 9.646c-.334.09-.698.132-1.075.132a3.68 3.68 0 01-.776-.068 4.132 4.132 0 003.831 2.812 8.32 8.32 0 01-5.084 1.722c-.336 0-.659-.015-.981-.056A11.674 11.674 0 006.29 16c7.545 0 11.67-6.154 11.67-11.488 0-.178-.006-.35-.015-.522A8.111 8.111 0 0020 1.894z"
+                fill="var(--social)" />
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/Icebox" target="_blank" class="footer-socialmedia-link">
+            <svg viewBox="0 0 16 16">
+              <title>messenger</title>
+              <path
+                d="M8 0c4.418 0 8 3.316 8 7.408 0 4.091-3.582 7.407-8 7.407a8.604 8.604 0 01-2.295-.31L2.981 16v-2.825C1.163 11.817 0 9.738 0 7.407 0 3.316 3.582 0 8 0zm5.168 5.333L9.242 7.506 7.155 5.333 2.783 9.975l3.975-2.173 2.037 2.173 4.373-4.642z"
+                fill="var(--social)" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-store-contact">
+        <div class="footer-nav-list">
+          <h5 class="footer-nav-heading">Contact</h5>
+          <a class="footer-content footer-contact" href="#">support@icebox.com</a>
+          <a class="footer-content footer-contact">(770) 828-5540</a>
+        </div>
+        <div class="footer-nav-list">
+          <h5 class="footer-nav-heading">Shop Address</h5>
+          <p class="footer-content">
+            3255 Peachtree Rd NE <br> Suite #2<br> Atlanta, GA 30305<br>
+          </p>
+        </div>
+        <div class="footer-nav-list">
+          <h5 class="footer-nav-heading">Showroom Open</h5>
+          <p class="footer-content">
+            Monday-Friday,<br> 11AM—7PM EST
+          </p>
+        </div>
+        <div class="footer-nav-list">
+          <h5 class="footer-nav-heading">Showroom Closed</h5>
+          <p class="footer-content">
+            Weekends
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</footer>
+
+
+
+
+
+
+{% endblock %}
+{% block included_content %}
+<script src="../js/staticpages.min.js"></script>
+{% endblock %}

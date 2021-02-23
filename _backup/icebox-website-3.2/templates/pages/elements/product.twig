@@ -1,0 +1,34 @@
+<!-- layout -->
+{% extends "../../layouts/elements.twig" %}
+{% block content %}
+
+<div class="results container">
+  <div class="results--products">
+    <div class="products layout--grid layout--products-bigger">
+
+      {% include '../../components/productcart.twig'%}
+      {% include '../../components/productcart-call.twig'%}
+      {% include '../../components/productcart-admin.twig'%}
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<script src="../js/homepage.min.js"></script>
+<script>
+  $(document).ready(function () {
+      $("#icon-wishlist").on("click", function () {
+        $(this).toggleClass("icon-in-wishlist");
+      });
+    });
+    $(document).ready(function () {
+      $("#icon-wishlist").on("click", function () {
+        $(this).toggleClass("icon-in-wishlist");
+      });
+    });
+</script>
+
+{% endblock %}

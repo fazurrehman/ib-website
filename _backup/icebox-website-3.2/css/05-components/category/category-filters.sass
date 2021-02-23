@@ -1,0 +1,150 @@
+// filter
+.filter-list-item
+  position: relative
+  z-index: 85
+  &__btn
+    position: relative
+    border: 1px solid transparent
+    z-index: 88
+    height: 38px
+    background-color: rgb(255, 255, 255)
+    color: rgb(0, 0, 0)
+    position: relative
+    cursor: pointer
+    user-select: none
+    overflow: hidden
+    padding: 1px 18px 0px 10px
+    display: inline-flex
+    align-items: center
+    text-transform: uppercase
+    &--label
+      font-size: 14px
+      line-height: 16px
+      font-weight: var(--fontmedium)
+      letter-spacing: 1px
+    &--icon
+      width: 12px
+      height: 12px
+      right: -8px
+      position: relative
+      opacity: 0.4
+    &:hover
+      border-color: rgb(0, 0, 0)
+      .filter-list-item__btn--icon
+        opacity: 1
+
+
+
+
+// dropdown
+.horizontal-bar__options
+  position: relative
+  display: flex
+  border-top: 1px solid #dfe0eb
+  border-bottom: 1px solid #dfe0eb
+  padding: 4px 0
+  justify-content: space-between
+
+  .filter-list-primary
+    display: flex
+
+.filter-list-item
+  position: relative
+  z-index: 60
+
+
+.options-filter-container
+  overflow: hidden
+  height: 0
+  transition: max-height 0.8s linear
+  transform: translateZ(0)
+
+.filter-list-item .options-filter-container
+  display: none
+  max-height: 50vh
+
+.open--filter .options-filter-container
+  display: block
+  height: auto
+
+.open--filter.filter-list-item
+  z-index: 70
+
+
+.open--filter.filter-list-item--is-open .options-filter-container
+  width: 300px
+  overflow: auto
+  position: absolute
+  z-index: 86
+  background: rgb(255, 255, 255)
+  border: 1px solid rgb(0, 0, 0)
+  margin-top: -1px
+  padding-top: 8px
+
+.open--filter.filter-list-item--is-open .filter-list-item__btn
+  border-top: 1px solid rgb(0, 0, 0)
+  border-right: 1px solid rgb(0, 0, 0)
+  border-left: 1px solid rgb(0, 0, 0)
+  border-image: initial
+  border-bottom: none
+
+.open--filter.filter-list-item--is-open .filter-list-item__btn--icon
+  transform: rotate(-180deg)
+  opacity: 1
+
+.options-filter-list
+  position: relative
+  margin-bottom: 16px
+  li
+    line-height: 48px
+    cursor: pointer
+    > *
+      color: #000000
+    &:hover
+      background: rgba(39, 94, 254, 0.1)
+
+  .title
+    color: #000000
+    font-size: 1rem
+  .stock-available
+    font-size: 14px
+    color: #888888
+    font-family: var(--body)
+
+
+.filter-type-list-submenu
+  display: block
+  color: #000
+  position: relative
+  padding: 4px 16px
+
+
+.options-filter-type-colors
+  display: grid
+  grid-template-columns: repeat(2, 50%)
+  padding: 16px
+  .color-title
+    font-size: 12px
+    display: block
+    padding-left: 8px
+    letter-spacing: 0.5px
+    width: 100%
+    font-weight: var(--fontmedium)
+  .colornav-item
+    display: flex
+    align-items: center
+    paddding: 0 8px
+    
+.checkbox-wrapper
+  display: flex
+  align-items: center
+  label
+    margin: 0
+  input
+    line-height: 40px
+    margin-top: -4px
+    margin-right: 8px
+
+
+.checkbox-wrapper label.title
+  background: red!important

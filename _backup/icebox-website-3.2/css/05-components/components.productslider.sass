@@ -1,0 +1,106 @@
+$thumbnail-mobile: 60px
+$thumbnail-desktop: 80px
+
+
+.image__viewer
+  position: relative
+  touch-action: none
+  cursor: url('../img/zoom-cursor.svg') 20 20,auto
+  cursor: url('../img/zoom-cursor.cur')
+  
+  .owl-nav
+    display: block
+    @include tablet
+      display: none
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    top: calc( 40% - 8px )
+    transform: translateY(-50%)
+    .owl-prev, .owl-next
+      width: 40px
+      height: 100px
+      position: absolute
+      display: block !important
+      border: 0px solid black
+    .owl-prev
+      left: 20px
+    .owl-next
+      right: 20px
+    .owl-prev, .owl-next
+      svg
+          width: 20px
+          height: 20px
+    
+
+    .owl-prev i, .owl-next i
+      transform: scale(2, 5)
+      color: #ccc
+
+
+
+#sync2
+  position: relative
+  touch-action: none
+  @include tablet
+    position: absolute
+    height: 100%
+    width: $thumbnail-desktop!important
+    top: -5%
+    left: 0
+    display: flex
+    align-items: center
+    .owl-nav
+      display: none
+    .owl-stage
+      width: $thumbnail-desktop!important
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-items: center
+  .owl-stage
+    padding-left: 12px
+    width: 100%!important
+    @include tablet
+      padding-left: 0
+  .owl-item,
+  .item
+    width: $thumbnail-mobile!important
+    height: $thumbnail-mobile
+    @include tablet
+      width: $thumbnail-desktop!important
+      height: $thumbnail-desktop
+  .owl-item
+    margin-right: 4px
+    @include tablet
+      margin-bottom: 4px
+  .item
+    border: 1px solid $grey
+    cursor: pointer
+    img
+      width: 100%
+      height: 100%
+  .current .item
+    border: 2px solid $primary
+
+// light room modifiing
+.lg-actions .lg-next:before,
+.lg-actions .lg-prev:after,
+.lg-toolbar .lg-icon:after
+    content: " "!important
+    @include backgroun-properties
+    width: 24px!important
+    height: 24px!important
+    display: block
+
+.lg-actions .lg-next:before
+  background-image: url($data-svg-prefix + map-get($icons, 'arrow-icon-down'))
+  transform: rotate(-90deg)
+
+.lg-actions .lg-prev:after
+  background-image: url($data-svg-prefix + map-get($icons, 'arrow-icon-down'))
+  transform: rotate(90deg)
+
+.lg-toolbar .lg-close:after
+  background-image: url($data-svg-prefix + map-get($icons, 'flag-close-rounded'));

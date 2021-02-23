@@ -1,0 +1,93 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+{% set page = 'address' %}
+
+{% block content %}
+
+<div class="container">
+
+  <!-- my account -->
+  <section class="myaccount">
+    <div class="myaccount__header">
+      <div class="myaccount__header-wrapper">
+        <h2 class="title-3">Address</h2>
+        <span class="myaccount-info">Edit addresses for orders and gifts</span>
+      </div>
+      <!-- breadcrums -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="myaccount.html">My Account</a></li>
+          <li class="breadcrumb-item" aria-current="page">Address</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- __wrapper"> -->
+    <div class="myaccount__wrapper">
+      <!-- navbar -->
+      {% include "../components/myaccount-navbar.twig" %}
+      <!-- dashboard -->
+      <div class="myaccount__wrapper-container">
+
+
+        <!-- address -->
+        <div class="account__address">
+
+          <div class="addresscard card-block">
+            <div class="addresscard__header card-block-header">
+              <h4 class="title-5">Shipping Address</h4>
+              <button class="btn btn-secondary edit-btn"
+                onclick="window.location.href='/myaccount-address-edit.html'">Edit</button>
+            </div>
+            <div class="addresscard__details">
+              <div class="card__section address-name">Jessica</div>
+              <div class="card__section">
+                <div class="card__section-list">3255 Peachtree Road Northeast
+                  Fulton County</div>
+                <div class="card__section">
+                  <div class="card__section-list">Atlanta</div>
+                  <div class="card__section-list">Georgia</div>
+                  <div class="card__section-list">30305</div>
+                </div>
+                <div class="card__section">(404) 991-8540</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="addresscard card-block">
+            <div class="addresscard__header card-block-header">
+              <h4 class="title-5">Billing Address</h4>
+              <button class="btn btn-secondary edit-btn"
+                onclick="window.location.href='/myaccount-address-edit.html'">Edit</button>
+            </div>
+
+            <div class="addresscard__details">
+              <div class="card__section">Jessica</div>
+              <div class="card__section">
+                <div class="address-information">3255 Peachtree Road Northeast
+                  Fulton County</div>
+                <div class="card__section">
+                  <div class="card__section-list">Atlanta</div>
+                  <div class="card__section-list">Georgia</div>
+                  <div class="card__section-list">30305</div>
+                </div>
+                <div class="card__section">(404) 991-8540</div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div><!-- end container -->
+    </div><!-- end myaccount__wrapper -->
+  </section>
+</div><!-- end container -->
+
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script src="js/categories.min.js"></script>
+{% endblock %}

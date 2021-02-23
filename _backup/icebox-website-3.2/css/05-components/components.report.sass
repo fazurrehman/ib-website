@@ -1,0 +1,148 @@
+$report-label: 0.875rem
+  
+.report
+  max-width: 1200px
+  margin: 80px auto
+  border: 16px solid #DDC99E
+  &::before
+    width: calc(100% - 16px)
+    height: calc(100% - 16px)
+    border: 8px solid #DDC99E
+    position: absolute
+    content: ''
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    margin: auto
+    z-index: -1
+
+.appraisal
+  &__header
+    margin-bottom: 24px
+    padding: 80px 24px 24px 24px
+    img
+      margin: 0 auto
+      display: block
+      width: 200px 
+  &__heading
+    color: #C18F31
+    text-transform: uppercase
+    position: relative
+    display: block
+    padding: 16px 
+    margin: 0 40px
+    text-align: center
+    &::before,
+    &::after
+      position: absolute
+      left: 0
+      content: ''
+      width: 100%
+      height: 1px
+      background: #C18F31
+    &::before
+      top: 0
+    &::after
+      bottom: 0
+
+  &__message
+    margin: 40px 0
+    padding: 0 80px
+    &--label
+      font-size: $report-label
+    &--name
+      font-size: $title-3
+      color: $primary-400
+    &--message
+      margin-top: 24px
+      p
+        font-size: 1rem
+        margin-bottom: 24px
+        line-height: 1.7
+  
+  &__product
+    margin: 0 80px
+    padding: 24px 0
+    border: 1px solid $border
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    &-image
+      flex: 0 1 280px
+      figure
+        max-width: 240px
+        margin: 0 auto 
+    &-price
+      text-align: center
+      font-weight: var(--fontbold)
+    &-details
+      flex: 0 1 60%
+      padding-left: 40px
+      
+  &__notice
+    padding: 0 80px
+    font-size: 0.6875rem
+    margin: 12px 0 16px 0
+
+  &__notes
+    padding: 24px 80px
+    text-align: right
+    label,
+    h4
+      font-weight: var(--fontbold)
+      font-size: $report-label
+
+    label
+      position: relative
+      padding-top: 16px
+      &::before
+        position: absolute
+        top: 0
+        right: 0
+        width: 50px
+        height: 4px
+        background: $primary
+        content: ''
+
+  &__footer
+    display: flex
+    justify-content: space-between
+    background: $primary
+    padding: 40px
+    margin: 24px
+    &-contact
+      font-size: 0.6875rem
+      text-align: right
+      font-weight: var(--fontmedium)
+      color: #ffffff
+      
+      
+// product-details--list
+.product-details--list
+  li
+    padding: 8px 0
+    border-bottom: 1px solid $softgrey
+    &:first-child,
+    &:last-child
+      border-bottom: 0
+      
+    span
+      margin-bottom: 4px
+      font-size: $report-label
+      text-transform: uppercase
+      display: block
+    p
+      font-size: 1.25rem
+      font-weight: var(--fontmedium)
+
+.product-details--title
+  line-height: 1.3
+  font-weight: var(--fontmedium)
+
+.authorized-signature
+  font-size: 0.8125rem
+  padding: 0 80px
+  span
+    display: block
+    font-weight: var(--fontbold)

@@ -1,0 +1,711 @@
+$product-transition: all 200ms
+$product-radius: 8px
+$product-space: 24px
+$product-activeState: $primary
+
+.productpage
+  position: relative
+  @include tablet
+    display: flex
+    flex-wrap: wrap
+    padding: 0 40px
+  &__gallery
+    width: 100%
+    height: 500px
+    @include tablet
+      width: calc((100% - 380px))
+    @include desktop
+      width: calc((100% - 440px))
+    @include bigger
+      width: calc((100% - 520px))
+
+  &__details
+    width: 100%
+    padding: 40px $product-space 16px $product-space
+    border-left: 1px solid #f1f2f5
+    @include tablet
+      width: 380px
+      padding: 0 0 40px 40px 
+    @include desktop
+      width: 440px
+    @include bigger
+      width: 520px
+
+
+
+
+/*=============================================
+ =            Product Page components          =
+ =============================================*/
+// productCommanHeader
+.productCommanHeader
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  padding-bottom: 12px
+  
+  // productCommanHeader--title
+  &--title
+    margin-bottom: 0
+    font-size: 14px
+    font-weight: var(--fontbold)
+    font-family: var(--body)
+
+  // productCommanHeader--link
+  &--link
+    font-size: 0.875rem
+    border-bottom: 1px dashed $black
+    line-height: 1.2
+    color: $black
+    opacity: 0.6
+    &:hover
+      opacity: 1
+      color: $black
+
+
+// productPageBreadcrumb
+.productPageBreadcrumb
+  padding: 0 24px
+  @include tablet
+    padding: 0 40px
+  
+/* Rating */
+.rating
+  .rating-score
+    margin-bottom: 0
+    position: relative
+    top: 2px
+    margin-left: 8px
+  .commonList
+    .icon
+      width: 12px!important
+      height: 12px!important
+
+
+// product status
+.productStatus
+  font-size: 0.8125rem
+  font-weight: var(--fontbold)
+  font-family: var(--heading)
+  display: block
+  margin: 0
+  
+// Product title
+.productTitle
+  .subTitle
+    @include font-size($title-5)
+    display: block
+    font-weight: var(--fontmedium)
+    padding-top: 4px
+
+// productColors
+.productColor
+  margin-bottom: -8px
+  .selected-color
+    display: block
+// customize css for product page
+.colornav--productPage
+  padding-top: 0
+  margin-left: -4px
+  .colornav-switch
+    width: 28px
+    height: 28px
+  .colornav-link
+    width: 36px
+    height: 36px
+
+// diamondQuality
+.diamondQuality
+  display: flex
+  .diamondQuality-option
+    flex: 1 0 auto
+    text-align: center
+    background: #EAECF4
+    border: 1px solid #EAECF4
+    margin-right: 8px
+    padding: 8px 4px
+    border-radius: $product-radius
+    transition: $product-transition
+    &.active
+      @include hover-bg-border
+      background: $product-activeState
+      color: #fff
+      font-weight: var(--fontbold)
+      img
+        filter: unset
+    &:hover
+      cursor: pointer
+      @include hover-bg-border
+      img
+        transform-style: preserve-3d
+        animation: spin 4s linear infinite alternate
+        transition: all 160ms
+    &:last-child
+      margin-right: 0
+    img
+      margin: 0 auto 4px auto
+      filter: brightness(0.5)
+      transform: none
+      transition: 200ms all
+      position: relative
+      
+  .diamond-title
+    font-size: 0.9375rem
+    font-family: var(--heading)
+    font-weight: var(--fontbold)
+      
+// diamond animated
+@keyframes spin
+  100%
+    transform: rotate(360deg)
+
+
+// cart-btn
+.cartBtn
+  width: 100%
+  margin-top: 24px
+  height: 60px
+  line-height: 60px
+  padding: 0 24px
+  border-radius: 1px
+  display: flex
+  justify-content: space-between
+  &-title,
+    text-transform: none
+    text-align: left
+    font-size: 1rem
+    transform: translate3d(0, 0, 0)
+    transition: 400ms 200ms transform $animation-cubic
+  &-amount
+    justify-content: flex-end
+    text-align: right
+    font-size: 1rem
+    transition: 100ms
+  &-icon
+    position: absolute
+    top: -2px
+    width: 24px
+    height: 24px
+    display: block
+    text-indent: -200%
+    font-size: 0
+    opacity: 0
+    visibility: hidden
+    // background: pink
+    transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55)
+  // hover efffect
+  &:hover
+    .cartBtn-title
+      transform: translate3d(32px, 0, 0)
+    .cartBtn-icon
+      transform: translate3d(24px, 0, 0)
+      opacity: 1
+      visibility: visible
+      pointer-events: 
+
+@keyframes spinner
+  to
+    transform: rotate(360deg)
+
+.loaderSpinner
+  position: absolute
+  right: 36px
+  top: 0
+  bottom: 0
+
+.spinner
+  width: 20px
+  height: 20px
+  box-sizing: border-box
+  &:before
+    width: 20px
+    height: 20px
+    box-sizing: border-box
+    content: ''
+    display: block
+    border-radius: 50%
+    border: 1px solid #ccc
+    border-top-color: #333
+    animation: spinner .6s linear infinite
+
+.spinner-absolute
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-top: -10px
+  margin-left: -10px
+
+/* Animations
+.spinner-add, .spinner-remove
+  animation-fill-mode: both
+  animation-duration: .4s
+
+.spinner-add
+  animation-name: spinner-add
+
+@keyframes spinner-add
+  from
+    transform: scale(0)
+  to
+    transform: scale(1)
+
+.spinner-remove
+  animation-name: spinner-remove
+
+@keyframes spinner-remove
+  to
+    transform: scale(0)
+
+
+// productDetails
+.productDetails
+  position: relative
+  padding-top: 40px
+  &__content
+    padding-bottom: 16px  
+  .checklist-icon
+    font-size: 1rem
+
+// itemLengthSize
+.itemLengthSize,
+.selectOption
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  .itemLengthSize-item
+    border: 1px solid rgba($grey, 0.6)
+    margin: 4px
+    padding: 16px 4px
+    text-align: center
+    border-radius: $product-radius
+    font-size: 0.8125rem
+    font-weight: var(--fontbold)
+    transition: $product-transition
+    &.active
+      @include hover-bg-border
+      background-color: rgba(#112CA0, 0.080)
+      color: $primary
+      font-weight: var(--fontbold)
+    &:hover
+      cursor: pointer
+      @include hover-bg-border
+
+// two-option selections
+.lengthSize--2
+  .itemLengthSize-item
+    flex: 0 0 calc((100% / 2) - 8px)
+
+// five-option selections
+.lengthSize--5
+  .itemLengthSize-item
+    flex: 0 0 calc((100% / 5) - 8px)
+
+// four-option selections
+.lengthSize--4
+  .itemLengthSize-item
+    flex: 0 0 calc((100% / 4) - 8px)
+
+
+/*=============================================
+ =      Product Page other sections          =
+ =============================================*/
+.productFulfillment
+  position: relative
+  display: grid
+  grid-template-columns: 1fr 1fr 
+  padding: 24px $product-space
+  border-top: 1px solid rgba($grey, 0.2)
+  border-bottom: 1px solid rgba($grey, 0.2)
+  margin-top: 24px
+  width: 100%
+  justify-content: center
+  @include tablet
+    padding: $product-space 0
+    text-align: center
+    grid-template-columns: 1fr 1fr 1fr 1fr!important
+  .productFulfillment
+    &-column
+      padding-right: 16px
+      border-right: 1px solid rgba($grey, 0.2)
+      border-bottom: 1px solid rgba($grey, 0.2)
+      padding-top: 24px
+      padding-bottom: 24px
+      &:nth-child(3),
+      &:nth-child(4)
+        border-bottom: 0
+      &:nth-child(2),
+      &:nth-child(4)
+        padding-left: 24px
+        border-right: 0
+      @include tabletsmall
+        padding-right: 40px
+      @include tablet
+        border: 0
+        padding-right: 8px
+        padding-left: 8px
+        margin-left: auto
+        margin-right: auto
+        max-width: 340px
+    &-icon
+      width: 32px
+      height: 32px
+      display: block
+      margin-bottom: 12px
+      @include tablet
+        margin-left: auto
+        margin-right: auto
+    &-title
+      font-size: 0.8125rem
+      font-weight: var(--fontbold)
+    &-content
+      font-size: 0.75rem
+      margin-bottom: 12px
+    &-link
+      font-size: 0.8125rem
+      font-weight: var(--fontbold)
+
+
+// productDetailContainer
+.productDetailContainer
+  position: relative
+  padding: 40px 0
+  @include tablet
+    padding: 80px 0
+  .container
+    @include tabletsmall
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+
+  &-details
+    width: 100%
+    @include tabletsmall
+      width: 50%
+      padding-right: 80px
+  &-media
+    width: 100%
+    img
+      width: 100%
+      @include tablet
+        max-width: 800px
+    @include tabletsmall
+      width: 50%
+      
+      
+  .productDetail
+    &-content
+      h2
+        letter-spacing: -1px
+      p
+        margin-bottom: 16px
+    &-accordion
+      .accordion-header
+        font-size: 1.25rem
+        color: $primary-300
+        font-weight: var(--fontmedium)
+        padding: 16px 0
+        margin: 0
+        &:hover
+          background: rgba(228,230,235,.5)
+      .commanChecklist li
+        font-size: 1rem
+        font-weight: var(--fontmedium)
+
+  .productBiggerImage
+    max-width: 600px
+    margin-left: auto
+
+.ProductDetailList
+  .col
+    border-bottom: 1px solid rgba($grey, 0.2)
+    &:nth-child(odd)
+      border-right: 1px solid rgba($grey, 0.2)
+    &:last-child
+      border-bottom: 0
+  .ProductDetailList
+    &-col
+      padding: 16px
+      border-bottom: 1px solid rgba($grey, 0.2)
+      border: 0
+    &-label
+      font-size: 0.8125rem 
+    &-title
+      font-size: $title-5
+
+
+/*=============================================
+ =            Customer reviews        =
+ =============================================*/
+.ourCustomers,
+.productSuggestions
+  padding: 60px 0
+  @include tablet
+    padding: 80px 0
+  @include desktop
+    padding: 120px 0
+  .section-header
+    margin-bottom: 24px
+.ourCustomersReviews
+  overflow: visible!important
+  @include tablet
+    overflow: hidden!important
+  .col
+    padding: 32px
+    border: 1px solid $grey
+    @include tablet
+      padding: 40px
+  .owl-item,
+  .owl-stage
+    display: flex
+  .owl-stage
+    margin: 0 2px
+  .title
+    font-size: $title-5
+    font-weight: var(--fontbold)
+    padding-bottom: 8px
+  .meta
+    .meta-review
+      padding-right: 8px
+      font-size: 0.75rem
+      font-weight: var(--fontmedium)
+      line-height: 1
+      opacity: 0.6
+      &:first-child
+        border-right: 1px solid $grey
+        margin-right: 8px
+  .review
+    padding-top: 24px
+    font-size: 14px
+      
+
+// productBottomBar
+.productBottomBar--height
+  height: auto
+
+.productBottomBarWrapper
+  position: fixed
+  bottom: 0
+  left: 0
+  background: #ffffff
+  width: 100%
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1)
+  z-index: 99
+  visibility: hidden
+  transform: translate3d(0, 100%, 0)
+  transition: 600ms all $animation-cubic
+  &.show
+    visibility: visible
+    transform: translate3d(0, 0, 0)
+  .d-block
+    padding: 12px
+    @include tablet
+      padding: 0
+
+.productBottomBar
+  display: flex
+  align-items: center
+  &__product
+    display: none
+    @include tablet
+      flex: 5 0 0
+      display: flex
+      align-items: center
+      justify-content: flex-end
+    &-image
+      margin-right: 24px
+      transform: scale(0.9)
+      img
+        border-radius: 8px
+        border: 1px solid rgba($grey, 0.4)
+        width: 80px
+        height: 80px
+        margin-top: 8px
+        margin-bottom: 8px
+    .productBottomBar-title
+      width: 340px
+      font-size: 1rem
+      text-align: right
+      padding-right: 16px
+      margin-bottom: 0
+
+  &__actions
+    width: 100%
+    @include tablet
+      flex: 1 0 0
+      display: flex
+      justify-content: flex-end
+      align-items: center
+    .productBottomBar-btn
+      padding-left: 48px
+      padding-right: 48px
+      @include tablet
+        width: auto
+
+
+/*=============================================
+ =           Other Classes          =
+ =============================================*/
+.stockMessage
+  display: block
+  font-weight: var(--fontbold)
+  font-size: 13px
+  padding: 8px
+
+.productpage
+  .product-card__image
+    min-height: 180px
+
+
+// new quality
+.diamondQuality
+  .content-wrapper
+    width: 100%
+    background: #fff
+    // background-clip: padding-box
+    border: $co-border
+    border-radius: 12px
+    color: #444852
+    &__row
+      display: table
+      position: relative
+      width: 100%
+      padding: 12px 16px
+      border-radius: 0
+      zoom: 1
+      @include clearfix2
+      &--secondary
+        background-color: rgba(#112CA0, 0.080)
+        border-radius: 0
+        position: relative
+        zoom: 1
+        border-top: 0!important
+        padding-left: 48px
+        padding-top: 8px!important
+        color: #000000
+        @include clearfix2
+    
+    &__tight
+      padding-left: 0
+      padding-right: 0
+
+
+    .checkout-block
+      display: flex
+      color: #444852
+      font-size: 0.875rem
+      @include clearfix2
+      ~.checkout-block
+        padding-top: 12px
+        margin-top: 12px
+        border-top: 1px solid $softgrey
+      &__inner
+        flex: 1
+        display: flex
+        &__btn a
+          color: #333333
+          font-size: 0.875rem
+      &__label
+        flex: 0 1 6em
+        padding-right: 12px
+      &__content
+        flex: 6
+        padding-right: 12px
+        color: #000000 
+
+
+    // radio-wrapper
+    .radio-wrapper~.radio-wrapper
+      padding-top: 12px
+      border-top: 2px solid $softgrey
+
+    .radio-row
+      display: flex
+      color: #444852
+      font-size: 0.875rem
+      padding: 0 12px
+      ~.radio-row
+        padding-top: 12px
+        margin-top: 12px
+        border-top: 1px solid $softgrey
+      &__inner
+        display: table
+        width: 100%
+        @include clearfix2
+
+    .radio__label
+      display: table-cell
+      vertical-align: middle
+      margin-bottom: 0
+      width: 100%
+      font-weight: var(--fontmedium)
+
+      &--primary
+        display: table-cell
+        width: 100%
+        color: #000000
+        font-weight: var(--fontbold)
+
+      &--stuff
+        display: table-cell
+        text-align: right
+        vertical-align: middle
+
+    .radio__input
+      margin-right: 12px
+
+    .field__icon
+      display: block
+      height: calc(100% - 12px)
+      position: absolute
+      top: 6px
+      right: 6px
+      width: 46px
+      &-wrapper
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        svg
+          height: 16px
+
+  .hidden
+    display: none
+
+  .radio-wrapper-bg,
+  .radio-wrapper-bg-container
+    background-color: rgba(#112CA0, 0.080)
+
+
+// letterCounter
+.letterCounter
+  position: relative
+  .field
+    padding: 0
+  .field__input
+    height: 56px
+    padding-left: 16px
+    padding-right: 108px
+    letter-spacing: 2px
+    &::placeholder
+      letter-spacing: 2px
+      font-weight: var(--fontmedium)
+  .field__btn
+    display: flex
+    align-items: center
+    height: 56px
+    position: absolute
+    right: 0
+    top: 0
+    bottom: 0
+    right: 0
+    margin-right: 6px
+  .btn-submit-letters
+    height: 44px
+    padding-left: 32px
+    padding-right: 32px
+
+  &--has-letters
+    .field > *:not(.field__btn)
+      background-color: rgba(#112CA0, 0.080)
+      pointer-events: none
