@@ -3,12 +3,13 @@
 ### Icebox 3.0 - 2021
 ...
 
-| Directories          |                                                                 |   |   |
-|----------------------|-----------------------------------------------------------------|---|---|
-| CSS                  |                                                                 |   |   |
-| sass/default.scss    | Holding all default setting                                     |   |   |
-| sass/app-icebox.scss | This is main icebox css file                                    |   |   |
-| comps                | Comps is components folder where you will see holder components |   |   |
+| Directories          |                                                                 | 
+|----------------------|-----------------------------------------------------------------|
+| CSS                  |                                                                 |
+| css/style.css        | Still we are using icebox old css, we will delete completely very soon afte  updating all pages.                                     |
+| sass/default.scss    | Holding all default setting                                     |
+| sass/app-icebox.scss | This is main icebox css file                                    |
+| comps                | Comps is components folder where you will see holder components |
 
 
 ```
