@@ -1,0 +1,68 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+{% set page = 'faq' %}
+
+
+{% block content %}
+<div class="heros contact">
+  <div class="hero__content">
+    <h1 class="title-2">Frequently Asked Question</h1>
+    <!-- <p class="text-4">For questions about jewelry, contact a Sales Professional. For engagement guidance.</p> -->
+  </div>
+</div>
+
+<div class="layout-accordion">
+  <div class="container">
+    <nav class="layout-navbar">
+      <a href="faq.html" class="accordion-link {% if page=='faq'%}accordion-link-active{% endif %}">Frequently Asked
+        Questions</a>
+      <a href="payment.html" class="accordion-link {% if page=='payment'%}accordion-link-active{% endif %}">Payments</a>
+      <a href="shipping.html" class="accordion-link {% if page=='shipping'%}accordion-link-active{% endif %}">Shipping &
+        Returns</a>
+    </nav>
+    <div class="layout-content">
+
+      <div class="question-wrapper">
+        <div class="faq-block">
+          <h4 class="comman-title">Can I create a wishlist?</h4>
+          <p class="text-block-bigger">You can easily create a wishlist in our webshop. Click on the ♡ icon you find
+            on any product, and a ♡
+            will appear in the
+            menu – you’ve created your wishlist. If you have an account, your wishlist will be saved and is
+            available
+            any time you
+            login to your account. If you do not have an account,</p>
+        </div>
+        <div class="faq-block">
+          <h4 class="comman-title">Can I add a personal note if I send someone a gift?</h4>
+          <p class="text-block-bigger">You can. During the checkout procedure you will notice a field for your
+            personal note. Here you have
+            the opportunity to
+            add some words. We will turn these into the coolest handwritten note. Be kind, keep it short!</p>
+        </div>
+        <div class="faq-block">
+          <h4 class="comman-title">I want my book(s) gift wrapped, is that possible?</h4>
+          <p class="text-block-bigger">Yes. In fact, that’s a standard service for every single product on every
+            online order. We believe each
+            book is a gift,
+            whether it is for yourself or for someone else.</p>
+        </div>
+        <div class="faq-block">
+          <h4 class="comman-title">I got an Error 404 or Error 500 – now what?</h4>
+          <p class="text-block-bigger"> We hate those because our website should work properly. We would appreciate
+            it if you send us an email
+            and try to reproduce your clicks and actions that eventually led to the error. It won’t immediately help
+            you but it will improve the quality of our online service for future clients. And they will be eternally
+            grateful.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script src="js/staticpages.min.js"></script>
+{% endblock %}

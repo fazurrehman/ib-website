@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="../css/style.min.css">
+
+<div class="header-banner">
+  <div class="header-promotion" data-close-content="header-banner">
+    <div class="owl-carousel header-promotion-carousel" id="promotionBanners">
+      <div class="header-promotion-carousel-item">
+        <div class="header-promotion-carousel-item-inner">Keeping Our Community Healthy & Safe. Our Community Healthy &
+          Safe. <a href="#" title="Read More"><u>Read More.</a></u></div>
+      </div>
+      <div class="header-promotion-carousel-item">
+        <div class="header-promotion-carousel-item-inner">Free Shipping &amp; Returns.</div>
+      </div>
+      <div class="header-promotion-carousel-item">
+        <div class="header-promotion-carousel-item-inner">We are still processing all online orders - all items include
+          FREE 2-day Shipping!</div>
+      </div>
+      <div class="header-promotion-carousel-item">
+        <div class="header-promotion-carousel-item-inner"><a href="#NEWSLETTER">Sign up</a> for <b>10% off</b> your
+          first order.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="globalNav">
+  {% include "../components/navbar-desktop.twig" %}
+  {% include "../components/navbar-mobile.twig" %}
+  <!-- search -->
+</div>
+
+<div class="search-page">
+  <div class="search-wrapper">
+    <div class="search-wrapper--input">
+      <div class="search-trigger nav-search-icon">
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M15.943 8.722a7.222 7.222 0 11-14.443 0 7.222 7.222 0 0114.443 0zm-1.832 6.857a8.722 8.722 0 111.469-1.469l3.435 3.436a1.038 1.038 0 11-1.469 1.469l-3.435-3.436z"
+            fill="#000" />
+        </svg>
+      </div>
+      <form action="/search" method="get">
+        <input name="search" class="search-query" autocomplete="off" placeholder="Search" value="">
+      </form>
+      <div class="search-trigger nav-search-icon">
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M1.414 0L0 1.414 3.536 4.95 0 8.485 1.414 9.9 4.95 6.364l3.535 3.535L9.9 8.485 6.364 4.95 9.9 1.414 8.485 0 4.95 3.536 1.414 0z"
+            fill="#000" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="search-wrapper--suggestion">
+      <span>Quick Suggestion</span>
+      <ul class="suggestion-links">
+        <li><a href="#">Best Selling Products</a></li>
+        <li><a href="#">Products in $500</a></li>
+        <li><a href="#">World Best Neckless</a></li>
+        <li><a href="#">Custom Rolex Watches</a></li>
+        <li><a href="#">Gold & Diamond Neckless</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Kids Jewellry</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<hr>
+
+<div class="globalNav">
+  <div class="globalNav__desktop nav-on-desktop">
+    <div class="logo">
+      <a href="\">
+        <img src="../img/logo.svg" alt="Logo">
+      </a>
+    </div>
+  
+    <nav class="desktop">
+      <ul class="mainNav">
+        <!-- submenu -->
+        <li class="mainNav-hasChildren">
+          <a href="#" class="rootLink">Men</a>
+          <div class="mainNav-subContainer">
+            <ul class="subMenu">
+              <div class="col-6 col-padding border-col">
+                <ul class="subMenu--links">
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">All</a></li>
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">New arrival</a></li>
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">Necklaces</a></li>
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">Earrings</a></li>
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">Bracelets</a></li>
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">Watches</a></li>
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">Accessories</a></li>
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">Custom</a></li>
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">Glasses</a></li>
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">Pendants</a></li>
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">Rings</a></li>
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">Necklaces</a></li>
+                  <li class="rootLink-child subMenu__cols-link"><a href="#">Earrings</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-padding feature-grid">
+                <div class="feature-grid--items">
+                  <figure><img src="../img/featured-1.jpg" alt=""></figure>
+                  <h4>Gift Cards</h4>
+                  <a href="#">Read more</a>
+                </div>
+                <div class="feature-grid--items">
+                  <figure><img src="../img/featured-1.jpg" alt=""></figure>
+                  <h4>Sell 20% OFF</h4>
+                  <a href="#">Shop Now</a>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </li><!-- submenu end -->
+        <li class="rootLink"><a href="#">Women</a></li>
+        <li class="rootLink"><a href="#">Custom</a></li>
+        <li class="rootLink"><a href="#">Best Sellers</a></li>
+        <li class="rootLink"><a href="#">Accessories</a></li>
+      </ul>
+    </nav>
+  
+    <div class="desktop-right">
+      <div class="accounts-login dropdown">
+        <a class="dropdown-toggle accounts-login--link" data-toggle="dropdown" href="#" aria-haspopup="true"
+          aria-expanded="false">My Account</a>
+        <div class="dropdown-menu desktop__dropdown dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+          <a href="myaccount.html" class="dropdown-item customer__information">
+            <label for="">James Jonsin</label>
+            <span>View Account </span>
+          </a>
+          <a class="dropdown-item" href="/my-orders">My Orders</a>
+          <a class="dropdown-item" href="/my-wishlist">My Wishlist</a>
+          <a class="dropdown-item" href="/admin/">Admin Area</a>
+          <a class="dropdown-item item--logout" href="/logout">Logout</a>
+        </div>
+      </div>
+  
+      <div class="search-trigger nav-search-icon">
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M15.943 8.722a7.222 7.222 0 11-14.443 0 7.222 7.222 0 0114.443 0zm-1.832 6.857a8.722 8.722 0 111.469-1.469l3.435 3.436a1.038 1.038 0 11-1.469 1.469l-3.435-3.436z"
+            fill="#000" /></svg>
+      </div>
+      <div class="mini-cart-trigger nav-cart-icon">
+        <span class="counter">8</span>
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 19">
+          <path
+            d="M15.6 17.6H1.4V5.7h2.8v2.1a.7.7 0 101.4 0V5.7h5.7v2.1a.7.7 0 101.4 0V5.7h2.8v11.9h.1zM8.5 1.4c1.6 0 2.8 1.3 2.8 2.8H5.7c0-1.5 1.2-2.8 2.8-2.8zm4.3 2.8c0-2.3-1.9-4.2-4.2-4.2-2.4 0-4.4 1.9-4.4 4.2H0v13.3c0 .9.6 1.5 1.4 1.5h14.2c.8 0 1.4-.6 1.4-1.4V4.2h-4.2z"
+            fill="#000" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  {% include "../components/navbar-mobile.twig" %}
+  <!-- search -->
+</div>
+
+<script src="js/homepage.min.js"></script>

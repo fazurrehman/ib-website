@@ -1,0 +1,316 @@
+$border-color: lighten($softgrey, 3%)
+
+
+
+
+.c-productcard-wrapper
+  border: 2px solid transparent
+  border-radius: 2px
+  position: relative
+
+// product-card
+.c-productcard
+  display: block
+  overflow: hidden
+  border-radius: 2px
+  border: 1px solid $border-color
+  transition: 40ms border ease-in
+  position: relative
+  // height: 100%
+  background: #ffffff
+  @include clearfix2
+  margin-bottom: 1px
+
+  &__stuff
+    position: relative
+    margin: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 100%
+    width: 100%
+    background-color: #fff
+    
+    .c-productcard-image
+      // position: relative
+      padding-bottom: 100%
+      img
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        object-fit: contain
+      
+      img[data-sizes="auto"]
+        display: block
+        width: 100%
+
+  &__details
+    position: relative
+    padding: 16px
+    padding-bottom: 8px
+    padding-top: 4px
+    @media (max-width: 600px)
+      padding: 8px
+      padding-top: 0
+    > *
+      font-size: 13px
+    &-top,
+    &-main,
+    &-bottom
+      display: block
+      position: relative
+      @include clearfix2
+    
+    &-top
+      min-height: 20px
+    &-main
+      margin-bottom: 8px
+      @media (max-width: 600px)
+        margin-bottom: 0
+    &-bottom
+    
+
+// classes
+// hover classes
+.c-productcard:hover
+  border-color: $primary
+
+
+.c-productcard-link
+  display: block
+  a
+    color: inherit
+
+.productcard-label
+  font-weight: var(--fontmedium)
+  font-size: 12px
+  color: #4c5269
+  margin-right: 6px
+  letter-spacing: 0.3px
+
+
+.productcard-title
+  font-size: 14px
+  margin-top: 12px
+  margin-bottom: 8px
+  font-weight: var(--fontmedium)
+  font-family: var(--body)
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden !important
+  white-space: nowrap
+  max-width: 100%
+  @media (max-width: 600px)
+    font-size: 12px
+    margin-bottom: 4px
+
+.productcard-price
+  display: flex
+  width: 100%
+  margin-bottom: 8px
+  &-new
+    margin-right: 8px
+    font-weight: var(--fontbold)
+    font-size: 13px
+    @media (max-width: 600px)
+      font-size: 12px
+  &-old
+    margin-right: 8px
+    position: relative
+    font-weight: 400
+    font-weight: var(--fontmedium)
+    color: rgba($red, 0.8)
+    font-size: 13px
+    @media (max-width: 600px)
+      font-size: 12px
+    &::before
+      background: #ff000080
+      position: absolute
+      height: 1px
+      width: 100%
+      top: 8px
+      right: 0
+      content: ''
+
+
+.product-card__details-colors
+  display: none
+
+.c-productcard-attribute
+  display: block
+  width: 100%
+  font-size: 12px
+  @media (max-width: 600px)
+    font-size: 11px
+  &-item
+    display: inline
+    color: #6c757d
+  &-item~&-item
+    margin-left: 2px
+    &::before
+      content: "/"
+      padding-right: 4px
+
+
+
+// main card hover
+.c-productcard-wrapper.is-active
+  @include tablet
+    .c-productcard
+      position: absolute
+      width: 100%
+      left: 0
+      z-index: 14
+    .product-card__details-colors
+      margin-top: 8px
+      display: flex
+    .productcard-title
+      text-overflow: unset
+      white-space: unset
+      overflow: unset
+
+
+
+.badge-shipping-today
+  background-color: rgba(#aee4c6, 0.2)
+  color: #015c32
+  padding: 2px 8px
+  border-radius: 4px
+  z-index: 8
+  @media (max-width: 600px)
+    padding: 2px 4px
+  .svgIcon-root
+    font-size: 13px
+  span
+    font-size: 12px
+    font-weight: var(--fontmedium)
+    @media (max-width: 600px)
+      font-size: 11px
+
+.c-productcard-wishlist
+  width: 20px
+  height: 20px
+  margin-top: 2px
+  margin-right: 2px
+  display: block
+  z-index: 8
+  cursor: pointer
+  position: relative
+  transition: 160ms all ease-in
+  opacity: 0.4
+  &::before
+    width: 32px
+    height: 32px
+    background-color: transparent
+    transition: 160ms all ease-in
+    content: ""
+    position: absolute
+    right: 0
+    left: -6px
+    top: -7px
+    border-radius: 100px
+  &:hover
+    opacity: 1
+    &::before
+      background-color: rgba($red, 0.1)
+
+
+// disable classes
+.is-disable
+  display: none!important
+
+
+// product card admin
+// flyout
+.c-productcard-for-product
+  position: absolute
+  top: 0px
+  left: 0px
+  right: 0px
+  display: flex
+  justify-content: space-between
+  margin: 12px
+  z-index: 1
+
+.c-productcard-for-admin
+  position: absolute
+  top: 0px
+  left: 0px
+  right: 0px
+  display: flex
+  justify-content: space-between
+  margin: 12px
+  z-index: 1
+
+  &-cols
+    display: inline-flex
+
+  .form-control
+    font-size: 13px
+    padding-left: 4px
+    font-weight: var(--fontmedium)
+    margin-right: 4px
+
+
+.c-productcard-table-stats,
+.c-productcard-table-watch
+  background-color: #fff
+  border-radius: 7px
+  box-shadow: 0 30px 40px 0 rgba(138, 138, 138, 0.2)
+  height: auto
+  padding: 8px
+
+  table
+    font-size: 12px
+    border-collapse: collapse
+    tr:hover 
+      background: rgba(39, 94, 254, 0.1)
+
+
+  .c-productcard
+    &-table-row
+      margin-bottom: 8px
+
+    &-table-heading
+      font-size: 11px
+      font-weight: 500
+      text-transform: uppercase
+      opacity: 0.7
+      padding-right: 4px
+      letter-spacing: 1px
+  
+    &-table-cell
+      font-weight: var(--fontbold)
+
+    &-table-heading,
+    &-table-cell
+      padding: 0.20rem
+
+    // stock available
+    &--stock-available
+      border: 1px solid $green
+
+  
+.c-productcard-table-watch
+  box-shadow: none
+  background: #f1f2f5
+  padding: 12px
+  margin: 12px 0
+  table
+    width: 100%
+  .c-productcard-table-heading
+    padding-right: 8px
+  .c-productcard-table-row
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+
+  .btn-table-edit
+    width: 100%
+    height: 32px
+    line-height: 1
+    padding: 0
+    background-color: #000000
+
+
+    

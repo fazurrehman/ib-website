@@ -1,0 +1,93 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+{% block included_content_header %}
+{% include "../components/promo1.twig" %}
+{% endblock %}
+{% block content %}
+
+
+<!-- filter mobile -->
+{% include '../components/results/filters-mobile.twig' %}
+<section class="wrap">
+  <div class="results">
+
+    <!-- sidebar -->
+    <div class="page__sidebar custom-checkbox">
+      {% include '../components/results/filters.twig' %}
+    </div>
+
+    <div class="page__results">
+
+      <!-- filter header -->
+      <div class="page__results-filter mobile--filter">
+
+        <div class="filters-title-header">
+
+          <!-- search results counter -->
+          <div class="search-header">
+            <div class="search-header-buttons">
+              <a href="/" class="btn-home">
+                <aside>
+                  <svg class="svgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 512 426">
+                    <path
+                      d="M66.997 163.471l75.719 86.676c7.603 8.705 6.711 21.924-1.995 29.527a20.84 20.84 0 01-13.755 5.169 20.913 20.913 0 01-15.771-7.157L5.324 156.491A20.843 20.843 0 010 142.546v-.001a20.849 20.849 0 015.486-14.125L111.194 7.411c7.61-8.698 20.822-9.591 29.527-1.995 8.705 7.603 9.591 20.822 1.995 29.527l-75.72 86.676H359.93c83.851 0 152.07 68.219 152.07 152.063s-68.226 152.063-152.07 152.063c-11.558 0-20.926-9.368-20.926-20.926 0-11.558 9.368-20.926 20.926-20.926 60.776 0 110.218-49.441 110.218-110.211 0-60.77-49.442-110.211-110.218-110.211H66.997z" />
+                  </svg>
+
+                </aside>
+                Back Home
+              </a>
+            </div>
+            <span class="text-4 mb-1">Your search for:</span>
+            <div class="d-flex align-items-center">
+              <h3 class="results-title">Designer Earrings</h3>
+              <span class="ml-2">[50]</span>
+            </div>
+
+          </div>
+
+
+          <a href="#0" class="filter-trigger-mobile" id="mobile-filter-trigger"><label>Filter</label>
+            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="2.5" width="20" height="2.5" fill="#101e5a" class="line-1"></rect>
+              <rect y="11.25" width="20" height="2.5" fill="#101e5a" class="line-2"></rect>
+              <rect x="3.75" width="2.5" height="7.5" fill="#101e5a" class="circle-1"></rect>
+              <rect x="13.75" y="8.75" width="2.5" height="7.5" fill="#101e5a" class="circle-2"></rect>
+            </svg>
+          </a>
+        </div>
+
+        <div class="filters-sort-header">
+          {% include '../components/results/filters-header.twig' %}
+        </div>
+        {% include '../components/results/filters-header-mobile.twig' %}
+
+        <div class="product-grid">
+          <section>
+            {% for i in 1..40 %}
+            {% include '../components/productcart.twig' with {'objects':i} %}
+            {% endfor %}
+          </section>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script src="js/development/development.min.js"></script>
+<script>
+  // Dropdown filter header, slide effect
+  // for filter header
+  $('.filters-custom.dropdown').on('show.bs.dropdown', function (e) {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown(200);
+  });
+  $('.filters-custom.dropdown').on('hide.bs.dropdown', function (e) {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp(0);
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,18 @@
+<section>
+  <div class="productCommanHeader">
+    <div class="productCommanHeader__left">
+      <h5 class="productCommanHeader--title d-flex"><i class="icon icon--rated-gold mr-2"></i>Recommendation</h5>
+    </div>
+    <div class="productCommanHeader__right">
+      <a class="productCommanHeader--link" href="#" id="jsSlidebarDiamondQualityTrigger">View All</a>
+    </div>
+  </div>
+  <div class="productRecommendation">
+    <ul id="js-RecommendationSlider" class="owl-carousel owl-theme">
+      {% for i in 1..8 %}
+      {% include '../productcart.twig' with {'objects':i} %}
+      {% endfor %}
+
+    </ul>
+  </div>
+</section>

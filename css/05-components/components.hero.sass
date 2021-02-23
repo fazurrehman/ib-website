@@ -1,0 +1,152 @@
+.hero-split
+  position: relative
+  &-wrapper
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    flex-direction: column-reverse
+    @include tablet
+      flex-direction: inherit
+  &--content,
+  &--media
+    width: 100%
+    @include tablet
+      flex: 1 0 50%
+
+  &--content
+    &-wrapper
+      padding: 40px
+      @include desktop
+        padding: 0 4% 0 14%
+        max-width: 800px
+      // formatting
+
+
+
+  &--media
+    @include tablet
+    .aspect-ratio-square
+      padding-top: 50%
+      @include tablet
+        padding-top: 90%
+  
+
+.btn-fixer
+  width: 100%
+  overflow: hidden
+  @include tablet
+    max-width: 80%
+
+.hero-style
+  text-align: center
+  @include tablet
+    text-align: left
+  h1
+    letter-spacing: -0.5px
+  
+  .btn
+    padding: 20px 40px
+    width: 100%
+
+
+
+// buy-pages customize
+.buy-pages
+  .socialmedia
+    display: none
+    @include tablet
+      display: flex
+  .footer-info ul li.select-country
+    display: none
+
+
+// hero pages
+.section
+  padding: 120px 0
+
+.section--small
+  padding: 60px
+
+.page-hero
+  position: relative
+  .hero-title
+    margin-bottom: 40px
+
+
+
+// homepage banners
+.banner
+  width: 100%
+  position: relative
+  background-color: var(--bg)
+  .banner-content
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0) 100%);
+    z-index: 1
+    padding: 60px 32px 32px 32px 
+    @include media(">820px")
+      position: absolute
+      left: unset
+      margin-left: 24px
+      bottom: 40px
+      background: #ffffff
+      width: 420px
+      z-index: 1
+      padding: 24px
+    @include media('>tablet')
+      padding: 32px
+
+
+  .banner
+    &-summary
+      font-size: 0.9375rem
+      margin-bottom: 8px
+      font-weight: var(--fontmedium)
+      color: #646C76
+      display: none
+      @include media(">820px")
+        display: block
+      @include media('>tablet')
+        margin-bottom: 4px
+        font-size: 1rem
+    &-heading
+      font-weight: var(--fontbold)
+      @include font-size(2rem)
+      letter-spacing: -0.3px
+      color: #ffffff
+      @include media(">820px")
+        color: #000000
+
+      @include media('>tablet')
+        margin-bottom: 12px
+  .btnLink
+    color: #ffffff
+    border-color: #ffffff
+    font-weight: var(--fontbold)
+    @include media(">820px")
+      color: $primary
+      border-color: inherit
+
+
+    
+
+
+.bg-image
+  width: 100%
+  // height: auto
+  position: relative
+  @include media(">820px")
+    height: 300px 
+  @include media(">desktop")
+    height: 400px 
+
+  &.image-wrapper img
+    height: auto
+    object-fit: contain
+    @include media(">820px")
+     object-fit: cover
+     height: inherit

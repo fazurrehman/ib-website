@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="eng">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta NAME="robots" content="noindex,nofollow" />
+  <!-- delete tag please when website live -->
+  <link rel="stylesheet" href="../css/style.min.css" />
+  <title>Icebox Diamonds & Watches - Nations Leading Mens Fine Jewelry</title>
+  <meta name="description" content="" />
+  <meta name="robots" content="noindex">
+  <!-- favicons -->
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" />
+  <link rel="shortcut icon" type="img/png" href="img/favicons/favicon-16.png" />
+  <link rel="shortcut icon" type="img/png" href="img/favicons/favicon-32.png" />
+  <link rel="apple-touch-icon" href="img/favicons/touch-icon-ipad.png" />
+  <link rel="apple-touch-icon" href="img/favicons/touch-icon-iphone-retina.png" />
+</head>
+
+<body class="nav-on-left">
+
+  
+<div class="newsletter">
+  <div class="newsletter--welcome">
+    <div class="shadow-layer"></div>
+    <button type="button" class="icon-b icon--close-rounded newsletter--trigger js-newsletterTrigger"></button>
+    <h4 id="newsletterWelcomeTitle" class="block mb-3 title-4 newsletter-header">Welcome</h4>
+    <p id="newsletterWelcomeText" class="block  mb-2 text-3">We don’t send a lot of emails but they’re usually a treat
+      to read. Sign up, and get $5 off of your four months.
+    </p>
+    <div id="newsletterWelcomeForm" class="section-form">
+      <form class="form-newsletter" action="">
+        <input class="input-no-border" type="email" placeholder="Enter your email" required>
+        <div class="button-group">
+          <button type="submit" id="newsletterWelcomeButton" class="btn">Subscribe</button>
+          <i class="icon">
+            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 13">
+              <path d="M17.701 0l-1.283 1.283 4.109 4.109H0v1.814h20.527l-4.109 4.109 1.283 1.282L24 6.3 17.701 0z"
+                fill="#999999"></path>
+            </svg></i>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <main>
+  </main>
+  <script src="../js/development/development.min.js"></script>
+<script>
+  _e('newsletterWelcomeButton').addEventListener('click', function () {
+    _e('newsletterWelcomeForm').remove();
+    _e('newsletterWelcomeTitle').innerHTML = 'Thank you! 🎉';
+    _e('newsletterWelcomeText').innerHTML = 'Now you will be the first get to know about new offers and discounts on icebox!';
+  }, false);
+  function _e(id) {
+    return document.getElementById(id);
+  }
+  $(function () {
+    $('#newsletterWelcomeButton').on('click', function () {
+      var r = $('<a href="#" class="btn btn-border mt-4 btn-full js-newsletterTriggerButton">Done</a>');
+      $(".newsletter--welcome").append(r).show();
+    });
+  });
+  function initNewsletterWelcome() {
+    setTimeout(function () {
+      $('.newsletter--overlay').addClass('is-active');
+    }, 3000);
+    $('.js-newsletterTriggerButton').on('click', function () {
+      $('.newsletter--overlay').removeClass('is-active');
+    });
+  }
+  $(document).ready(function () {
+    initNewsletterWelcome();
+  });
+</script>
+
+</body>
+
+</html>

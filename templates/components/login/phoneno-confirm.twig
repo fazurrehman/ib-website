@@ -1,0 +1,33 @@
+<div id="ib-phoneNumberConfirm" class="ib-modal-view" style="display: none;">
+  <header>
+    <h4 class="title-4 headline">Enter your code</h4>
+    <p class="subhead">We send a code to <strong>(+01) 991-8549</strong>, <br> Please enter it below</p>
+  </header>
+  <form class="needs-validation" novalidate>
+
+    <div class="input-confirm">
+      <input id="codeBox1" class="input-confirm-code" type="number" maxlength="1" onkeyup="onKeyUpEvent(1, event)"
+        onfocus="onFocusEvent(1)" placeholder="0">
+      <input id="codeBox2" class="input-confirm-code" type="number" maxlength="1" onkeyup="onKeyUpEvent(2, event)"
+        onfocus="onFocusEvent(2)" placeholder="0">
+      <input id="codeBox3" class="input-confirm-code" type="number" maxlength="1" onkeyup="onKeyUpEvent(3, event)"
+        onfocus="onFocusEvent(3)" placeholder="0">
+      <input id="codeBox4" class="input-confirm-code" type="number" maxlength="1" onkeyup="onKeyUpEvent(4, event)"
+        onfocus="onFocusEvent(4)" placeholder="0">
+    </div>
+
+    <div class="ib-modal-cta">
+      <button type="submit" class="btn btn-primary mb-2">Continue</button>
+      <button type="submit" class="btn btn-reset-codeSend">Resend code</button>
+      <span class="alert alert--info js-code-resend" style="display: none;">Get the code via a call on your mobile.The
+        link
+        will get activated in
+        0:13
+        seconds.</span>
+    </div>
+  </form>
+  <div class="ib-modal-footer fl">
+    Not a member?
+    <a href="#" class="btnLink bold js-btn-signup">Create Account</a>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+// $promotion-normal: $secondary
+// .promotion
+//   position: relative
+//   overflow: hidden
+//   // resultpage
+//   &__resultpage
+//     text-align: center
+//     padding: 24px
+//     display: flex
+//     align-items: center
+//     justify-content: center
+//     flex-direction: column
+//     min-height: 200px
+//     margin-bottom: 40px
+//     background-size: cover
+//     background-position: center center
+//     background-repeat: no-repeat
+//     @include tablet
+//       min-height: 350px
+//     .promotion-title
+//       margin-bottom: 4px
+//       font-weight: var(--fontbold)
+//       font-size: $title-5
+//       color: #ffffff
+//       @include tablet
+//         font-size: $title-4
+//     .promotion-details
+//       font-size: $text-4
+//       font-weight: var(--fontmedium)
+//       color: #ffffff
+//       text-shadow: -2px 0 4px rgba(0, 0, 0, 0.6)
+
+// promotions
+.promo--discount
+  background-color: lighten($secondary, 15%)
+
+
+.promotion
+  position: relative
+  overflow: hidden
+  // resultpage
+  &__resultpage
+    text-align: center
+    padding: 24px 16px
+    margin-bottom: 40px
+    .promotion-title
+      margin-bottom: 4px
+      font-weight: var(--fontbold)
+      font-size: $title-5
+      @include tablet
+        font-size: $title-4
+    .promotion-details
+      font-size: $text-5
+      font-weight: var(--fontmedium)
+
+// promotions
+.promo--discount
+  background: lighten($secondary, 15%)
+

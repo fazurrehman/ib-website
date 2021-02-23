@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="eng">
+
+<head>
+  {% include "../components/header.twig" %}
+  <style>
+    .button-on-mobile {
+      position: fixed;
+      bottom: 0;
+      text-align: center;
+      background: #2cca73;
+      z-index: 4;
+      width: 100%;
+      text-align: center;
+    }
+
+    .button-on-mobile .btn {
+      text-align: center;
+      width: 100%;
+      color: #ffffff;
+      padding-top: 8px;
+      padding-bottom: ;
+    }
+
+    @media (min-width: 960px) {
+      .button-on-mobile {
+        display: none
+      }
+    }
+  </style>
+</head>
+
+<body class="nav-on-left buy-pages">
+  {% include "../components/navbar.twig" %}
+
+  <main>
+
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <!-- Footer -->
+
+  <div class="footerContact">
+    <div class="footerContact-shopinfo">
+      <figure class="background-cover"
+        style="background-image: url(../img/icebox-store.jpg); background-position: center center">
+      </figure>
+      <div class=" container">
+        <div class="shopInfo">
+          <a href="https://www.google.com/maps?ll=33.843213,-84.370885&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=1431302544280744083"
+            class="link--overlap"></a>
+          <label class="commanLabel">Shop Addesss</label>
+          <h3 class="shopInfo-title">
+            3255 Peachtree Rd NE <br>Suite #2 <br> Atlanta,
+            GA 30305
+          </h3>
+          <ul class="shopInfo-cols">
+            <li>
+              <label class="commanLabel">Shop Open</label>
+              <h5 class="title-5">Monday-Friday<br> 9AM-7PM EST</h5>
+            </li>
+            <li class="shopInfo-closed-col">
+              <label class="commanLabel">Shop Closed</label>
+              <h5 class="title-5 --red">Weekends</h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footerContact-callinfo">
+      <div class="container">
+        <label class="commanLabel" style="font-size: 1rem">CALL NOW!</label>
+        <h2 class="title-2 color-white">404-991-9721</h2>
+      </div>
+    </div>
+
+    {% include "../components/country.twig" %}
+    {% include "../components/cart-empty.twig" %}
+    <div class="button-on-mobile">
+      <button class="btn" onclick="document.location.href = 'tel:4049919721'">Click to Call: 404-991-9721</button>
+    </div>
+    {{ block('included_content') }}
+    <script src="js/homepage.min.js"></script>
+    <script>
+      var booked_time = '';
+      var booked_date = '';
+      var wizard;
+      function checkEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+      }
+      $.fn.steps.setStep = function (step) {
+        var currentIndex = $(this).steps('getCurrentIndex');
+        for (var i = 0; i < Math.abs(step - currentIndex); i++) {
+          if (step > currentIndex) {
+            $(this).steps('next');
+          }
+          else {
+            $(this).steps('previous');
+          }
+        }
+      };
+      $(document).ready(function () {
+        $("#get-appointment").on("click", function (e) {
+          e.preventDefault();
+          $(".sidebarNew").addClass("is-active");
+          $(".sidebarNew-container").addClass("is-active");
+          e.stopPropagation();
+        });
+        $("#appointmentCancel").on("click", function (e) {
+          e.preventDefault();
+          $(".sidebarNew").removeClass("is-active");
+          $(".sidebarNew-container").removeClass("is-active");
+          resetWizard();
+        });
+        $(".time-slot").on("click", function (e) {
+          e.preventDefault();
+          $(".time-slot").toggleClass("time-slot--selected");
+        });
+        $('#slidebarClosed').on("click", function (e) {
+          e.preventDefault();
+          $(".sidebarNew").removeClass("is-active");
+          $(".sidebarNew-container").removeClass("is-active");
+          $('#frmBook').show();
+          $('#footer_book_msg').show();
+          $('#appointmentCancel').show();
+          $('#finishMsg').hide();
+          $('.calendar').fadeIn();
+          $('.appointment-time').fadeOut();
+          $('#appointmentCancel').click();
+          resetWizard();
+        });
+      });
+      function resetWizard() {
+        var step = 0;
+        var currentStep = $("#wizard").steps("getCurrentIndex");
+        if (currentStep < step) {
+          while (currentStep !== step) {
+            $("#wizard").steps("next");
+            currentStep++;
+          }
+        } else if (currentStep > step) {
+          while (currentStep !== step) {
+            $("#wizard").steps("previous");
+            currentStep--;
+          }
+        }
+        $('#frmBook')[0].reset();
+      }
+      $(function () {
+        wizard = $("#wizard").steps({
+          headerTag: "h4",
+          bodyTag: "section",
+          transitionEffect: "fade",
+          enableAllSteps: true,
+          transitionEffectSpeed: 500,
+          onStepChanging: function (event, currentIndex, newIndex) {
+            if (newIndex === 1) {
+              var name = $('#customerName').val();
+              var email = $('#customerEmail').val();
+              var phone = $('#customerPhone').val();
+              if ($.trim(name) != '' && checkEmail(email) && $.trim(phone) != '') {
+                $('.steps ul').addClass('step-2');
+              } else {
+                $('#error_modal_msg').html('Please fill in the required fields correctly !');
+                $('#error_modal').modal('show');
+                return false;
+              }
+            } else {
+              $('.steps ul').removeClass('step-2');
+            }
+            if (newIndex === 2) {
+              $('.steps ul').addClass('step-3');
+            } else {
+              $('.steps ul').removeClass('step-3');
+            }
+            if (newIndex === 3) {
+              $('.steps ul').addClass('step-4');
+              $('.actions ul').addClass('step-last');
+            } else {
+              $('.steps ul').removeClass('step-4');
+              $('.actions ul').removeClass('step-last');
+            }
+            return true;
+          },
+          onFinishing: function (event, currentIndex) {
+            if (booked_date == '' || booked_time == '') {
+              showMessage('error', 'Error', 'Please select a date and time for your appointment !');
+              return false;
+            } else {
+              return true;
+            }
+          },
+          onFinished: function (event, currentIndex) {
+            bookAppointment();
+            $('#frmBook').hide();
+            $('#footer_book_msg').hide();
+            $('#appointmentCancel').hide();
+            $('#booked_time_tag').html($('#selected_date_html').html());
+            $('#finishMsg').show();
+          },
+          labels: {
+            current: "current step:",
+            pagination: "Pagination",
+            finish: "Book Appointment",
+            next: "Next",
+            previous: "Back",
+            loading: "Loading ..."
+          }
+        });
+        $('.wizard > .steps li a').click(function () {
+          $(this).parent().addClass('checked');
+          $(this).parent().prevAll().addClass('checked');
+          $(this).parent().nextAll().removeClass('checked');
+        });
+        $('.forward').click(function () {
+          $("#wizard").steps('next');
+        })
+        $('.backward').click(function () {
+          $("#wizard").steps('previous');
+        })
+        $('.checkbox-circle label').click(function () {
+          $('.checkbox-circle label').removeClass('active');
+          $(this).addClass('active');
+        })
+      })
+      function selectDate(obj) {
+        var selected = $(obj).attr('data-date');
+        booked_date = selected;
+        $('#input_date').val(booked_date);
+        $('.calendar').fadeOut();
+        $('.row-flex').fadeIn();
+        $('#time_row').fadeIn();
+        $('#html_date').fadeIn();
+        $('.btn-week').each(function () {
+          $(this).removeClass('seleted');
+        });
+        $(obj).addClass('seleted');
+        $('#selected_date_html').html($(obj).attr('data-html-date'));
+      }
+      function selectTime(obj) {
+        $('.time-slot').each(function () {
+          $(this).removeClass('time-slot--selected');
+        });
+        $(obj).addClass('time-slot--selected');
+        booked_time = $(obj).html();
+        $('#input_time').val(booked_time);
+        $('#selected_date_html').append(', at ' + booked_time);
+      }
+      function bookAppointment() {
+        var form = $('#frmBook');
+        var url = form.attr('action');
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: form.serialize(), // serializes the form's elements.
+          success: function (data) {
+            var result = $.parseJSON(data);
+            $('#section_loading').hide();
+            $('#section_done').show();
+          }
+        });
+      }
+      function showDate() {
+        booked_time = '';
+        $('#input_time').val(booked_time);
+        $('.time-slot').each(function () {
+          $(this).removeClass('time-slot--selected');
+        });
+        $('.row-flex').fadeOut();
+        $('#time_row').fadeOut();
+        $('#html_date').fadeOut();
+        $('.calendar').fadeIn();
+      }
+    </script>
+    <script>
+      function initializeHomepageCelebritySlider() {
+        $('#buyer-review').owlCarousel({
+          loop: true,
+          slideTransition: 'linear',
+          autoplaySpeed: 12000,
+          smartSpeed: 600,
+          touchDrag: true,
+          mouseDrag: true,
+          margin: 16,
+          dots: false,
+          nav: false,
+          lazyLoad: true,
+          navText: [
+            '<svg width="24px" height="24px" viewBox="0 0 12 21"><path fill="#ffffff" d="M11.904898 2.714694l-8.190204 8.190204 8.190204 8.190204-1.809796 1.809796-10-10 10-10z" fill-rule="evenodd"/></svg>',
+            '<svg width="24px" height="24px"  viewBox="0 0 12 21"><path fill="#ffffff" d="M.095102 2.714694l8.190204 8.190204-8.190204 8.190204 1.809796 1.809796 10-10-10-10z" fill-rule="evenodd"/></svg>' /* icons from https://iconmonstr.com */,
+          ],
+          responsive: {
+            0: {
+              items: 1.2,
+              margin: 16,
+            },
+            600: {
+              items: 3,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+        });
+      }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+@import "css/00-settings/settings.font" 
+@import "node_modules/rfs/sass"
+
+// headings
+h1, h2, h3, h4, h5, h6
+  font-family: var(--heading)
+  color: #030719
+
+
+// paragraph
+p
+  color: #393d4e
+  font-size: 16px
+
+// title
+$title-1: 4rem
+$title-2: 3rem
+$title-3: 2.25rem
+$title-4: 1.8rem
+$title-5: 1.125rem
+$title-6: 0.875rem
+
+.title-1
+  @include font-size($title-1) // 64px
+.title-2
+  @include font-size($title-2) // 48px
+.title-3
+  @include font-size($title-3) // 32px
+.title-4
+  @include font-size($title-4) // 24px
+.title-5
+  @include font-size($title-5) // 18px
+  letter-spacing: 0.3px
+.title-6
+  @include font-size($title-5) // 14px
+  letter-spacing: 0.3px
+
+// body text
+$text-1: 1.5rem
+$text-2: 1.125rem
+$text-3: 1rem
+$text-4: 0.875rem
+$text-5: 0.75rem
+
+.text-1
+  @include font-size($text-1)
+.text-2
+  @include font-size($text-2)
+.text-3
+  @include font-size($text-3)
+.text-4
+  @include font-size($text-4)
+.text-5
+  @include font-size($text-5)
+  font-weight: var(--fontmedium)
+
+
+// modifier wrights
+.light
+  font-weight: var(--fontlight)!important // 300
+.regular
+  font-weight: var(--fontnormal)!important // 400
+.mbold
+  font-weight: var(--fontmedium)!important // 500
+.bold
+  font-weight: var(--fontbold)!important // quarto

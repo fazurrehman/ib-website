@@ -1,0 +1,99 @@
+{% extends "../../layouts/default.twig" %}
+{% set pageTitle = "Icon Library" %}
+{% set cssStyle = "../css/style.min.css" %}
+{% set cssDefault = "../css/default.css" %}
+{% set cssIcebox = "../css/app-icebox.css" %}
+
+
+{% block content %}
+<style>
+
+    .icon-library{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        
+    }
+
+		.icon-library .svgIcon-root{
+			align-items: center;
+        justify-content: center;
+				margin: 0 auto;
+				height: 8rem;
+				font-size: 4rem;
+
+		}
+
+
+    .--facebook {
+      color: #3b5998;
+    }
+  
+    .--groupme {
+      color: #00adee;
+    }
+  
+    .--instagram {
+      color: #f56040;
+    }
+  
+    .--twitter {
+      color: #1da1f2;
+    }
+  
+    .--youtube {
+      color: #ff0000;
+    }
+  </style>
+
+
+<div class="icon-library ib-container">
+    <svg class="svgIcon-root --facebook">
+        <use xlink:href="../icons.svg#icon-facebook" />
+      </svg>
+      <svg class="svgIcon-root --groupme">
+        <use xlink:href="../icons.svg#icon-groupme" />
+      </svg>
+      <svg class="svgIcon-root --instagram">
+        <use xlink:href="../icons.svg#icon-instagram" />
+      </svg>
+      <svg class="svgIcon-root --twitter">
+        <use xlink:href="../icons.svg#icon-twitter" />
+      </svg>
+      <svg class="svgIcon-root --youtube">
+        <use xlink:href="../icons.svg#icon-youtube" />
+      </svg>
+			<svg class="svgIcon-root --facebook">
+        <use xlink:href="../icons.svg#icon-facebook" />
+      </svg>
+      <svg class="svgIcon-root --groupme">
+        <use xlink:href="../icons.svg#icon-groupme" />
+      </svg>
+      <svg class="svgIcon-root --instagram">
+        <use xlink:href="../icons.svg#icon-instagram" />
+      </svg>
+      <svg class="svgIcon-root --twitter">
+        <use xlink:href="../icons.svg#icon-twitter" />
+      </svg>
+      <svg class="svgIcon-root --youtube">
+        <use xlink:href="../icons.svg#icon-youtube" />
+      </svg>
+			<svg class="svgIcon-root --facebook">
+        <use xlink:href="../icons.svg#icon-facebook" />
+      </svg>
+      <svg class="svgIcon-root --groupme">
+        <use xlink:href="../icons.svg#icon-groupme" />
+      </svg>
+      <svg class="svgIcon-root --instagram">
+        <use xlink:href="../icons.svg#icon-instagram" />
+      </svg>
+      <svg class="svgIcon-root --twitter">
+        <use xlink:href="../icons.svg#icon-twitter" />
+      </svg>
+      <svg class="svgIcon-root --youtube">
+        <use xlink:href="../icons.svg#icon-youtube" />
+      </svg>
+</div>
+{% endblock %}
+
+{% block included_content %}
+{% endblock %}

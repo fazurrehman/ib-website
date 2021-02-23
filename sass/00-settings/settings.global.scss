@@ -1,0 +1,43 @@
+:root {
+  // colors
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-brand: #14A9DD;
+  --color-brand-400: #43BAE4;
+  --color-brand-300: #8AD4EE;
+  --color-brand-200: #B9E5F5;
+  --color-brand-100: #D0EEF8;
+  --color-brand-50: #E8F6FC;
+
+  --color-gold: #FCD99F;
+  --color-blue: #2342C6;
+
+  --color-accent-green: #00DA81;
+  --color-accent-yellow: #FFB900;
+  --color-accent-red: #FF3512;
+
+  --color-black-100: #F4F6FC;
+  --color-black-200: #E7EAF9;
+  --color-black-300: #68687D;
+  --color-black-400: #292947;
+
+  // brand colors
+  --color-primary: var(--color-brand);
+  --color-secondary: var(--color-gold);
+  --color-btn: var(--color-blue);
+  --color-btn-hover: var(--color-brand-300);
+  --color-btn-secondary-hover: var(--color-brand-100);
+  --color-validation-error: var(--color-red);
+  --color-validation-success: var(--color-green);
+  --color-bg-body: var(--color-white);
+  --color-border: var(--color-black-200);
+
+  // typography
+  --heading: 'SharpSansNo2', Georgia, serif;
+  --body: 'HelveticaNowDisplay', 'Helvetica Neue', Arial, Sans-Serif;
+  --meta: 'HelveticaNowDisplay', 'Helvetica Neue', Arial, Sans-Serif;
+  --aditional-font: 'SharpSansNo2', Georgia, serif;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+}

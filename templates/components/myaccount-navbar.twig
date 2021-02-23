@@ -1,0 +1,18 @@
+<!-- navbar -->
+<nav class="myaccount__wrapper-navbar">
+  <div class="cnavbar__block">
+    <a class="cnavbar__block-link {% if page=='overview'%}link-is-active{% endif %}" href="myaccount.html">Overview</a>
+  </div>
+  <div class="cnavbar__block">
+    <label>Order</label>
+    <a class="cnavbar__block-link {% if page=='order'%}link-is-active{% endif %}" href="myaccount-order.html">Order & returns</a>
+  </div>
+  <div class="cnavbar__block">
+    <label>Account</label>
+    <a class="cnavbar__block-link {% if page=='address'%}link-is-active{% endif %}" href="myaccount-address.html">Address</a>
+    <a class="cnavbar__block-link {% if page=='profile'%}link-is-active{% endif %}" href="myaccount-profile.html">Profile</a>
+    <a class="cnavbar__block-link {% if page=='wishlist'%}link-is-active{% endif %}" href="myaccount-wishlist.html">Wishlist</a>
+    <a class="cnavbar__block-link {% if page=='newsletter'%}link-is-active{% endif %}" href="myaccount-newsletter.html">Newsletter</a>
+    <a class="cnavbar__block-link item-logout" href="#">Logout</a>
+  </div>
+</nav>

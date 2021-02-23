@@ -1,0 +1,35 @@
+.story-carosuel-container
+  position: relative
+  width: 100%
+  z-index: 8
+
+.story-carousel
+  position: relative
+  display: flex
+  flex-wrap: nowrap
+  overflow-x: auto
+  padding-top: 16px
+  padding-bottom: 16px
+  margin: 0 auto
+  -webkit-overflow-scrolling: touch
+  @include media('>tablet')
+    justify-content: center
+  &::-webkit-scrollbar
+    display: none
+  &-items
+    flex: 0 0 auto
+    color: #000000
+    position: relative
+    text-transform: capitalize
+    font-weight: var(--fontmedium)
+    font-size: 15px
+    display: inline
+    margin-right: 4px
+    padding: 16px 12px
+    // background-color: pink
+    &:last-child
+      padding-right: 40px
+      @include media('>tablet')
+        padding-right: 0
+    &:hover
+      cursor: pointer

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="eng">
+
+<head>
+  {% include "../components/header.twig" %}
+</head>
+
+<body>
+  <main>
+
+    {% block content %}
+    {% endblock %}
+  </main>
+  {{ block('included_content') }}
+</body>
+
+</html>

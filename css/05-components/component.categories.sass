@@ -1,0 +1,538 @@
+// setting
+$filter-label: 0.8125rem
+$filter-dropdown-items: 1rem
+$filter-dropdown: 0.9375rem
+$filter-label-on: 0.75rem
+$filter-dropdown-menu: 240px
+$filter-mobile-bigger: 1rem
+
+.wrap
+  position: relative
+  margin: 16px 0
+  @include tablet
+    margin: 24px 0
+
+.results
+  position: relative
+  display: flex
+  margin-top: 0
+  flex: 1 0 auto
+  .page__sidebar
+    padding-left: 32px
+    width: 232px
+    display: none
+    @include tablet
+      display: block
+  .page__results
+    width: 100%
+    @include tablet
+      margin-right: 0
+      margin-left: 32px
+      padding-right: 32px
+      width: calc(100% - 264px - 0.01px)
+
+  // promotion
+  .promotion
+    margin-left: 16px
+    margin-right: 16px
+    @include tablet
+      margin-left: 0
+      margin-right: 0
+  
+
+// filters
+.filter-mobile,
+.filter-links
+  position: relative
+  .list-group
+    margin-bottom: 32px 
+  .list-group-title
+    font-size: 	1.125rem
+    letter-spacing: -0.1px
+    font-family: var(--heading)
+    font-weight: var(--fontbold)
+    margin-bottom: 12px
+    display: block
+
+.menu-check
+  position: relative
+  .menu-item
+    display: flex
+    margin: 6px 0
+    display: flex
+    padding: 4px 0
+    @include tablet
+      padding: 0
+    input[type="checkbox"]
+      transform: scale(0.8)
+      width: 20px
+    input[type=checkbox]:checked ~ label
+      font-weight: var(--fontmedium)
+    label
+      width: calc( 100% - 24px )
+      position: relative
+      padding: 4px 0
+      margin-left: 4px
+      margin-bottom: 0
+      width: calc( 100% - 24px )
+      opacity: 0.8
+      transition: 100ms ease-in
+    // hover
+    input[type="checkbox"],
+    label
+      &:hover
+        opacity: 1
+        color: var(--color-theme-link-hover)
+
+
+
+  // page__results-filter
+.page__results-filter
+  position: relative
+  margin-bottom: 16px
+
+.filters-title-header
+  @include clearfix
+  position: relative
+  display: flex
+  margin-bottom: 16px
+  padding: 0 16px
+  @include tablet
+    padding: 0
+  .results-title
+    font-weight: var(--fontbold)
+    margin: 0
+  .filter-trigger-mobile
+    top: 4px
+    @include tablet
+      display: none
+
+
+  
+
+
+// filters-custom
+.filters-sort-header
+  margin-bottom: 8px
+  position: relative
+  display: none
+  @include tablet
+    display: block
+  
+.filters-sort
+  position: relative
+  display: flex
+  align-items: center
+  border-top: 1px solid rgba($grey, 0.2) 
+  border-bottom: 1px solid rgba($grey, 0.2)
+  padding: 12px 0 6px 0
+  margin-bottom: 12px
+  fieldset
+    float: left
+  .status-current
+    padding: 4px 8px 4px 12px
+    margin-top: -4px
+    label
+      margin-bottom: 0
+  .filters-custom
+    display: inline
+
+.filter-shipping
+  display: inline-block
+  label
+    margin-bottom: 0
+    font-size: $filter-label-on
+    margin-top: -2px
+    color: #000000
+    opacity: 0.8
+
+.filters-custom
+  .filters-dropdown
+    font-size: $filter-dropdown
+    font-weight: var(--fontmedium)
+    text-transform: uppercase
+    font-family: var(--heading)
+    letter-spacing: 1px
+    margin: 0 8px
+  .dropdown-menu
+    min-width: $filter-dropdown-menu
+    margin: 0
+    border-radius: 0
+    border: 1px solid #ddd
+    box-shadow: 2px 2px 10px rgba(0,0,0,.1)
+    .dropdown-item
+      padding: 12px
+      margin: 0
+      &:active
+        background-color: $secondary
+
+
+// .colornav-items
+.colornav-items
+  display: inline-block
+  list-style: none
+  margin: 0 -2px
+  margin-bottom: 0px
+  padding-top: 15px
+
+.colornav-item
+  float: left
+  margin: 0 6px
+
+.colornav-value
+  position: absolute
+  clip: rect(1px, 1px, 1px, 1px)
+  -webkit-clip-path: inset(0 0 99.9% 99.9%)
+  clip-path: inset(0 0 99.9% 99.9%)
+  overflow: hidden
+  height: 1px
+  width: 1px
+  padding: 0
+  border: 0
+
+.colornav-link
+  border: 1px solid transparent
+  border-radius: 50%
+  box-sizing: border-box
+  color: #333
+  cursor: pointer
+  float: left
+  padding: 3px
+  position: relative
+  width: 40px
+  height: 40px
+  z-index: 1
+  transition: all 120ms ease-in
+
+.colornav-link.current,
+.colornav-value:checked ~ .colornav-link
+  border-color: #1d2e70
+  cursor: default
+  transition: all 120ms ease-in
+
+.colornav-switch
+  // background: #ccc 50%
+  border-radius: 50%
+  box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.1)
+  display: block
+  width: 32px
+  height: 32px
+
+.colornav-oneline
+  @include tablet
+    padding: 8px 16px
+  .colornav-item
+    float: none
+    display: flex
+    align-items: center
+  .colornav-label
+    padding-left: 8px
+    display: block
+    width: 100%
+    &:hover
+      cursor: pointer
+
+.colornav-oneline
+  width: 100%
+  .colornav-item:hover .colornav-link
+    border-color: #1d2e70
+
+
+// .filters-enable
+.filters-is-enable
+  position: relative
+  width: 100%
+
+    
+
+
+// filtersize
+.filtersize
+  position: relative
+  @include tabletsmall
+    display: flex
+    flex-wrap: wrap
+    .filtersize-item
+      flex: 1 0 calc(100% / 2 - 16px)
+      margin: 8px
+  @include tablet
+    display: block
+    padding: 8px 16px
+
+  .filtersize-item
+    border: 1px solid $border
+    padding: 10px 8px
+    text-align: center
+    margin-bottom: 8px
+    box-shadow: 0 0 0 0 $primary
+    transition: all 160ms ease-in-out
+    &:hover
+      border-color: $primary
+      box-shadow: 0 0 0 1px $primary
+      background: rgba(#275efe, 0.1)
+    a
+      color: #000000
+      &:hover
+        color: $primary
+    &.filter-label
+      font-size: $filter-mobile-bigger
+      @include tablet
+        font-size: $filter-label
+      
+
+// Mobile filter
+.filters-sort-categories
+  margin-bottom: 16px
+  @include tablet
+    display: none
+
+.scrolling-wrapper
+  // overflow-x: scroll
+  // overflow-y: hidden
+  // white-space: nowrap
+  display: flex
+  flex-wrap: nowrap
+  overflow-x: auto
+  -webkit-overflow-scrolling: touch
+  @include tablet
+    display: none
+  &::-webkit-scrollbar
+    display: none
+
+
+.categorie-filters
+  display: flex
+  align-items: center
+  flex: 0 0 auto
+  &-item
+    margin: 0 6px
+    padding: 8px
+  .filter-label
+    font-size: 1rem
+    font-weight: var(--fontmedium)
+    a
+      color: #000000
+
+// filtericon
+.filter-trigger-mobile
+  display: inline
+  position: relative
+  cursor: pointer
+  margin-left: auto
+  label
+    margin: 0
+    color: #000000
+    opacity: 0.8
+  &::after
+    content: ""
+    width: 80px
+    height: 40px
+    position: absolute
+    right: -10px
+    top: -10px
+
+.circle-1, .circle-2, .line-1, .line-2
+  transition: all .2s ease-in
+  z-index: 2
+
+.circle-1.is-active
+  transform: translateX(10px)
+  fill: #101e5a
+
+.circle-2.is-active
+  transform: translateX(-10px)
+  fill: #101e5a
+
+.line-1.is-active, .line-2.is-active
+  fill: #909ab0
+
+
+
+
+.filter-mobile-wraper
+  opacity: 0
+  visibility: hidden
+  pointer-events: none
+  position: fixed
+  transition: all 600ms
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 100
+  @include tablet
+    none
+  &.is-active
+    opacity: 1
+    visibility: visible
+    pointer-events: all
+  
+  .list-group
+    display: table!important
+    
+
+.filter-mobile-bg
+  background-color: rgba($primary, .8)
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  z-index: 99
+  opacity: .9
+
+.filter-mobile
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  background-color: #fff
+  z-index: 120!important
+  display: flex
+  flex-direction: column
+  width: 320px
+  transform: translate3d(-200%,0,0)
+  transition: transform 1.2s cubic-bezier(.16,1.08,.38,.98)
+  @include tabletsmall
+    width: 560px
+  &.is-active
+    transition: transform 1.2s cubic-bezier(.16,1.08,.38,.98)
+    transform: translateZ(0)
+
+  fieldset
+    margin-bottom: 24px
+    padding-bottom: 24px
+    border-bottom: 1px solid rgba($grey, 0.2)
+  .filter-close
+    position: absolute
+    width: 40px
+    height: 40px
+    right: -16px
+    top: 10px
+    transition: transform 1s 200ms
+    transform: translateX(-40px) rotate(-90deg)
+    &.is-active
+      transform: none
+    &::after
+      position: absolute
+      width: 60px
+      height: 60px
+      content: ''
+      left: -10px
+      top: -10px
+      display: block
+    
+
+// mobile filter
+.content-scroll
+  display: flex
+  flex-wrap: nowrap
+  overflow-y: auto
+  padding: 24px
+  flex-direction: column
+  width: 100%
+
+
+
+// product-grid
+$desktop-p: 8px
+$desktop-mo: 4px
+
+// quick classes
+.filter-label
+  font-size: $filter-mobile-bigger
+  line-height: 1.2
+  color: #000000
+  &:hover
+    cursor: pointer
+  @include tablet
+    font-size: $filter-label
+
+.filters-sort
+  .filter-label
+    font-size: $filter-dropdown-items
+
+
+
+.product-grid
+  position: relative
+  section
+    display: flex
+    flex: 1 0 0
+    flex-wrap: wrap
+
+  .product-card
+    display: inline-block
+    margin: 4px
+    width: calc( 100% / 2 - 8px)
+    @include tabletsmall
+      width: calc( 100% / 3 - 8px)
+    @include desktop
+      width: calc( 100% / 4 - 8px)
+    @include bigger
+      width: calc( 100% / 5 - 8px)
+    @media (min-width: 1800px)
+      width: calc( 100% / 6 - 8px)
+
+
+
+// custimizibg
+.filter--color
+  .colornav-oneline
+    text-align: center
+    @include tablet
+      text-align: inherit
+    .colornav-item
+      float: left
+      margin: 0 auto 16px auto
+      width: calc( 100% / 3 )
+      display: block
+      padding-left: 0
+      @include tablet
+        float: none
+        margin: 0
+        display: flex
+        width: 100%
+    .colornav-link
+      float: unset
+      @include tablet
+        float: left
+  .colornav-label
+    font-size: $filter-label
+          
+
+.filter--sortby
+  @include tablet
+    margin-left: auto
+    display: inline-block
+  .dropdown-item
+    padding: 8px 0
+    @include tablet
+      padding: inherit
+  
+.product-counter
+  opacity: 0.7
+
+.page__sidebar
+  .product-counter
+    float: right
+
+
+.search-header
+  position: relative
+  
+.btn-home
+  display: inline-flex
+  align-items: center
+  color: #000000 
+  margin-bottom: 16px
+  padding: 4px 8px
+  border-radius: 2px
+  font-size: 0.875rem
+  &:hover
+    background-color: rgba(39,94,254,.1);
+  aside
+    margin-right: 8px
+
+
+

@@ -1,0 +1,123 @@
+
+
+//  newsletter-homepage 
+.newsletter-homepage
+  .modal-dialog
+    max-width: 600px
+    margin: 0 8px
+    @include mobile
+      margin: 0 auto
+      max-width: 800px
+
+  .modal-content
+    flex-direction: row
+    overflow: hidden
+    &-wrapper
+      flex-basis: 100%
+      padding: 40px
+      @include mobile
+        flex-basis: 60%
+      .modal-header
+        flex-direction: column
+        padding: 0
+        text-align: center
+        border: 0
+        align-items: center
+        margin-bottom: 40px
+        h2
+          font-weight: var(--fontbold)
+          letter-spacing: 0.3px
+    &-media
+      position: relative
+      display: none
+      @include mobile
+        overflow: hidden
+        display: block
+        flex-basis: 40%
+      .modal-media
+        width: 100%
+        height: 100%
+        background: #e4e6eb
+        display: flex
+        img
+          object-fit: cover
+      
+
+.buttonGroups
+  display: flex
+  justify-content: space-between
+  margin: 16px 0 24px 0
+  .btn
+    width: 48%
+    padding: 0!important
+
+
+  
+// newsletter-form
+.newsletter-form
+  padding: 0
+  .input__wrapper
+    margin-bottom: 8px
+  .dropdown__custom
+    width: 100%
+    font-weight: 400
+
+
+.ask-question
+  .modal-dialog
+    max-width: 600px
+    margin: 0 8px
+    @include tablet
+      margin: 0 auto
+  .modal-content
+    padding: 24px
+  .btn-modal
+    position: absolute
+    right: 24px
+  .modal-header
+    text-align: center
+    padding: 0
+    border: 0
+    flex-direction: column
+    margin-top: 16px
+    margin-bottom: 24px
+    align-items: center
+    .modal-title
+      font-family: var(--body)
+      font-weight: var(--fontbold)
+      @include font-size($title-5)
+      text-align: center
+
+  .modal-content-media
+    display: flex
+    align-items: center
+    padding: 12px
+    border-radius: 16px
+    margin-bottom: 24px
+    .product-details
+      padding: 0 16px
+      flex: 1 0 60px
+      .product-title
+        font-size: $text-4
+      .product--info-wrapper-attributes
+        display: flex
+        margin-top: 4px
+        .product-attribute
+          font-size: 12px
+          font-weight: var(--fontmedium)
+          text-transform: uppercase
+          &::after
+            content: ' / '
+            padding: 0 4px
+          &:last-child::after
+            content: ''
+    .modal-media
+      width: 60px
+      height: 60px
+      border-radius: 16px
+      overflow: hidden
+      img
+        object-fit: cover
+  
+  .btn
+    width: 100%

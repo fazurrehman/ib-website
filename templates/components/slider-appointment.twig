@@ -1,0 +1,158 @@
+<div class="sidebarNew enquiry">
+  <div class="sidebarNew-container">
+    <button type="button" id="appointmentCancel" class="icon-b slidebar-close icon--close-rounded"></button>
+
+    <form action="">
+      <div id="wizard" class="book-appointment">
+        <!-- step -->
+        <h4></h4>
+        <section>
+          <label class="booking-steps">Step: <strong>1</strong>/3</label>
+          <div class="book-appointment--header">
+            <h3 class="title-3">Book an In-store Appointment</h3>
+            <p>We will authenticate & evaluate your pieces in front of your eyes.<br>
+              <strong>Most transactions take 15 minutes</strong>, and we pay cash on the spot</p>
+
+          </div>
+          <div class="book-appointment--container">
+            <div class="input__wrapper input__wrapper-space">
+              <label for="customerName" class="input__normal-label">Your Name</label>
+              <input type="text" class="input__normal" id="customerName" placeholder="Full Name">
+            </div>
+            <div class="input__wrapper input__wrapper-space">
+              <label for="customerEmail" class="input__normal-label">Email Address</label>
+              <input type="email" class="input__normal" id="customerEmail" placeholder="Email">
+            </div>
+            <div class="input__wrapper input__wrapper-space">
+              <label for="customerPhone" class="input__normal-label">Phone Number</label>
+              <input type="number" class="input__normal" id="customerPhone" placeholder="Contact Number">
+            </div>
+          </div>
+        </section>
+        <!-- step -->
+        <h4></h4>
+        <section>
+          <label class="booking-steps">Step: <strong>2</strong>/3</label>
+          <div class="book-appointment--header">
+            <h3 class="title-3">Describe your item!</h3>
+            <p>So we can prepare for your appointment.</p>
+          </div>
+          <div class="book-appointment--container">
+            <div class="input__wrapper">
+              <div class="select-catagory">
+                <label for="selectGender" class="input__normal-label">What do want to sell?</label>
+                <select class="dropdown__custom input__normal" id="ringSize">
+                  <option selected="">Select</option>
+                  <option>Watch</option>
+                  <option>Earring</option>
+                  <option>Necklace</option>
+                  <option>Bracelet</option>
+                  <option>Pendant</option>
+                  <option>Others</option>
+                </select>
+              </div>
+            </div>
+            <div class="input__wrapper input__wrapper-space">
+              <textarea type="text" class="input__default textarea-style"
+                placeholder="Describe your items if you have a moment"></textarea>
+            </div>
+          </div>
+        </section>
+        <!-- step -->
+        <h4></h4>
+        <section>
+          <label class="booking-steps">Step: <strong>2</strong>/3</label>
+          <div class="book-appointment--header">
+            <h3 class="title-3">Select Appointment</h3>
+            <p>Simply select your available time to visit store!</p>
+          </div>
+          <div class="book-appointment--container">
+            <!-- calendar -->
+            <div class="calendar">
+              <div class="calendar__week calendar-grid">
+                <button class="btn-week" type="button" onclick="selectDate(this);" data-date="Today">
+                  <time>8</time>
+                  <label for="">Mon</label>
+                </button>
+                <button class="btn-week date-seleted" type="button" data-date="Tomorrow">
+                  <time>9</time>
+                  <label for="">May - Tue</label>
+                </button>
+                <button class="btn-week" type="button" data-date="Tomorrow">
+                  <time>10</time>
+                  <label for="">May - Wed</label>
+                </button>
+                <button class="btn-week" type="button" data-date="Tomorrow">
+                  <time>11</time>
+                  <label for="">May - Thu</label>
+                </button>
+                <button class="btn-week" type="button" data-date="Tomorrow">
+                  <time>12</time>
+                  <label for="">May - Fri</label>
+                </button>
+                <button class="btn-week weekend" type="button" data-date="Tomorrow">
+                  <time>13</time>
+                  <label for="">May - Sat</label>
+                </button>
+                <button class="btn-week weekend" type="button" data-date="Tomorrow">
+                  <time>14</time>
+                  <label for="">May - Sun</label>
+                </button>
+                <button class="btn-week" type="button" data-date="Tomorrow">
+                  <time>15</time>
+                  <label for="">May - Mon</label>
+                </button>
+                <button class="btn-week" type="button" data-date="Tomorrow">
+                  <time>16</time>
+                  <label for="">May - Tue</label>
+                </button>
+                <button class="btn-week shop-closed" type="button" data-date="Tomorrow">
+                  <time>17</time>
+                  <label for="">May - Wed <i>(Closed)</i></label>
+                </button>
+                <button class="btn-week" type="button" data-date="Tomorrow">
+                  <time>18</time>
+                  <label for="">May - Thu</label>
+                </button>
+                <button class="btn-week" type="button" data-date="Tomorrow">
+                  <time>19</time>
+                  <label for="">May - Fri</label>
+                </button>
+                <button class="btn-week" type="button" data-date="Tomorrow">
+                  <time>20</time>
+                  <label for="">May - Sat</label>
+                </button>
+                <button class="btn-week" type="button" data-date="Tomorrow">
+                  <time>21</time>
+                  <label for="">May - Sun</label>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- step -->
+        <h4></h4>
+        <section>
+          <label class="booking-steps">Step: <strong>3</strong>/3</label>
+          <div class="book-appointment--header">
+            <h3 class="title-3">Select Appointment Date & Time</h3>
+            <div class="appointment-preview">
+              <span>27 March, at 02:00pm</span>
+            </div>
+          </div>
+          <div class="book-appointment--container">
+            <div class="appointment-time">
+              <div class="time-slot">12:00pm</div>
+              <div class="time-slot time-slot--selected">2:00pm</div>
+              <div class="time-slot">4:00pm</div>
+              <div class="time-slot">6:00pm</div>
+            </div>
+          </div>
+          
+        </section>
+      </div>
+    </form>
+
+    <!-- <span class="footer-msg">Our store hours are Monday-Friday from 11AM-7PM</span> -->
+  </div><!-- end cart -->
+</div><!-- end cart__wrapper -->

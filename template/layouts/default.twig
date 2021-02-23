@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="eng">
+
+<head>
+  {% include "../components/meta.twig" %}
+</head>
+
+
+<body class="{% if pageClass is defined %}{{ pageClass }}{% else %}{% endif %}">
+
+  <main class="{% if mainClass is defined %}{{ mainClass }}{% else %}{% endif %}">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  {{ block('included_content') }}
+</body>
+
+</html>

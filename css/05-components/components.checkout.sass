@@ -1,0 +1,464 @@
+@import "checkout/checkout.minicart"
+@import "checkout/checkout.article"
+@import "checkout/checkout.mybag"
+
+// variables
+$co-small-font: $title-6
+$co-content-padding: 20px
+$co-border: 1px solid #dfe0eb
+$co-radius: 8px
+
+.mybag-page
+  background-color: #f1f2f5
+  padding: 40px 0
+
+.checkoutpage
+  // summery-accordion
+  .summery-accordion
+    display: block
+    padding: $co-content-padding
+    background-color: #f1f2f5
+    @include media('>960px')
+      display: none
+
+  // brand-logo mobile
+  .brand-logo
+    display: block
+    padding: 0 $co-content-padding
+    margin: 24px 0
+    @include clearfix
+    @include media('>720px')
+      width: 90%
+      margin-left: auto
+      margin-right: auto
+      padding-left: 0
+      padding-right: 0
+    @include media('>960px')
+      display: none
+    .logo
+      position: relative
+      top: 0
+      margin-left: 0
+
+
+  body,
+  .content,
+  .wrap,
+  .main
+    display: flex
+    flex-direction: column
+    flex: 1 0 auto
+  
+  .content
+    overflow: hidden
+    
+  // wrap
+  .wrap
+    flex-direction: column-reverse
+    margin: 0 auto
+    zoom: 1
+    width: 100%
+    padding: 0 $co-content-padding
+    box-sizing: border-box
+    @include clearfix2
+    @include media('>720px')
+      width: 90%
+      box-sizing: content-box
+    @include media('>960px')
+      padding: 0 5%
+      flex-direction: row
+    @include media('>1280px')
+      max-width: 1280px
+
+
+  // main
+  .main
+    width: 100%
+    box-sizing: content-box
+    padding-bottom: 16%
+    @include media('>960px')
+      padding-top: 4%
+      width: 52%
+      padding-right: 6%
+      float: left
+      
+    &__header
+      position: relative
+
+    .logo
+      position: relative
+      top: 0
+      display: none
+      margin-bottom: 1em
+      @include media('>960px')
+        display: inline-block
+
+    
+    .breadcrumb
+      &-item
+        font-size: 12px
+        &.is-active--breadcrumb
+          color: #000000
+
+  // sidebar
+  .sidebar
+    width: 100%
+    box-sizing: content-box
+    position: relative
+    @include media('>960px')
+      border-left: 2px solid #dfe0eb
+      padding-top: 4%
+      width: 38%
+      padding-left: 4%
+      float: right
+    &::after
+      content: ""
+      position: absolute
+      z-index: -1
+      top: 0
+      left: -100%
+      bottom: 0
+      background-position: left top
+      width: 400%
+      background: #f1f2f5
+      display: block
+      @include media('>960px')
+        left: 0
+    
+
+    &__content
+      &-is--collapsed
+        @include media('<720px')
+          height: 0
+          visibility: hidden
+          overflow: hidden
+          pointer-events: none
+        @include media('<960px')
+          display: none
+    
+
+  // sections
+  .section
+    padding: 0
+    padding-top: 2rem
+    @include media('>720px')
+      margin-left: -8px
+      margin-right: -8px
+      padding-top: 3rem
+    &.-is--collapsed
+      display: none
+    &__header
+      margin-bottom: 1em
+      span, a
+        font-size: $co-small-font
+      &-title
+        margin-bottom: 0
+      &-wrapper
+        text-align: left
+        @include media('>720px')
+          text-align: right
+
+    &__content
+      zoom: 1
+      @include clearfix2
+
+  .step__footer
+    position: relative
+    z-index: 2
+    width: 100%
+    align-items: center
+    justify-content: space-between
+    padding-top: 2rem
+    display: flex
+    flex-direction: column-reverse
+    @include media('>720px')
+      flex-direction: row
+      padding-top: 3rem
+    .btn-checkout
+      height: 58px
+      width: calc(100% - 16px)
+      margin-bottom: 1em
+      @include media('>720px')
+        width: auto
+        margin-bottom: 0
+        padding-left: 40px
+        padding-right: 40px
+    .btn--back
+      color: #222222
+      font-weight: var(--fontmedium)
+
+ 
+
+  // .content-wrapper
+  .content-wrapper
+    background: #fff
+    // background-clip: padding-box
+    border: $co-border
+    border-radius: 4px
+    color: #444852
+    &__row
+      display: table
+      position: relative
+      width: 100%
+      padding: $co-content-padding
+      border-radius: 0
+      zoom: 1
+      @include clearfix2
+      &--secondary
+        background: #f1f2f5
+        border-radius: 0
+        position: relative
+        zoom: 1
+        @include clearfix2
+    
+    &__tight
+      padding-left: 0
+      padding-right: 0
+
+
+    .checkout-block
+      display: flex
+      color: #444852
+      font-size: 0.875rem
+      @include clearfix2
+      ~.checkout-block
+        padding-top: 12px
+        margin-top: 12px
+        border-top: 1px solid $softgrey
+      &__inner
+        flex: 1
+        display: flex
+        &__btn a
+          color: #333333
+          font-size: 0.875rem
+      &__label
+        flex: 0 1 6em
+        padding-right: 12px
+      &__content
+        flex: 6
+        padding-right: 12px
+        color: #000000 
+
+
+    // radio-wrapper
+    .radio-wrapper~.radio-wrapper
+      padding-top: $co-content-padding
+      border-top: 2px solid $softgrey
+
+    .radio-row
+      display: flex
+      color: #444852
+      font-size: 0.875rem
+      padding: 0 $co-content-padding
+      ~.radio-row
+        padding-top: $co-content-padding
+        margin-top: $co-content-padding
+        border-top: 1px solid $softgrey
+      &__inner
+        display: table
+        width: 100%
+        @include clearfix2
+
+    .radio__label
+      display: table-cell
+      vertical-align: middle
+      margin-bottom: 0
+      width: 100%
+      font-weight: var(--fontmedium)
+
+      &--primary
+        display: table-cell
+        width: 100%
+        color: #000000
+        .svgIcon-root
+          height: 20px
+          width: auto
+
+      &--stuff
+        display: table-cell
+        text-align: right
+        vertical-align: middle
+
+    .radio__input
+      margin-right: 12px
+
+    .field__icon
+      display: block
+      height: calc(100% - 12px)
+      position: absolute
+      top: 6px
+      right: 6px
+      width: 46px
+      &-wrapper
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        svg
+          height: 16px
+
+
+
+  // payments icon
+  .payment-icons
+    display: flex
+    
+  .payment-icon--amazon
+    margin-top: 4px
+  .payment-icon--amex
+    height: 24px!important
+    
+  .payment-icon
+    width: 28px
+    height: 18px
+    display: inline-block
+    margin-left: 4px
+    background-size: cover
+
+  // hidden
+  .hidden
+    display: none
+
+  
+  .mybag-summery-list
+    width: 100%
+    margin-top: 16px
+    li
+      display: flex
+      justify-content: space-between
+      margin-bottom: 6px
+      font-weight: var(--fontmedium)
+      font-size: 14px
+    .total
+      font-weight: var(--fontbold)
+      font-size: 1rem
+      margin-top: 16px
+      padding-bottom: 16px
+      padding-top: 16px
+      border-top: 1px solid $primary-100
+
+
+
+// express checkout
+.express-checkout
+  padding: $co-content-padding
+  border: $co-border
+  border-radius: $co-radius
+  position: relative
+  margin-top: 16px
+  &__title
+    font-size: $title-6
+    font-weight: var(--fontbold)
+    letter-spacing: 0.5px
+    text-align: center
+    background-color: #ffffff
+    display: table
+    margin: 0 auto
+    padding: 4px 16px
+    position: relative
+    z-index: 1
+    pointer-events: none
+    margin-top: -30px
+    padding-bottom: 10px
+  &__content
+    @include media('>720px')
+      display: flex
+  .btn-express-checkout
+    position: relative
+    background-color: inherit
+    width: 100%
+    padding: 0 12px
+    height: 44px
+    border-radius: 4px
+    background-color: inherit
+    margin-top: 8px
+    &:first-child
+      margin-top: 0
+    @include media('>720px')
+      margin-top: 0
+      flex: 1 1 auto
+      width: calc(100%/3)
+      margin-right: 12px
+    &:last-child
+      margin-right: 0
+    svg
+      width: 100%
+      height: 21px
+    span
+      display: inline-block
+      line-height: 0
+
+    &--apple
+      background-color: #000000
+      &:hover
+        background-color: rgba(#000000, 0.9)
+    &--google
+      background-color: #000000
+      &:hover
+        background-color: rgba(#000000, 0.9)
+    &--paypal
+      background-color: #FFC439
+      &:hover
+        background-color: darken(#FFC439, 9)
+
+
+.payment-blankstate
+  position: relative
+  padding: 16px 40px
+  &__icon
+    width: 80px
+    height: 80px
+    margin: 0 auto
+    opacity: 0.6
+  &__content
+    text-align: center
+    max-width: 400px
+    margin: 0 auto
+
+
+// order summery
+.summery-accordion
+  position: relative
+  border-top: $co-border
+  border-bottom: $co-border
+  &-toggle
+    width: 100%
+    position: relative
+    background-color: #f1f2f5
+    vertical-align: middle
+    padding: 0
+    &__icon,
+    &__label,
+    &__total
+      display: table-cell
+      vertical-align: middle
+
+    &__icon
+      padding-right: 12px
+      .icon-svg svg
+        width: 22px
+        height: 22px
+    
+    &__label
+      width: 100%
+      text-align: left
+      padding-top: 4px
+    
+    &__arrow
+      margin-left: 8px
+      svg
+        width: 16px
+        height: 16px
+
+
+  .order-container
+    position: relative
+    width: 100%
+    display: block
+    @include clearfix2
+    &__inner
+      display: table
+      width: 100%
+      zoom: 1
+      @include media('>720px')
+        padding: 0 24px

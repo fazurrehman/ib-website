@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="eng">
+
+<head>
+  {% include "../components/header.twig" %}
+</head>
+
+<body class="nav-on-left">
+  {% include "../components/navbar.twig" %}
+
+  <main class="{% if pageClass is defined %}{{ pageClass }}{% else %}{% endif %}">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <a href="#" class="ScrollTop">
+    <aside>
+      <svg class="svgIcon-root" viewBox="0 0 30 40">
+        <path
+          d="M29.465 13.82L15.465.19a.666.666 0 00-.93 0l-14 13.631a.664.664 0 000 .955l3.802 3.702c.26.254.673.253.932-.001l6.398-6.273v27.13c0 .368.298.667.666.667h5.334a.667.667 0 00.666-.667v-27.13l6.398 6.273a.667.667 0 00.932.001l3.802-3.702a.666.666 0 000-.955z" />
+      </svg>
+    </aside>
+    <!-- <label>Scroll Top</label> -->
+  </a>
+
+  {{ block('included_content') }}
+  {% include "../components/cart-items.twig" %}
+  {% include "../components/trust-footer.twig" %}
+  {% include "../components/footer.twig" %}
+  {% include "../components/country.twig" %}
+</body>
+
+</html>

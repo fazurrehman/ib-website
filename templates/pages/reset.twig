@@ -1,0 +1,60 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+<!-- header addtional -->
+{% block included_content_header %}
+{% include "../components/promo1.twig" %}
+{% endblock %}
+
+{% block content %}
+<div class="ib-modal-view forget-update-page">
+  <header>
+    <figure class="ib-modal-media">
+      <svg width="232" height="101" viewBox="0 0 232 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M42.3418 100C30.8443 85.1969 41.192 36.1887 24.9518 42.2249C14.3166 51.2792 28.1136 91.0894 42.3418 100Z"
+          fill="#2D4088" stroke="black" stroke-width="0.28669" />
+        <path
+          d="M41.4795 99.6314C23.5557 84.8283 24.0895 39.5568 7.70548 47.3176C-3.50462 52.6277 22.9397 91.152 41.4795 99.6314Z"
+          fill="white" stroke="black" stroke-width="0.28669" />
+        <path
+          d="M37.7427 97.9068C23.9456 84.9721 14.8913 53.6413 2.53147 62.5519C-4.64469 67.7254 14.4602 87.4153 37.7427 97.9068Z"
+          fill="#2D4088" stroke="black" stroke-width="0.28669" />
+        <path d="M8.18604 99.4878H220.603" stroke="black" stroke-width="0.860071" stroke-linecap="round" />
+        <rect x="33.1631" y="0.5" width="159.577" height="98.5124" rx="5.34" fill="white" stroke="#101E5A" />
+        <rect opacity="0.23" x="47.4941" y="24.5564" width="184.412" height="59.1243" rx="29.5622" fill="#97A1C6" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M206.484 56.6521L203.254 62.1253L196.53 56.4494L197.914 65.3687H191.717L193.036 56.4494L186.18 62.1253L183.147 56.5846L191.322 53.4087L183.147 50.0978L186.312 44.6245L193.102 50.3681L191.717 41.4487H197.914L196.53 50.3681L203.386 44.6921L206.484 50.2329L198.178 53.4087L206.484 56.6521ZM171.439 62.3534L174.669 56.8802L166.363 53.6368L174.669 50.461L171.571 44.9202L164.715 50.5961L166.1 41.6768H159.903L161.287 50.5961L154.497 44.8526L151.333 50.3258L159.507 53.6368L151.333 56.8126L154.365 62.3534L161.221 56.6775L159.903 65.5968H166.1L164.715 56.6775L171.439 62.3534ZM139.623 62.582L142.853 57.1088L134.547 53.8654L142.853 50.6895L139.755 45.1488L132.899 50.8247L134.283 41.9054H128.087L129.471 50.8247L122.681 45.0812L119.517 50.5544L127.691 53.8654L119.517 57.0412L122.549 62.582L129.405 56.906L128.087 65.8254H134.283L132.899 56.906L139.623 62.582Z"
+          fill="#2D4088" />
+        <path
+          d="M106.164 26.2034C106.164 17.7571 99.266 11 90.9605 11C82.6549 11 75.7571 17.7571 75.7571 26.2034V37.1836C71.6747 41.1252 69 46.7561 69 52.9501C69 65.0565 78.8541 74.9106 90.9605 74.9106C103.067 74.9106 112.921 65.0565 112.921 52.9501C112.921 46.7561 110.387 41.1252 106.164 37.1836V26.2034ZM82.9364 26.2034C82.9364 21.8395 86.4557 18.1794 90.9605 18.1794C95.3244 18.1794 98.9845 21.6987 98.9845 26.2034V32.5381C96.4506 31.5527 93.7759 30.9896 90.9605 30.9896C88.145 30.9896 85.4703 31.5527 82.9364 32.5381V26.2034ZM99.266 50.9793L91.242 58.8625C90.6789 59.4256 89.975 59.7072 89.2712 59.7072C88.5673 59.7072 87.8635 59.4256 87.3004 58.8625L82.5141 54.0763C81.3879 52.9501 81.3879 51.2608 82.5141 50.2754C83.6403 49.1493 85.3296 49.1493 86.315 50.2754L89.1304 53.0909L95.1836 47.0377C96.3098 45.9115 97.9991 45.9115 98.9845 47.0377C100.392 48.1639 100.392 49.8531 99.266 50.9793Z"
+          fill="#1D2E70" />
+      </svg>
+
+    </figure>
+    <h4 class="title-4 headline">Forgot Password?</h4>
+    <p class="subhead">Set a new password for Icebox. After creating the password you’ll stay logged in.</p>
+  </header>
+  <form>
+
+    <div class="form-item form-item--with-scaling-label js-form-item">
+      <label class="form-item__label">Password</label>
+      <input type="password" id="userPassword" class="form-text form-item__input js-passwordToggle"
+        placeholder="&nbsp;">
+      <div id="showPassword" class="toggle-password icon-m icon-eye"></div>
+    </div>
+
+
+    <div class="ib-modal-cta">
+      <button type="submit" class="btn btn-primary">Reset Password</button>
+    </div>
+  </form>
+  <div class="ib-modal-footer fl">
+    Or return to
+    <a href="#" class="btnLink bold">Login Account</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block included_content %}
+<script src="js/staticpages.min.js"></script>
+{% endblock %}

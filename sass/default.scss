@@ -1,0 +1,26 @@
+@import "00-settings/settings.global";
+@import "02-generic/generic.reset";
+@import "00-settings/settings.font";
+@import "03-elements/elements.typography";
+
+// vendors
+@import "node_modules/bootstrap4/scss/bootstrap-grid.scss";
+@import "01-tools/tools.gridsystem";
+x .ds {
+  position: relative;
+
+  .ds-block {
+    display: block;
+    margin-bottom: 80px;
+
+    .ds-block__header {
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+
+    .ds-block__body {
+      margin-bottom: 24px;
+    }
+  }
+}

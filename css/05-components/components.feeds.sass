@@ -1,0 +1,108 @@
+.feeds
+  section
+    display: flex
+    flex-wrap: wrap
+  .cardInstagram
+    flex-basis: 100%
+    margin: 8px
+    flex-grow: 1
+    @include mobile
+      flex-basis: calc( (100% / 2) - 16px )
+    @include tablet
+      flex-basis: calc( (100% / 3) - 16px )
+    @include desktop
+      flex-basis: calc( (100% / 4) - 16px )
+    @media (min-width: 1800px)
+      flex-basis: calc( (100% / 5) - 16px )
+  
+  .cardYoutube
+    flex-basis: 100%
+    margin: 8px
+    flex-grow: 1
+    @include mobile
+      flex-basis: calc( (100% / 2) - 16px )
+    @include tablet
+      flex-basis: calc( (100% / 3) - 16px )
+    @media (min-width: 1800px)
+      flex-basis: calc( (100% / 4) - 16px )
+
+
+.cardFeed
+  position: relative
+  border-radius: 8px
+  overflow: hidden
+  border: 1px solid $softgrey
+  transition: 100ms border ease-in
+  &:hover
+    border: 1px solid $primary-300
+    box-shadow: 0 0 1px $primary-300
+
+  .cardYoutube
+    &__media,
+    &__information
+      position: relative
+    &__media
+
+
+      
+.cardInstagram
+  &__media
+    position: relative
+    &::before
+      padding-bottom: 56%
+    img
+      width: 100%
+  
+
+.statsBar
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 12px 0
+  bottom: 8px
+  background: $white
+  margin: 0 8px
+  left: 0
+  right: 0
+  border-radius: 8px
+
+.icon-cols
+  display: flex
+  align-items: center
+  margin-right: 8px
+  .icon
+    margin-right: 4px
+  
+.icon-cols-group
+  display: flex
+  align-items: center
+
+.stats-title
+  font-size: 12px
+  font-weight: var(--fontbold)
+  line-height: 1
+  margin-top: 2px
+
+
+
+// reset elements for this page
+.feeds
+  .dropdown__custom
+    width: 100%
+    border-radius: 0
+    border: 0
+    border-color: $softgrey!important
+  .border-8
+    border-radius: 0 0 8px 8px
+  .cardInstagram
+    .statsBar
+      position: absolute
+      padding: 12px 8px
+
+.feed-t-w
+  flex-basis: 100%
+
+.feed-t-c
+  flex-basis: 100%
+  margin-top: 8px

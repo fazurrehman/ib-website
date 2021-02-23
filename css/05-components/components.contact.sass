@@ -1,0 +1,145 @@
+.contact
+  background: $graident-primary
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  min-height: 220px
+  .hero__content
+    padding: 0 40px
+    max-width: 600px
+  h1,
+  p
+    color: #ffffff
+
+.layout-navbar
+  position: relative
+  overflow: auto
+  overflow-y: hidden
+  flex: 1 0 0
+  display: -webkit-box
+  padding-left: 16px!important
+  margin-bottom: 40px
+  @include tablet
+    overflow: hidden
+    overflow-y: hidden
+    padding-left: 0
+    border-right: 1px solid $border-color
+  .accordion-link
+    font-weight: var(--fontmedium)
+    padding: 6px 0
+    color: $text
+    font-size: $text-4
+    transition: all 0.1s 0s ease-out
+    display: flex
+    align-items: center
+    padding: 16px
+    border-radius: 8px
+    font-weight: var(--fontbold)
+    margin-right: 16px
+    border: 1px solid $border-color
+    width: 40%
+    @include tablet
+      padding: 16px 12px 12px 16px
+      display: inline-block
+      width: 96%
+      border: 0
+
+    &:hover
+      color: $primary
+    &-active
+      background: $primary-200
+      font-weight: var(--fontbold)
+      color: #ffffff
+      border-radius: 8px
+
+.store-card
+  position: relative
+  display: flex
+  border: 1px solid $border-color
+  overflow: hidden
+  border-radius: 16px
+  margin-bottom: 16px
+  max-height: 460px
+  .store-image,
+  .store-information
+    flex-basis: 100%
+    display: flex
+    justify-content: center
+    flex-direction: column
+    @include tablet
+      flex-basis: 50%
+  
+.store-information
+  .information-block
+    padding: 0
+    margin-bottom: 24px
+    span
+      display: block
+      font-weight: $text-2
+  .block-title
+    display: flex
+    align-items: center
+    margin-bottom: 8px
+    position: relative
+    .icon-b
+      position: absolute
+      left: -40px
+        
+
+.question-wrapper
+  max-width: 600px
+  .faq-block
+    margin-bottom: 40px
+
+      
+
+
+.block-title
+  font-family: var(--body)
+  font-size: $text-3
+  font-weight: var(--fontbold)
+  margin: 0
+
+// question-wrapper
+.comman-title
+  font-family: var(--body)
+  font-size: $text-2
+  font-weight: var(--fontbold)
+  margin-bottom: 8px
+
+.text-block-bigger
+  font-size: 1rem
+  line-height: 1.8
+
+
+.contact--modifier
+  height: 400px
+  @include tablet
+    height: 500px
+  .hero__content
+    margin-top: -120px
+    @include tablet
+      margin-top: -120px
+
+.contact-wrapper
+  display: flex
+  background: #ffffff
+  margin-top: -160px
+  box-shadow: 0 1px 36px rgba(0,0,0,0.12)
+  flex-direction: column
+  @include tablet
+    flex-direction: row
+  &--form
+    flex: 1 0 100%
+    padding: 40px
+    @include tablet
+      flex: 1 0 60%
+      padding: 60px
+  &--information
+    flex: 1 0 100%
+    padding: 60px 80px
+    background: rgba($primary-100, 0.3)
+    @include tablet
+      flex: 1 0 40%

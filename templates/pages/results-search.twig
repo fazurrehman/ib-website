@@ -1,0 +1,78 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+
+<!-- header addtional -->
+{% block included_content_header %}
+{% include "../components/promo1.twig" %}
+{% endblock %}
+
+<!-- main -->
+{% block content %}
+<section class="hero">
+  <div class="hero--image">
+    <picture>
+      <source media="(min-width: 600px)" srcset="img/page-header-desktop.jpg">
+      <img class="lazy loaded" alt="" src="img/page-header-mobile.jpg"
+        onload="window.aos &amp;&amp; window.aos.refresh()">
+    </picture>
+  </div>
+  <div class="container">
+    <div class="hero--content">
+      <h2 class="title-2 text-white">Beautiful Pendants Collection</h2>
+      <p class="text-2 text-white">Starting from $1000</p>
+    </div>
+  </div>
+</section>
+
+<section class="productline">
+  <div class="container-lg">
+    <!-- header -->
+    <div class="pheader">
+      <div class="pheader__wrapper search-results">
+        <nav class="pheader__results-counter" aria-label="breadcrumb">
+          We found<span>1628</span>results for<span>Gold</span>
+        </nav>
+        <div class="pheader__wrapper-action">
+          <div class="pheader__wrapper-action-filter">
+            <a href="#0" class="cd-filter-trigger"><label>Filter</label>
+              <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="2.5" width="20" height="2.5" fill="#101e5a" class="line-1"></rect>
+                <rect y="11.25" width="20" height="2.5" fill="#101e5a" class="line-2"></rect>
+                <rect x="3.75" width="2.5" height="7.5" fill="#101e5a" class="circle-1"></rect>
+                <rect x="13.75" y="8.75" width="2.5" height="7.5" fill="#101e5a" class="circle-2"></rect>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- productresults -->
+      <div class="results">
+        <!-- filter -->
+        <div class="results--filter-wrapper" style="opacity: 1; visibility: visible;">
+          {% include "../components/filter.twig" %}
+        </div>
+
+        <div class="results--products">
+          <div class="products layout--grid layout--products">
+            {% for i in 1..8 %}
+            {% include '../components/productcart.twig' with {'objects':i} %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+{% endblock %}
+
+
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script src="js/categories.min.js"></script>
+{% endblock %}

@@ -1,0 +1,116 @@
+<div id="filter_wrapper" class="results--filter-wrapper is-active">
+  <div class="results--filter filter-is-visible">
+    <div class="results--filter-container drag-content">
+
+      <div class="accordion js-accordion">
+
+        <div class="accordion__item js-accordion-item active margin-b-24">
+          <div class="accordion-header js-accordion-header product-subtitle">Gender</div>
+          <div class="accordion-body js-accordion-body" style="display: block;">
+            <div class="accordion-body__contents">
+              <ul class="comman__list">
+                <li onclick="setGender('Male');" class="">Male</li>
+                <li onclick="setGender('Female');" class="">Female</li>
+                <li onclick="setGender('Unisex');" class="">Unisex</li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- end of accordion item -->
+        <div class="accordion__item js-accordion-item active margin-b-24">
+          <div class="accordion-header js-accordion-header product-subtitle">Colors</div>
+          <div class="accordion-body js-accordion-body" style="display: block;">
+            <div class="accordion-body__contents">
+              <!-- colors -->
+              <div class="product__color">
+                <ul class="product__color-choose">
+                  <li class="filter-modifier">
+                    <input type="radio" name="colour" value="Yellow" id="golden" class="check_in color_radio">
+                    <label for="golden"></label>
+                    <div class="check color-golden"></div>
+                    <span class="color--value">Yellow</span>
+                  </li>
+                  <li class="filter-modifier">
+                    <input type="radio" name="colour" value="White" id="silver" class="check_in color_radio">
+                    <label for="silver"></label>
+                    <div class="check color-silver"></div>
+                    <span class="color--value">White</span>
+                  </li>
+                  <li class="filter-modifier">
+                    <input type="radio" name="colour" value="Rose" id="rosegold" class="check_in color_radio">
+                    <label for="rosegold"></label>
+                    <div class="check color-rosegold"></div>
+                    <span class="color--value">Rose</span>
+                  </li>
+                  <li class="filter-modifier">
+                    <input type="radio" name="colour" value="Two-Tone" id="twotone" class="check_in color_radio">
+                    <label for="twotone"></label>
+                    <div class="check color-twotone"></div>
+                    <span class="color--value">2-Tone</span>
+                  </li>
+                </ul>
+              </div><!-- end product__color -->
+            </div>
+          </div>
+        </div><!-- end of accordion item -->
+        <div class="accordion__item js-accordion-item active margin-b-24">
+          <div class="accordion-header js-accordion-header product-subtitle">Sub-Category</div>
+          <div class="accordion-body js-accordion-body" style="display: block;">
+            <div class="accordion-body__contents">
+              <ul class="comman__list">
+                <li class="sub_cat active"><a href="/products/pendants/all">ALL</a></li>
+                <li class="sub_cat "><a href="/products/pendants/jesus_pendants">Jesus Pendants</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/angel_pendants">Angel Pendants</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/crosses">Crosses</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/other_pendants">Other Pendants</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/letter_pendants">Letter Pendants</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/coin_pendants">Coin Pendants</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/religious_pendants">Religious Pendants</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/photo_pendants">Photo Pendants</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/animals">Animals</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/hearts">Hearts</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/sports">Sports</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/weapons">Weapons</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/icebox">Icebox</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/glasses">Glasses</a>
+                </li>
+                <li class="sub_cat "><a href="/products/pendants/countries">Countries</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- end of accordion item -->
+
+        <div class="accordion__item js-accordion-item active margin-b-24">
+          <div class="accordion-header js-accordion-header product-subtitle">Sort By</div>
+          <div class="accordion-body js-accordion-body" style="display: block;">
+            <div class="accordion-body__contents">
+              <ul class="comman__list">
+                <li onclick="setSortBy('Newest');" class="">Newest</li>
+                <li onclick="setSortBy('Popular');" class="">Popular</li>
+                <li onclick="setSortBy('High');" class="">Price: High-Low</li>
+                <li onclick="setSortBy('Low');" class="">Price: Low-High</li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- end of accordion item -->
+
+
+
+
+      </div><!-- end of accordion -->
+    </div>
+  </div>
+</div>

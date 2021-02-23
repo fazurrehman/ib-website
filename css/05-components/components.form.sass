@@ -1,0 +1,428 @@
+$input-border: lighten($grey, 10%)
+$label-size: $text-4
+$label-color: $nightsky
+  
+  
+// Basic form styling
+.input__wrapper
+  position: relative
+  display: block
+  &-space
+    margin-bottom: 16px
+
+.input__default
+  border-radius: 0
+  border: 1px solid $input-border
+  padding: 24px 8px 8px 11px
+  background-color: transparent
+  position: relative
+  z-index: 2
+  border-radius: 4px
+  transition:  all 150ms
+  width: 100%
+  font-weight: var(--fontmedium)
+  letter-spacing: 0.3px
+  &:not(textarea)
+    height: 44px
+  + label
+    position: absolute
+    z-index: 1
+    top: 12px
+    margin: 0
+    transition: all 0.2s ease-in-out
+    pointer-events: none
+    left: 12px
+    right: 10px
+    display: inline-table
+    font-size: $label-size
+    color: $label-color
+    font-size: 16px
+    width: 100%
+  
+  &:focus
+    background-color: transparent
+    border: 1px solid #2c42a6
+    box-shadow: 0 1px 6px -1px rgba(39, 94, 254, 0.32)
+
+  &:focus
+    + label
+      color: $primary
+  
+  &:focus, &.has-value
+    border: 1px solid #2c42a6
+    + label
+      font-size: 0.75rem
+      top: 4px
+
+::placeholder
+  font-size: 1rem
+  color: $label-color
+  font-weight: 400
+
+// input__normal
+.input__normal
+  border-radius: 0
+  border: 1px solid $input-border!important
+  padding: 12px 12px 10px!important
+  background-color: transparent
+  position: relative
+  z-index: 2
+  border-radius: 4px
+  transition:  all 150ms
+  width: 100%
+  font-weight: var(--fontmedium)
+  letter-spacing: 0.3px
+  &:focus
+    background-color: transparent
+    border: 1px solid #2c42a6!important
+    box-shadow: 0 1px 6px -1px rgba(39, 94, 254, 0.32)
+  &-label
+    font-size: $label-size
+    color: $label-color
+    font-weight: var(--fontmedium)
+    margin-bottom: 0
+
+
+
+// Position labels for when javascript is disabled
+.no-js
+  .form-control + label
+    font-size: 0.75rem
+    top: 0
+
+
+.form-default:focus
+  ~ .line
+    &:after
+      transform: scaleX(1)
+  
+// Remove Bootstrap 4 height from select
+select.form-default:not([size]):not([multiple])
+  height: 44px
+
+
+// custom classes
+.input__wrapper-half
+  display: flex
+  flex-direction: column
+  @include tablet
+    justify-content: space-between
+    flex-direction: row
+  .input__wrapper
+    width: 100%
+    @include tablet
+      width: calc( 50% - 8px )
+
+
+.change__detail
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-bottom: 1px solid $softgrey
+  padding-bottom: 8px
+  margin-bottom: 8px
+  &:last-child
+    border-bottom: 0
+    padding-bottom: 0
+    margin-bottom: 0
+  &-block
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    width: 100%
+    .shipping_label
+      margin: 0
+      font-weight: normal
+      font-size: $text-4
+      width: 80px
+    .shipping_status
+      flex: 1 0 0
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      font-weight: normal!important
+      font-size: $text-4!important  
+  .shipping_action
+    font-size: $text-4
+    color: $primary
+    @include hover-line
+
+// shipping__methods
+.shipping__methods
+  position: relative
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border: 1px solid $input-border
+  padding: 12px 16px
+  border-radius: 4px
+  margin-bottom: 8px
+  transition: all 300ms $animation-cubic
+  cursor: pointer
+  &:last-child
+    margin-bottom: 0
+  &:hover
+    background: $hover
+
+  &.is-active--shipping
+    border: 1px solid $primary
+    box-shadow: 0 0 0 1px #000000
+  
+  .shipping__block
+    h5
+      font-family: var(--body)
+      margin-bottom: 4px
+      font-size: $title-6
+      font-weight: var(--fontbold)
+    p
+      font-size: $text-4
+
+  .shipping__cost
+    font-weight: var(--fontbold)
+    font-size: $text-4
+    text-transform: uppercase
+
+
+// payment__options
+.payment__options
+  position: relative
+  width: 100%
+  .payment__button
+    position: relative
+    border: 1px solid $grey
+    border-radius: 4px
+    padding: 16px
+    margin-bottom: 8px
+    cursor: pointer
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-weight: var(--fontbold)
+    color: $primary
+    &:hover
+      background: $hover
+    label
+      margin-bottom: 0
+
+  // buttons icons
+  .icon__wrapper
+    display: flex
+    .icon
+      width: 36px!important
+      margin-right: 4px
+
+  .payment--paypal
+    width: 100px!important
+    height: 24px!important
+    background-size: contain
+
+  .payment
+    &--visa,
+    &--master,
+    &--amex,
+    &--wiretransfer,
+    &--amexexpress,
+      width: 40px!important
+      height: 24px!important
+      
+    &--bitcoin,
+    &--amazonpay
+      width: 92px!important
+      height: 24px!important
+      position: relative
+      top: 4px
+    
+    &--bitcoin
+      width: 80px!important
+      top: 0
+    
+
+.textarea-style
+  padding-top: 8px
+  @include tablet
+    height: 200px
+
+
+.form-title
+  font-family: var(--body)
+  margin-bottom: 24px
+  
+
+.valid-feedback
+  display: none!important
+
+// reset bootstrap validation
+.form-control.is-invalid, .was-validated .form-control:invalid,
+.form-control.is-valid, .was-validated .form-control:valid
+  background-position: right 16px center
+  transition: none!important
+
+
+.form-control.is-invalid, .was-validated .form-control:invalid
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0c4.422 0 8 3.578 8 8 0 4.422-3.578 8-8 8-4.422 0-8-3.578-8-8 0-4.422 3.578-8 8-8zm0 1.25A6.746 6.746 0 001.25 8c0 3.73 3.019 6.75 6.75 6.75 3.73 0 6.75-3.019 6.75-6.75 0-3.73-3.019-6.75-6.75-6.75zm0 8.817a.844.844 0 110 1.688.844.844 0 010-1.688zm0-6.04c.345 0 .625.28.625.625v4.025a.625.625 0 11-1.25 0V4.652c0-.345.28-.625.625-.625z" fill="%23D1191C"/></svg>')
+  
+.form-control.is-valid, .was-validated .form-control:valid
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M11.536 6.345l-4.192 4.193a.625.625 0 01-.884 0L4.464 8.542a.625.625 0 11.883-.883l1.554 1.554 3.751-3.751a.625.625 0 01.884.883zM16 8c0 4.422-3.579 8-8 8-4.422 0-8-3.579-8-8 0-4.422 3.579-8 8-8 4.422 0 8 3.579 8 8zm-1.25 0c0-3.731-3.02-6.75-6.75-6.75A6.746 6.746 0 001.25 8c0 3.731 3.02 6.75 6.75 6.75 3.731 0 6.75-3.02 6.75-6.75z" fill="%232CCA73"/></svg>')
+  border: 1px solid #2c42a6!important
+  box-shadow: none
+
+
+
+// form 2020 css for every input
+.form-item
+  position: relative
+  transition: all 0.4s ease
+  width: 100%
+  max-width: 100%
+  margin-bottom: 1rem
+
+.form-item--with-scaling-label label
+  top: 0
+  left: 0
+  position: absolute
+  pointer-events: none
+  transform-origin: 0 0
+  z-index: 1
+  transition: transform 0.2s
+  transition-timing-function: ease-out
+  font-size: 1rem
+  padding: 16px 12px 0 12px
+  color: rgba(#000000,.6)
+  margin-bottom: 0
+  font-weight: var(--fontmedium)
+  transform-origin: 0 0
+  transform: translate3d(0,0,0)
+
+.form-item__label
+  display: inline-block
+  font-weight: normal
+  vertical-align: middle
+  color: #b4b4aa
+  padding: 10px 10px 10px 0
+
+.form-text,
+.form-email,
+.form-password,
+.form-number,
+.form-select,
+.form-tel,
+.form-date,
+textarea
+  -webkit-appearance: none
+  appearance: none
+  width: 100%
+  border: 1px solid #C9D0DA
+  font-family: inherit
+  padding: 16px 12px 0 12px
+  height: 48px
+  font-size: 16px
+  font-weight: 400
+  border-radius: 4px
+  font-weight: var(--fontmedium)
+  letter-spacing: 0.3px
+  color: $dark
+  transition: all 100ms ease-in
+  &:hover
+    background: rgba($dark,.04)
+  &:focus
+    background-color: transparent
+    border: 1px solid #2c42a6
+    box-shadow: 0 1px 6px -1px rgba(39, 94, 254, 0.32)
+    outline: none
+
+.form-item--with-scaling-label
+  input, textarea
+    // padding: 21px 20px 10px 20px
+
+  &.form-item--input-filled label
+    transform: translate3d(5px, -8px, 0) scale3d(0.8, 0.8, 1)
+
+.form-item--phone
+  .iti
+    width: 100%!important
+  .form-tel
+    padding-top: 2px
+
+.form-item--underline
+  .form-tel 
+    border: 0!important
+    border-radius: 0
+    background: transparent
+    border-bottom: 1px solid $input-border!important
+    margin-bottom: 24px!important
+
+
+
+// input--line
+.input-default
+  padding: 8px 12px
+  width: 100%
+
+.input--has-line
+  border: 0
+  border-radius: 0
+  background: transparent
+  border-bottom: 1px solid $input-border
+  
+
+
+// form new
+ 
+// ib-input-underline
+.ib-input-underline
+  display: flex
+  border-bottom: 1px solid #C9D0DA
+  margin-bottom: 24px!important
+
+.input-country,
+.input-phone,
+.input-phone::placeholder
+  font-size: 1.25rem
+  font-weight: var(--fontmedium)
+
+.input-country
+  max-width: 80px
+  padding: 0
+  border: 0
+  height: 48px
+  font-weight: var(--fontmedium)
+  margin-right: 16px
+
+.input-phone
+  border: 0
+  letter-spacing: 3px
+  &:focus
+    border: 0
+    box-shadow: none
+    
+// input-phone-confirm
+.input-confirm
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 24px
+
+.input-confirm-code
+  width: calc( 25% - 12px )
+  flex-grow: 1
+  margin-right: 12px
+  font-size: 2rem
+  font-weight: var(--fontmedium)
+  padding: 8px
+  text-align: center
+  border: 0
+  border-bottom: 2px solid #C9D0DA
+  &:focus
+    border-color:  #2c42a6
+
+.input-confirm-code::placeholder
+  margin: 0 auto
+  text-align: center
+  font-size: 2rem
+  color: #C9D0DA
+
+.form-item--half
+  width: 50%
+  float: left

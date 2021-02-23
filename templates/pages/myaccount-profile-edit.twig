@@ -1,0 +1,83 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+{% set page = 'profile' %}
+
+{% block content %}
+
+<div class="container">
+  <!-- my account -->
+  <section class="myaccount">
+    <div class="myaccount__header">
+      <div class="myaccount__header-wrapper">
+        <h2 class="title-3">Profile Edit</h2>
+      </div>
+      <!-- breadcrums -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="myaccount.html">My Account</a></li>
+          <li class="breadcrumb-item"><a href="myaccount-profile.html">Profile</a></li>
+          <li class="breadcrumb-item" aria-current="page">Profile Edit</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- __wrapper"> -->
+    <div class="myaccount__wrapper">
+      {% include "../components/myaccount-navbar.twig" %}
+      <!-- dashboard -->
+      <div class="myaccount__wrapper-container">
+        <!-- address -->
+        <div class="account__profile-edit">
+          <div class="main">
+      
+            <div class="main__section">
+              <div class="account__header">
+                <div class="account__header-wrapper">
+                  <div class="account-picture">
+                    <img src="img/userprofile.png" alt="">
+                  </div>
+                  <a href="#" class="upload-btn">Upload Photo</a>
+                </div>
+              </div>
+      
+              <div class="input__wrapper input__wrapper-space">
+                <input type="text" class="input__default" id="firstName">
+                <label for="firstName">First Name</label>
+              </div>
+              <div class="input__wrapper input__wrapper-space">
+                <input type="text" class="input__default" id="lastName">
+                <label for="lastName">Last Name</label>
+              </div>
+              <div class="input__wrapper input__wrapper-space">
+                <input type="email" class="input__default" id="email">
+                <label for="email">Email</label>
+              </div>
+      
+              <div class="input__wrapper input__wrapper-space">
+                <input type="text" class="input__default" id="phoneno">
+                <label for="phoneno">Phone No</label>
+              </div>
+      
+            </div><!-- end main__section -->
+      
+            <div class="main__section main__footer">
+              <a href="myaccount.html" class="btn btn__cart">Cancel</a>
+              <button class="btn btn-primary btn__cart">Save Changes</button>
+            </div><!-- end main__section -->
+      
+          </div>
+      
+        </div>
+      
+      </div><!-- end container -->
+
+    </div><!-- end myaccount__wrapper -->
+  </section>
+</div><!-- end container -->
+
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script src="js/categories.min.js"></script>
+{% endblock %}

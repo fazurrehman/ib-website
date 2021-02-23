@@ -1,0 +1,14 @@
+<section class="productSuggestions">
+  <div class="container">
+    <div class="section-header">
+      <h3>You might like it too</h3>
+    </div>
+    <!-- product wrapper -->
+    <div id="product-wrapper" class="product-wrapper owl-carousel owl-theme">
+      {% for i in 1..8 %}
+      {% include '../productcart.twig' with {'objects':i} %}
+      {% endfor %}
+    </div>
+
+
+</section>

@@ -1,0 +1,39 @@
+<!-- layout -->
+{% extends "../layouts/default.twig" %}
+{% set page_title = 'Instagram Feeds | Icebox' %}
+
+{% block content %}
+<section class="wrap">
+  <div class="results">
+
+    <!-- sidebar -->
+    <div class="page__sidebar custom-checkbox">
+      {% include '../components/results/filters.twig' %}
+    </div>
+
+    <div class="page__results">
+      <!-- filter header -->
+      <div class="page__results-filter">
+        <div class="filters-sort-header">
+          <div class="navigationTabs navigationTabs--center mb-3">
+            <a href="instagram-feeds.html" class="navigationTabs-item active-page">Instagram</a>
+            <a href="youtube-feeds.html" class="navigationTabs-item">YouTube</a>
+          </div>
+        </div>
+        <div class="feeds instagram-feeds">
+          <section>
+            {% for i in 1..40 %}
+            {% include '../components/feed-instagram.twig' with {'objects':i} %}
+            {% endfor %}
+          </section>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
+
+{% block included_content %}
+<script src="js/categories.min.js"></script>
+{% endblock %}

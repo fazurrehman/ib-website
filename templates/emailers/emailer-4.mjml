@@ -1,0 +1,282 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-all padding="0px"></mj-all>
+      <mj-all font-family="Roboto , arial, helvetica, sans-serif"></mj-all>
+      <mj-text line-height="120%" font-size="14px"></mj-text>
+      <mj-class name="button" background-color="#101E5A" font-size="15px" font-weight="700" />
+      <mj-class name="product" padding="16px" border="1px solid #f1f2f5" background-color="#fff" />
+
+    </mj-attributes>
+    <mj-breakpoint width="420px" />
+    <!-- font-family -->
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+    <!-- custom css -->
+    <mj-style inline="inline">
+      .section {
+        padding-bottom: 40px;
+      }
+
+      .link {
+        color: #000000;
+        text-decoration: none;
+        padding: 16px 0;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 14px
+      }
+
+      .productlink {
+        color: #333;
+        text-decoration: none;
+        padding: 24px 0 0 0;
+        display: inline-block;
+        font-size: 12px;
+        line-height: 140%
+      }
+
+      .subheading {
+        color: #000000;
+        font-weight: bold;
+        margin-bottom: 16px;
+        display: block;
+      }
+
+
+      .button a {
+        display: inline-block;
+        padding: 8px 24px 6px 24px;
+        border-radius: 3px;
+      }
+
+      .footer-icon {
+        text-align: center;
+        font-weight: 500;
+        margin-top: 16px;
+        display: block;
+      }
+
+      .border-top {
+        border-top: 1px solid #D8D8D8
+      }
+
+      .border-bottom {
+        border-bottom: 1px solid #D8D8D8
+      }
+
+      .btn-secondary {
+        display: table;
+        width: 96% !important;
+        margin: 5px !important;
+        font-size: 13px;
+        font-weight: 500;
+        color: #141414;
+        width: 175px;
+        line-height: 48px;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid #141414;
+      }
+    </mj-style>
+  </mj-head>
+
+  <!-- body -->
+  <mj-body background-color="#ffffff">
+    <!-- logo -->
+    <mj-section background-color="#ffffff">
+      <mj-column>
+        <mj-image align="center" border="none" src="https://icebox.com/assets/public-2020/img/newsletters/logo/logo.png" padding="20px 0" target="_blank" title="" width="120px"></mj-image>
+      </mj-column>
+    </mj-section>
+
+    <!-- navbar -->
+    <mj-section background-color="#ffffff">
+      <mj-group>
+        <mj-column width="25%">
+          <mj-text align="center"><a href="https://www.icebox.com/?gender=Male" class="link">Men</a></mj-text>
+        </mj-column>
+        <mj-column width="25%">
+          <mj-text align="center"><a href="https://www.icebox.com/?gender=Female" class="link">Women</a></mj-text>
+        </mj-column>
+        <mj-column width="25%">
+          <mj-text align="center"><a href="https://www.icebox.com/best-sellers" class="link">Best Sellers</a></mj-text>
+        </mj-column>
+        <mj-column width="25%">
+          <mj-text align="center"><a href="https://www.icebox.com/products/accessories/all" class="link">Accessores</a></mj-text>
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- text -->
+    <mj-section background-color="#E6E7F0">
+      <mj-column width="88%">
+        <mj-text align="center" font-size="40px" padding="40px 0" font-weight="700" line-height="120%">
+          Best Pendants collection just start from 350$
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- banner section -->
+    <mj-section background-color="#E6E7F0" css-class="section">
+      <mj-column width="88%">
+        <mj-image width="600px" src="https://res.cloudinary.com/faizur/image/upload/v1593593616/client/2-watches.gif" href="https://icebox.com/" />
+      </mj-column>
+    </mj-section>
+
+    <!-- products -->
+    <mj-section background-color="#E6E7F0" css-class="section">
+      <mj-column width="88%">
+        <mj-text align="center" font-size="24px" padding="0 0 32px 0" font-weight="700" line-height="130%">
+          Explore all Item what you love!
+        </mj-text>
+      </mj-column>
+      <mj-group width="88%">
+        <mj-column width="50%" mj-class="product">
+          <mj-image width="300px" src="https://www.icebox.com/unsafe/340x0/icebox-jewelry.s3.amazonaws.com/products/a1a2081dd2e14c71bd6da6581958c596.jpg" href="https://mjml.io" />
+          <mj-text>
+            <a class="productlink" href="https://icebox.com/">Custom Rolex Datejust 36mm Two-Tone Unisex 13.61ctw</a>
+          </mj-text>
+        </mj-column>
+        <mj-column width="50%" mj-class="product">
+          <mj-image width="300px" src="https://www.icebox.com/unsafe/640x0/icebox-jewelry.s3.amazonaws.com/products/5a7d238f08a7d69888b20d41d2789a1d.jpg" href="https://mjml.io" />
+          <mj-text>
+            <a class="productlink" href="https://icebox.com/">Custom Rolex Datejust 36mm Two-Tone Unisex 13.61ctw</a>
+          </mj-text>
+        </mj-column>
+        <mj-column width="50%" mj-class="product">
+          <mj-image width="300px" src="https://www.icebox.com/unsafe/640x0/icebox-jewelry.s3.amazonaws.com/products/437a572c44d11b12cd2453b1b753f42e.jpg" href="https://mjml.io" />
+          <mj-text>
+            <a class="productlink" href="https://icebox.com/">Custom Rolex Datejust 36mm Two-Tone Unisex 13.61ctw</a>
+          </mj-text>
+        </mj-column>
+        <mj-column width="50%" mj-class="product">
+          <mj-image width="300px" src="https://www.icebox.com/unsafe/640x0/icebox-jewelry.s3.amazonaws.com/products/42a1c458e6cad5550911f3154bc53cbb.jpg" href="https://mjml.io" />
+          <mj-text>
+            <a class="productlink" href="https://icebox.com/">Custom Rolex Datejust 36mm Two-Tone Unisex 13.61ctw</a>
+          </mj-text>
+        </mj-column>
+        <mj-column width="50%" mj-class="product">
+          <mj-image width="300px" src="https://www.icebox.com/unsafe/640x0/icebox-jewelry.s3.amazonaws.com/products/3cf9de26ce3f8f4f2e48a678df06a959.jpg" href="https://mjml.io" />
+          <mj-text>
+            <a class="productlink" href="https://icebox.com/">Custom Rolex Datejust 36mm Two-Tone Unisex 13.61ctw</a>
+          </mj-text>
+        </mj-column>
+        <mj-column width="50%" mj-class="product">
+          <mj-image width="300px" src="https://www.icebox.com/unsafe/640x0/icebox-jewelry.s3.amazonaws.com/products/441e24d97edf630afa52d7063d117c75.jpg" href="https://mjml.io" />
+          <mj-text>
+            <a class="productlink" href="https://icebox.com/">Custom Rolex Datejust 36mm Two-Tone Unisex 13.61ctw</a>
+          </mj-text>
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    <!-- icebox cta -->
+    <mj-section background-color="#E6E7F0" css-class="section">
+      <mj-column width="100%">
+        <mj-button mj-class="button" href="https://google.fr" css-class="button">
+          Shop Now Best Watches
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- footer -->
+    <mj-section background-color="#fff" padding=" 24px">
+      <mj-column width="50%">
+        <mj-text>
+          <a href="https://icebox.com/" class="btn-secondary">Diamond Pendants</a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-text>
+          <a href="https://icebox.com/" class="btn-secondary">Gold & Diamond Necklaces</a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-text>
+          <a href="https://icebox.com/" class="btn-secondary">Mens & Ladies Diamond Rings</a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-text>
+          <a href="https://icebox.com/" class="btn-secondary">Best Selling Bracelets</a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-text>
+          <a href="https://icebox.com/" class="btn-secondary">Pre-owned Rolex Watches</a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-text>
+          <a href="https://icebox.com/" class="btn-secondary">Gold Chains</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+
+    <mj-section background-color="#F6F6F6" mj-class="section" padding="40px 24px 24px 24px" css-class="border-top border-bottom">
+      <mj-column>
+        <mj-image src="https://icebox.com/assets/public-2020/img/newsletters/icons/internation.png" width="32px" />
+        <mj-text css-class="footer-icon" align="center" padding-bottom="24px">
+          World-wide Free Shipping with insured
+        </mj-text>
+      </mj-column>
+      <mj-column>
+        <mj-image src="https://icebox.com/assets/public-2020/img/newsletters/icons/guaranteed.png" width="32px" />
+        <mj-text css-class="footer-icon" align="center" padding-bottom="24px">
+          Guaranteed to your door
+        </mj-text>
+      </mj-column>
+      <mj-column>
+        <mj-image src="https://icebox.com/assets/public-2020/img/newsletters/icons/customercare.png" width="32px" />
+        <mj-text css-class="footer-icon" align="center" padding-bottom="24px">
+          24/7 Customer support
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#F6F6F6" mj-class="section" padding="24px">
+      <mj-column width="40%">
+        <mj-table align="center">
+          <tr style="list-style: none;line-height:1">
+            <td align="center">
+              <a href="https://www.facebook.com/icebox/">
+                <img width="28" src="https://icebox.com/assets/public-2020/img/newsletters/icons/facebook.png" />
+              </a>
+            </td>
+            <td align="center">
+              <a href="www.instagram.com/icebox/">
+                <img width="28" src="https://icebox.com/assets/public-2020/img/newsletters/icons/instagram.png" />
+              </a>
+            </td>
+            <td align="center">
+              <a href="https://www.youtube.com/channel/UCv8gFyATae1x0VmDHmNbIhg?sub_confirmation=1">
+                <img width="28" src="https://icebox.com/assets/public-2020/img/newsletters/icons/youtube.png" />
+              </a>
+            </td>
+            <td align="center">
+              <a href="https://www.twitter.com/icebox/">
+                <img width="28" src="https://icebox.com/assets/public-2020/img/newsletters/icons/twitter.png" />
+              </a>
+            </td>
+          </tr>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#F6F6F6" padding="24px 0" css-class="border-top">
+      <mj-column width="100%">
+        <mj-text align="center" font-size="12px">
+          3255 Peachtree Rd NE, Suite #2 , Atlanta, GA 30305 <br>
+          <a href="mailto:support@icebox.com" style="color: #000">support@icebox.com</a> | (770) 828-5540
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text align="center" padding-top="16px">
+          <a href="https://www.icebox.com/privacy-policy" class="link" style="font-size: 12px; text-decoration: underline; font-weight: 400">PRIVACY POLICY</a> | <a href="https://www.icebox.com/" class="link" style="font-size: 12px; text-decoration: underline; font-weight: 400">© ICEBOX</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+
+  </mj-body>
+</mjml>

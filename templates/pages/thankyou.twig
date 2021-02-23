@@ -1,0 +1,79 @@
+<!-- layout -->
+{% extends "../layouts/empty.twig" %}
+
+{% block content %}
+<section class="credential__height credential__padding">
+
+  <div class="credential__header">
+    <div class="credential__header-logo"><img src="img/logo.svg" alt=""></div>
+    <a href="index.html" class="credential__header-action"><span class="icon-big icon--close-rounded"></span></a>
+  </div><!-- end header -->
+
+  <div class="credential forget-password">
+    <!-- credential__layout -->
+    <div class="credential__layout">
+      <div class="credential__layout-wrapper">
+
+        <div class="credential__layout-wrapper-header">
+          <div class="page-icon-wrapper">
+            <svg width="165" height="135" viewBox="0 0 165 135" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient x1="-1.464%" y1="6.309%" x2="102.769%" y2="93.691%" id="a">
+                  <stop stop-color="#101E5A" offset="0%"></stop>
+                  <stop stop-color="#2D4088" offset="100%"></stop>
+                </linearGradient>
+                <linearGradient x1="41.025%" y1="71.453%" x2="47.275%" y2="31.385%" id="b">
+                  <stop stop-color="#FFF" stop-opacity="0" offset="0%"></stop>
+                  <stop stop-color="#132E3C" offset="100%"></stop>
+                </linearGradient>
+                <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="c">
+                  <stop stop-color="#EACB91" offset="0%"></stop>
+                  <stop stop-color="#A49265" offset="100%"></stop>
+                </linearGradient>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <path
+                  d="M137.984 5.679l-.39 5.043-8.97 112.887c-.33 4.15-4.807 6.637-8.552 4.75L3.226 69.516c-4.386-2.208-4.276-8.452.185-10.507l122.61-56.486 4.43-2.028c3.686-1.687 7.842 1.173 7.533 5.185z"
+                  fill="url(#a)"></path>
+                <path
+                  d="M137.984 5.679l-.39 5.043-8.97 112.887c-.33 4.15-4.807 6.637-8.552 4.75L3.226 69.516c-4.386-2.208-4.276-8.452.185-10.507l122.61-56.486 4.43-2.028c3.686-1.687 7.842 1.173 7.533 5.185z"
+                  fill="url(#a)"></path>
+                <path fill="#101E5A" d="M75.145 105.347l13.095 6.7L58.814 135 50 92.49 125 12z"></path>
+                <path fill="url(#b)" opacity=".4" style="mix-blend-mode:multiply"
+                  d="M75.145 105.347l13.095 6.7L58.814 135 50 92.49 125 12z"></path>
+                <path fill="#6979B4" d="M75.095 106L59 135l29-22.447z"></path>
+                <g>
+                  <path
+                    d="M138.474 51.004c14.894.262 26.761 12.535 26.522 27.428-.238 14.894-12.493 26.781-27.387 26.565-14.895-.215-26.8-12.453-26.607-27.347.193-14.894 12.412-26.819 27.306-26.648.055 0 .11 0 .166.002z"
+                    fill="#EACB91"></path>
+                  <path
+                    d="M27.474.004c14.894.262 26.761 12.535 26.522 27.428-.238 14.894-12.493 26.781-27.387 26.565C11.714 53.782-.19 41.544.002 26.65.195 11.756 12.414-.17 27.308.002c.055 0 .11 0 .166.002z"
+                    fill="url(#c)" transform="translate(111 51)"></path>
+                  <path
+                    d="M133.29 87c-.416 0-.813-.185-1.084-.507l-7.853-9.337a1.464 1.464 0 01-.273-1.43 1.414 1.414 0 012.442-.45l6.948 8.262 17.205-14.213c.61-.505 1.509-.411 2.005.209.497.62.405 1.532-.206 2.036L134.19 86.676a1.41 1.41 0 01-.9.324z"
+                    fill="#FFF" fill-rule="nonzero"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <h3>Password Request</h3>
+        </div><!-- end -->
+
+        <div class="credential__layout-wrapper-switch">
+          <span>Thank You.
+            Instructions on how to reset your password will be emailed to you.</span>
+          <a href="index.html" class="home-btn"><i class="icon icon--arrow-down"></i>Back to Homepage</a>
+        </div><!-- end switch -->
+
+
+      </div><!-- end wrapper -->
+    </div><!-- end layout -->
+
+  </div>
+</section>
+{% endblock %}
+<!-- footer scripts -->
+{% block included_content %}
+<!-- scripts -->
+<script src="js/staticpages.min.js"></script>
+{% endblock %}
