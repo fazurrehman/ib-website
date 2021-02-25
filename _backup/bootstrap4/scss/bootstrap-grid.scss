@@ -62,20 +62,20 @@ $utilities: map-get-multiple($utilities,
 @import "utilities/api";
 
 @media(min-width:960px) {
-  .container {
+  .ib-container {
     padding-left: 15px;
     padding-right: 15px
   }
 }
 
 @media(min-width:1280px) {
-  .container {
+  .ib-container {
     width: 1280px
   }
 }
 
 @media(min-width:1600px) {
-  .container {
+  .ib-container {
     width: 1600px
   }
 }

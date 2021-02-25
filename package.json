@@ -6,6 +6,7 @@
 	"dependencies": {
 		"@fancyapps/fancybox": "^3.5.7",
 		"@types/mcustomscrollbar": "^2.8.32",
+		"accordionjs": "^2.1.2",
 		"acorn": "^7.1.1",
 		"bootstrap": "^4.6.0",
 		"bootstrap-select": "^1.13.14",
@@ -69,6 +70,8 @@
 		"gulp-merge-json": "^2.1.1",
 		"gulp-postcss": "^8.0.0",
 		"gulp-pretty-html": "^2.0.10",
+		"gulp-svg-combine": "^1.0.2",
+		"gulp-svgmin": "^3.0.0",
 		"gulp-svgstore": "^7.0.1",
 		"gulp-twig": "^1.2.0",
 		"lightslider": "^1.1.6",

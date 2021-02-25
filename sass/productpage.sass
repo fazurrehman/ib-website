@@ -1,0 +1,265 @@
+// spacing
+$space-8: 8px
+$space-12: 12px
+$space-16: 16px
+$space-24: 24px
+$space-32: 32px
+$space-40: 40px
+$product-size-medium: 14px
+
+  
+  
+// Layout setting
+.container-wrap
+  position: relative
+  display: flex
+
+.section-gallery
+  width: 100%
+  position: relative
+.section-sidebar
+  position: relative
+  margin-top: 24px
+  flex: 0 0 520px
+  max-width: 520px
+
+
+  
+// product blocks
+.ib-product-section
+  display: block
+  margin-bottom: $space-24
+  position: relative
+  &__content
+    display: block
+
+.ib-product-section--group
+  margin: $space-40 0
+  .ib-product-section--group_item~.ib-product-section--group_item
+    border-top: 1px solid var(--color-border)
+    padding-top: 24px
+    margin-top: 24px
+
+
+
+.ib-product-label
+  letter-spacing: 2px
+  margin-bottom: $space-16
+  display: block
+
+.ib-product-title-group
+  display: flex
+
+.ib-product-title
+  width: 100%
+  padding-right: 24px
+
+.ib-product-pricing
+  flex: 0 0 100px
+  max-width: 100px
+  text-align: right
+
+.ib-product-summary
+  width: calc(100% - 100px)
+  margin-bottom: 8px
+  
+
+// ib-product-section-header
+.ib-product-section__header
+  display: flex
+  justify-content: space-between
+  font-size: 0.875rem
+  margin-bottom: $space-16
+
+.preview-value
+  letter-spacing: 0.5px
+  padding-left: 4px
+
+// colors
+.ib
+  &-colornav
+    display: inline-block
+
+  &-colornav-items
+    display: inline-block
+    list-style: none
+    margin: 0 -2px
+  
+  &-colornav-item
+    float: left
+    margin: 0 6px
+
+  &-colornav-value,
+  &-colornav-label
+    position: absolute
+    clip: rect(1px, 1px, 1px, 1px)
+    clip-path: inset(0 0 99.9% 99.9%)
+    overflow: hidden
+    height: 1px
+    width: 1px
+    padding: 0
+    border: 0
+
+  &-colornav-link
+    border: 1px solid transparent
+    border-radius: 50%
+    box-sizing: border-box
+    color: #333
+    cursor: pointer
+    float: left
+    padding: 3px
+    position: relative
+    width: 40px
+    height: 40px
+    z-index: 1
+    transition: all 120ms ease-in
+
+  &-colornav-switch
+    background: #ccc 50%
+    border-radius: 50%
+    box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.1)
+    display: block
+    width: 32px
+    height: 32px
+
+  &-colornav-label
+    font-size: 10px
+    line-height: 1
+    font-weight: 400
+    top: 100%
+    left: -55%
+    text-align: center
+    white-space: nowrap
+    width: 80px
+    height: auto
+    z-index: 1
+
+.ib-colornav-link.selected,
+.ib-colornav-value:checked~.ib-colornav-link
+  border-color: var(--color-brand)
+  cursor: default
+.ib-colornav-value:focus~.ib-colornav-link
+  box-shadow: 0 0 0 3px rgba(131,192,253,.5)
+  outline: none
+
+
+// diamond quality
+.content-box
+  background: #fff
+  background-clip: padding-box
+  border: 1px solid var(--color-border)
+  color: #545454
+
+  &::before,
+  &::after
+    content: ""
+    display: table
+    
+  &__row
+    display: table
+    box-sizing: border-box
+    width: 100%
+    padding: 12px 12px 10px 12px
+    position: relative
+    zoom: 1
+    border-bottom: 1px solid var(--color-border)
+    &:last-child
+      margin-bottom: 0
+      border-bottom: 0
+    &.selected
+      background-color: var(--color-state-selected)
+      font-weight: var(--font-medium)
+
+.radio-wrapper
+  display: table
+  box-sizing: border-box
+  width: 100%
+  &::before,
+  &::after
+    content: ""
+    display: table
+
+.radio__input
+  display: table-cell
+  padding-right: 0.75em
+  white-space: nowrap
+  cursor: pointer
+  vertical-align: middle
+
+.radio__label
+  display: table-cell
+  width: 100%
+  &__primary
+    display: table-cell
+    width: 100%
+    line-height: 1
+    font-weight: var(--font-medium)
+    .small-text
+      font-size: 13px
+      padding-left: 8px
+      opacity: 0.75
+      font-weight: var(--font-regular)
+  &__accessory
+    display: table-cell
+    text-align: right
+    padding-left: 0.75em
+    white-space: nowrap
+
+
+// content-button
+.product-size
+  position: relative
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(65px, 1fr))
+  border-left: 1px solid var(--color-border)
+  *
+    box-sizing: border-box
+  
+  &__option
+    width: auto
+    border: 1px solid var(--color-border)
+    border-left: none
+    margin-bottom: -1px
+    height: 40px
+    display: flex
+    justify-content: center
+    text-align: center
+    align-items: center
+    line-height: 1em
+    letter-spacing: 1px
+    cursor: pointer
+    font-size: $product-size-medium
+    &:hover,
+    &.selected
+      background-color: var(--color-brand)
+      transition: background-color 80ms ease-in
+      color: #fff
+
+//cta
+.ib-product-btn-group
+  display: flex
+  .ib-btn--cta-productpage
+    width: 100%
+  .ib-btn-icon
+    flex: 0 0 58px
+    max-width: 58px
+    margin-left: 16px
+
+// "ib-product-product-availability
+.ib-product-item-availability
+  position: relative
+  width: 100%
+  &__item
+    display: flex
+    padding: $space-8 0
+    &:last-child
+      padding-bottom: 0
+    .svgIcon-root
+      font-size: 24px
+      margin-right: 24px
+      text-align: left
+      display: block
+    .product-availability-information
+      width: 100%
+      font-size: 14px
+

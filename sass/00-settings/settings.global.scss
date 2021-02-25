@@ -2,41 +2,48 @@
   // colors
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-brand: #14A9DD;
-  --color-brand-400: #43BAE4;
-  --color-brand-300: #8AD4EE;
-  --color-brand-200: #B9E5F5;
-  --color-brand-100: #D0EEF8;
-  --color-brand-50: #E8F6FC;
+  --color-brand: #14a9dd;
+  --color-brand-400: #43bae4;
+  --color-brand-300: #8ad4ee;
+  --color-brand-200: #b9e5f5;
+  --color-brand-100: #d0eef8;
+  --color-brand-50: #e8f6fc;
 
-  --color-gold: #FCD99F;
-  --color-blue: #2342C6;
+  --color-gold: #fcd99f;
+  --color-blue: #2342c6;
 
-  --color-accent-green: #00DA81;
-  --color-accent-yellow: #FFB900;
-  --color-accent-red: #FF3512;
+  --color-accent-green: #00da81;
+  --color-accent-yellow: #ffb900;
+  --color-accent-red: #ff3512;
 
-  --color-black-100: #F4F6FC;
-  --color-black-200: #E7EAF9;
-  --color-black-300: #68687D;
+  --color-black-100: #f4f6fc;
+  --color-black-200: #e7eaf9;
+  --color-black-300: #68687d;
   --color-black-400: #292947;
 
   // brand colors
-  --color-primary: var(--color-brand);
-  --color-secondary: var(--color-gold);
-  --color-btn: var(--color-blue);
-  --color-btn-hover: var(--color-brand-300);
-  --color-btn-secondary-hover: var(--color-brand-100);
-  --color-validation-error: var(--color-red);
-  --color-validation-success: var(--color-green);
-  --color-bg-body: var(--color-white);
-  --color-border: var(--color-black-200);
+  --color-primary: #14a9dd;
+  --color-secondary: #fcd99f;
+  --color-btn: #2342c6;
+  --color-btn-hover: #8ad4ee;
+  --color-btn-secondary-hover: #d0eef8;
+  --color-validation-error: #ff3512;
+  --color-validation-success: #00da81;
+  --color-bg-body: #ffffff;
+  --color-border: #d8dde4;
+  --color-state-selected: #f1f2f5;
+
+  // Input
+  --input-primary: #14a9dd;
+  --input-border: #c9d0da;
+  --input-border-hover: #14a9dd;
+  --input-shadow: rgba(22, 30, 50, 0.04);
 
   // typography
-  --heading: 'SharpSansNo2', Georgia, serif;
-  --body: 'HelveticaNowDisplay', 'Helvetica Neue', Arial, Sans-Serif;
-  --meta: 'HelveticaNowDisplay', 'Helvetica Neue', Arial, Sans-Serif;
-  --aditional-font: 'SharpSansNo2', Georgia, serif;
+  --heading: "SharpSansNo2", Georgia, serif;
+  --body: "HelveticaNowDisplay", "Helvetica Neue", Arial, Sans-Serif;
+  --meta: "HelveticaNowDisplay", "Helvetica Neue", Arial, Sans-Serif;
+  --aditional-font: "SharpSansNo2", Georgia, serif;
   --font-regular: 400;
   --font-medium: 500;
   --font-bold: 700;

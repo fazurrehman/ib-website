@@ -20,6 +20,27 @@ const beautify = require('gulp-beautify');
 
 const svgstore = require('gulp-svgstore');
 const cheerio = require('gulp-cheerio');
+const svgmin = require('gulp-svgmin');
+
+
+gulp.task('svgstore', function() {
+  return gulp
+    .src('icons/*.svg')
+    .pipe(rename({
+      prefix: 'icon-'
+    }))
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+      },
+      parserOptions: {xmlMode: true}
+    }))
+    .pipe(svgstore({
+      prefix: 'icon-',
+      inlineSvg: true
+  }))
+    .pipe(gulp.dest('dist'));
+});
 
 
 // paths
@@ -225,23 +246,7 @@ gulp.task('twigTemplate', () => {
 });
 
 
-gulp.task('svgstore', function() {
-  return gulp
-    .src('icons/*.svg')
-    .pipe(rename({
-      prefix: 'icon-'
-    }))
-    .pipe(cheerio({
-      run: function($) {
-        $('[fill]').removeAttr('fill');
-      },
-      parserOptions: {
-        xmlMode: true
-      }
-    }))
-    .pipe(svgstore())
-    .pipe(gulp.dest('dist'));
-});
+
 
 
 gulp.task('js-homepage', () => {
@@ -615,12 +620,13 @@ gulp.task('watch', () => {
     paths.root.css + ['**/*.sass', '**/*.scss'],
     paths.root.postCss + ['**/*.sass', '**/*.scss'],
     paths.root.js + ['**/*.js'],
+    
   ]);
 });
 
 gulp.task(
   'default',
-  gulp.series(gulp.parallel(['browser-sync', 'twig', 'watch']))
+  gulp.series(gulp.parallel(['browser-sync', 'twig', 'watch', 'svgstore']))
 );
 
 // emailer templates copying in dist folder
