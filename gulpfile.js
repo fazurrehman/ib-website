@@ -20,7 +20,12 @@ const beautify = require('gulp-beautify');
 
 const svgstore = require('gulp-svgstore');
 const cheerio = require('gulp-cheerio');
-const svgmin = require('gulp-svgmin');
+
+const rollup = require('gulp-better-rollup');
+const babel = require('rollup-plugin-babel');
+const resolve = require('rollup-plugin-node-resolve');
+const commonjs = require('rollup-plugin-commonjs');
+
 
 
 gulp.task('svgstore', function() {
@@ -245,6 +250,31 @@ gulp.task('twigTemplate', () => {
   );
 });
 
+
+gulp.task('js-homepage-v2', () => {
+  return gulp
+    .src([paths.root.js + 'homepage-v2.js'])
+    .pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, 'umd'))
+    .pipe(concat('homepage-v2.min.js'))
+    .on('error', function (error) {
+      gutil.log(gutil.colors.red(error.message));
+      notifier.notify({
+        title: 'Homepage js concat compilation error',
+        message: error.message,
+      });
+    })
+    .pipe(
+      uglify({
+        compress: {
+          global_defs: {
+            DEBUG: false,
+          },
+        },
+      })
+    )
+    .pipe(gulp.dest(paths.root.distJs))
+    .pipe(browsersync.stream());
+});
 
 
 

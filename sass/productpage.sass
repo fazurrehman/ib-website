@@ -22,6 +22,7 @@ $product-size-medium: 14px
   margin-top: 24px
   flex: 0 0 520px
   max-width: 520px
+  padding-bottom: 40px
 
 
   
@@ -34,7 +35,7 @@ $product-size-medium: 14px
     display: block
 
 .ib-product-section--group
-  margin: $space-40 0
+  margin: $space-40 0 0 0
   .ib-product-section--group_item~.ib-product-section--group_item
     border-top: 1px solid var(--color-border)
     padding-top: 24px
@@ -192,7 +193,6 @@ $product-size-medium: 14px
   &__primary
     display: table-cell
     width: 100%
-    line-height: 1
     font-weight: var(--font-medium)
     .small-text
       font-size: 13px
@@ -204,6 +204,7 @@ $product-size-medium: 14px
     text-align: right
     padding-left: 0.75em
     white-space: nowrap
+    font-size: 13px
 
 
 // content-button
@@ -249,6 +250,7 @@ $product-size-medium: 14px
 .ib-product-item-availability
   position: relative
   width: 100%
+  padding-bottom: $space-40
   &__item
     display: flex
     padding: $space-8 0
@@ -261,5 +263,110 @@ $product-size-medium: 14px
       display: block
     .product-availability-information
       width: 100%
-      font-size: 14px
+      font-size: $product-size-medium
 
+// .sidebar-box
+.sidebar-box
+  max-height: 100px
+  position: relative
+  word-break: break-word
+  margin-bottom: 24px
+  overflow: hidden
+
+  .read-more
+    position: absolute
+    bottom: 0px
+    left: 0
+    right: 0
+    width: 100%
+    text-align: center
+    margin: 0
+    z-index: 2
+    padding-top: 40px
+    background: linear-gradient(0deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%)
+
+// ib-product-delivery
+.ib-product-delivery
+  position: relative
+  width: 100%
+  &__header
+    margin-bottom: $space-16
+  &__timeline
+    display: flex
+    justify-content: space-between
+    position: relative
+    margin-bottom: $space-40
+    &:before
+      width: 96%
+      border-bottom: 1px dashed rgba(0,0,0,0.3)
+      height: 1px
+      content: ""
+      position: absolute
+      left: 0
+      right: 0
+      margin: 0 auto
+      top: 24px
+    .ib-icon-wrapper
+      border: 8px solid #fff
+      box-sizing: content-box
+    &-column
+      flex: 1 0 50%
+      &:last-child
+        text-align: right
+        .ib-icon-wrapper,
+        .ib-tooltip-button
+          margin-left: auto
+    .ib-tooltip-button
+      opacity: 0.75
+
+
+//ib-product-attribute-info
+.ib-product-attribute-info
+  position: relative
+  padding: 0
+  float: left
+  @include ib-clearfix
+  margin-bottom: 24px
+  display: block
+  padding-right: 16px
+
+  .ib-product-attribute-title
+    display: table
+    margin-bottom: 4px
+    color: #666
+    .svgIcon-root
+      opacity: 1
+
+.ib-stock-scary-message
+  margin-top: 8px
+  display: block
+  color: var(--color-accent-red)
+
+// tools
+.tooltiptext
+  visibility: visible
+  width: 240px
+  background-color: white
+  color: black
+  font-size: 0.9em
+  text-align: left
+  border-radius: 5px
+  padding: 25px
+  position: absolute
+  z-index: 1
+  top: 100%
+  left: 0
+  box-shadow: 0px 4px 12px 0px rgba(97, 82, 244, 0.1)
+
+  &::after
+    content: ""
+    position: absolute
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 12px
+    border-color: white transparent transparent white
+    transform: rotate(45deg)
+    top: -12px
+    left: 40px
+    border-radius: 6px 0px 0px 0px

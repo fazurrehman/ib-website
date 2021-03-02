@@ -1,0 +1,71 @@
+.ib-accordion
+  position: relative
+  width: 100%
+  @include ib-clearfix
+
+  &__header
+    display: flex
+    width: 100%
+    justify-content: space-between
+    padding: 16px 0
+    margin: 8px 0
+    position: relative
+    align-items: center
+    &:hover
+      opacity: 1
+
+    &:before,
+    &:after
+      content: ""
+      background: inherit
+      border: inherit
+      border-radius: inherit
+      position: absolute
+      top: 0
+      left: -20px
+      width: calc(100% + 40px)
+      height: 100%
+      z-index: -1
+      transform: rotate(0.0001deg)
+      opacity: 0
+      border-radius: 100px;
+
+    &::before
+      background: #222222
+      transform: scale(0.7) perspective(1px)
+      transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42), opacity 150ms ease-out
+      opacity: 0
+
+    &::after
+      transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),background 150ms ease-out,box-shadow 200ms ease-out
+
+    &:hover:before
+      transform: scale(1) perspective(1px)
+      opacity: 0.075
+
+    &:hover:after
+      opacity: 1
+      transform: scaleX(1.015) scaleY(1.035) perspective(1px)
+
+    &-title
+      font-size: 15px
+      font-weight: var(--font-medium)
+
+  &-icon
+    width: 12px
+    height: 12px
+    display: block
+    transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42), opacity 150ms ease-out
+
+
+.ib-accordion.acc_section.acc_active
+  .ib-accordion-icon
+    transform: rotate(180deg)
+  .ib-accordion__header-title
+    font-weight: var(--font-bold)
+  .ib-accordion__content
+    margin-bottom: 32px
+    margin-top: 16px
+
+.ib-accordion~.ib-accordion
+  border-top: 1px solid var(--color-border)

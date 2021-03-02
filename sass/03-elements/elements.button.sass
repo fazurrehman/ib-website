@@ -86,7 +86,7 @@
   opacity: 1
 
 .ib-btn-icon.ib-btn--transparent:before
-  background: #222222
+  background: var(--color-button-hover)
   transform: scale(0.7) perspective(1px)
   
 
@@ -101,14 +101,22 @@
 .ib-btn-icon.ib-btn--transparent:hover 
   color: #222222
 
-
 .ib-btn--transparent:hover:before
   transform: scale(1) perspective(1px)
-  opacity: 0.075
+  opacity: 1
 
-.ib-btn-icon:hover:after,
+.ib-btn-icon:hover:after
   opacity: 1
   transform: scaleX(1.015) scaleY(1.035) perspective(1px)
 
 .ib-btn-icon:after
   transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),background 150ms ease-out,box-shadow 200ms ease-out
+
+
+//ib-tooltip-button
+.ib-tooltip-button
+  border-bottom: 1px dashed black
+  padding-bottom: 2px
+  cursor: help
+  display: table
+  margin-bottom: 4px
