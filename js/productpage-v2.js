@@ -2,7 +2,9 @@
 import './vendor/accordionjs';
 //lazy loader for images
 import LazyLoad from 'vanilla-lazyload';
-jQueryBridget('vanilla-lazyload', LazyLoad, $);
+
+var myLazyLoad = new LazyLoad();
+myLazyLoad.update();
 
 function initProductColorsSwitches(){
     $('.js-colornav .ib-colornav-item').click(function () {
@@ -34,6 +36,7 @@ function initAccodion(){
         activeIndex : [1, 2, 3],
     });
 }
+
 
 // loading elements
 $(document).ready(function () {

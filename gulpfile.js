@@ -251,11 +251,11 @@ gulp.task('twigTemplate', () => {
 });
 
 
-gulp.task('js-homepage-v2', () => {
+gulp.task('js-productpage-v2', () => {
   return gulp
-    .src([paths.root.js + 'homepage-v2.js'])
+    .src([paths.root.js + 'productpage-v2.js'])
     .pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, 'umd'))
-    .pipe(concat('homepage-v2.min.js'))
+    .pipe(concat('productpage-v2.min.js'))
     .on('error', function (error) {
       gutil.log(gutil.colors.red(error.message));
       notifier.notify({

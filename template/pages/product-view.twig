@@ -4,53 +4,185 @@
 
 {% block content %}
 
-<div class="container-wrap ib-container">
-	<div class="section-gallery">
-		<div class="section-gallery__desktop">
-			<div class="section-gallery__desktop-view">
-
-			</div>
-		</div>
-	</div>
-	<div class="section-sidebar">
-		{% include "../pages/comps/productpage-comps.twig" %}
-	</div>
-</div>
+  <div class="container-wrap">
+    <div class="section-gallery">
+      <div class="section-gallery__desktop">
+        <div class="section-gallery__desktop-block">
+          <img
+                  alt="A lazy image"
+                  class="lazy ib-product-image"
+                  data-src="https://www.icebox.com/unsafe/800x600/icebox-jewelry.s3.amazonaws.com/products/42a1c458e6cad5550911f3154bc53cbb.jpg"
+                  data-srcset="https://www.icebox.com/unsafe/800x600/icebox-jewelry.s3.amazonaws.com/products/42a1c458e6cad5550911f3154bc53cbb.jpg 400w,
+                               https://www.icebox.com/unsafe/800x600/icebox-jewelry.s3.amazonaws.com/products/42a1c458e6cad5550911f3154bc53cbb.jpg 800w"
+                  data-sizes="100w"
+          />
+        </div>
+        <div class="section-gallery__desktop-block">
+          <img
+                  alt="A lazy image"
+                  class="lazy ib-product-image"
+                  data-src="https://www.icebox.com/unsafe/800x600/icebox-jewelry.s3.amazonaws.com/products/0b475508a2e0868ff19ada157df6c776.jpg"
+                  data-srcset="https://www.icebox.com/unsafe/800x600/icebox-jewelry.s3.amazonaws.com/products/0b475508a2e0868ff19ada157df6c776.jpg 400w,
+                               https://www.icebox.com/unsafe/800x600/icebox-jewelry.s3.amazonaws.com/products/0b475508a2e0868ff19ada157df6c776.jpg 800w"
+                  data-sizes="100w"
+          />
+        </div>
+        <div class="section-gallery__desktop-block">
+          <img
+                  alt="A lazy image"
+                  class="lazy ib-product-image"
+                  data-src="https://www.icebox.com/unsafe/800x600/icebox-jewelry.s3.amazonaws.com/products/704180eb6d177d61f4f2d72569a33e30.jpg"
+                  data-srcset="https://www.icebox.com/unsafe/800x600/icebox-jewelry.s3.amazonaws.com/products/704180eb6d177d61f4f2d72569a33e30.jpg 400w,
+                               https://www.icebox.com/unsafe/800x600/icebox-jewelry.s3.amazonaws.com/products/704180eb6d177d61f4f2d72569a33e30.jpg 800w"
+                  data-sizes="100w"
+          />
+        </div>
+        <div class="section-gallery__desktop-block">
+          <img
+                  alt="A lazy image"
+                  class="lazy ib-product-image"
+                  data-src="https://www.icebox.com/unsafe/800x600/icebox-jewelry.s3.amazonaws.com/products/4e7607bdc38aa8255c3fe0e166ac5eb8.jpg"
+                  data-srcset="https://www.icebox.com/unsafe/800x600/icebox-jewelry.s3.amazonaws.com/products/4e7607bdc38aa8255c3fe0e166ac5eb8.jpg 400w,
+                               https://www.icebox.com/unsafe/800x600/icebox-jewelry.s3.amazonaws.com/products/4e7607bdc38aa8255c3fe0e166ac5eb8.jpg 800w"
+                  data-sizes="100w"
+          />
+        </div>
+      </div>
+      <div class="section-fix-content">
+        <div class="section-fix-content__row">
+          <div class="ib-delivery-values">
+            <div class="col-3">
+              <svg class="svgIcon-root link-hover --important-information"  id="ib-tooltip" title="After you place your order, GemsJunctionIndia will take 1-3 business days to prepare it for shipment.">
+                <use xlink:href="../icons.svg#question" />
+              </svg>
+            </div>
+            <div class="col-3">hello</div>
+            <div class="col-3">hello</div>
+            <div class="col-3">hello</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-sidebar">
+      {% include "../pages/comps/productpage-comps.twig" %}
+    </div>
+  </div>
 
 
 {% endblock %}
 {% block included_content %}
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-	<script src="js/homepage-v2.min.js"></script>
-	<script>
-		var $el, $ps, $up, totalHeight;
-		$(".sidebar-box .button").click(function() {
-			totalHeight = 0
-			$el = $(this);
-			$p  = $el.parent();
-			$up = $p.parent();
-			$ps = $up.find("p:not('.read-more')");
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/productpage-v2.min.js"></script>
+  <script>
+      var $el, $ps, $up, totalHeight;
+      $(".sidebar-box .button").click(function () {
+          totalHeight = 0;
+          $el = $(this);
+          $p = $el.parent();
+          $up = $p.parent();
+          $ps = $up.find("p:not('.read-more')");
 
-			// measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
-			$ps.each(function() {
-				totalHeight += $(this).outerHeight();
-			});
-			$up
-							.css({
-								// Set height to prevent instant jumpdown when max height is removed
-								"height": $up.height(),
-								"max-height": 9999
-							})
-							.animate({
-								"height": totalHeight
-							});
+          // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+          $ps.each(function () {
+              totalHeight += $(this).outerHeight();
+          });
+          $up
+              .css({
+                  // Set height to prevent instant jumpdown when max height is removed
+                  height: $up.height(),
+                  "max-height": 9999,
+              })
+              .animate({
+                  height: totalHeight,
+              });
 
-			// fade out read-more
-			$p.fadeOut();
+          // fade out read-more
+          $p.fadeOut();
 
-			// prevent jump-down
-			return false;
+          // prevent jump-down
+          return false;
+      });
+  </script>
 
-		});
-	</script>
+  <script>
+      $( function()
+      {
+          var targets = $( '[id~=ib-tooltip]' ),
+              target	= false,
+              tooltip = false,
+              title	= false;
+
+          targets.bind( 'mouseenter', function()
+          {
+              target	= $( this );
+              tip		= target.attr( 'title' );
+              tooltip	= $( '<div id="tooltip"></div>' );
+
+              if( !tip || tip == '' )
+                  return false;
+
+              target.removeAttr( 'title' );
+              tooltip.css( 'opacity', 0 )
+                  .html( tip )
+                  .appendTo( 'body' );
+
+              var init_tooltip = function()
+              {
+                  if( $( window ).width() < tooltip.outerWidth() * 1.5 )
+                      tooltip.css( 'max-width', $( window ).width() / 2 );
+                  else
+                      tooltip.css( 'max-width', 340 );
+
+                  var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 ),
+                      pos_top	 = target.offset().top - tooltip.outerHeight() - 20;
+
+                  if( pos_left < 0 )
+                  {
+                      pos_left = target.offset().left + target.outerWidth() / 2 - 20;
+                      tooltip.addClass( 'left' );
+                  }
+                  else
+                      tooltip.removeClass( 'left' );
+
+                  if( pos_left + tooltip.outerWidth() > $( window ).width() )
+                  {
+                      pos_left = target.offset().left - tooltip.outerWidth() + target.outerWidth() / 2 + 20;
+                      tooltip.addClass( 'right' );
+                  }
+                  else
+                      tooltip.removeClass( 'right' );
+
+                  if( pos_top < 0 )
+                  {
+                      var pos_top	 = target.offset().top + target.outerHeight();
+                      tooltip.addClass( 'top' );
+                  }
+                  else
+                      tooltip.removeClass( 'top' );
+
+                  tooltip.css( { left: pos_left, top: pos_top } )
+                      .animate( { top: '+=10', opacity: 1 }, 50 );
+              };
+
+              init_tooltip();
+              $( window ).resize( init_tooltip );
+
+              var remove_tooltip = function()
+              {
+                  tooltip.animate( { top: '-=10', opacity: 0 }, 50, function()
+                  {
+                      $( this ).remove();
+                  });
+
+                  target.attr( 'title', tip );
+              };
+
+              target.bind( 'mouseleave', remove_tooltip );
+              tooltip.bind( 'click', remove_tooltip );
+          });
+      });
+
+  </script>
+
 {% endblock %}
+

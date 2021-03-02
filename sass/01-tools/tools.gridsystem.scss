@@ -4,6 +4,10 @@
 /// @access public
 ////
 
+//@include media(">desktop", "<=1150px") {
+//  font-size: 4.0rem;
+//}
+
 
 ///
 /// Creates a list of global breakpoints
@@ -16,7 +20,7 @@ $breakpoints: (
   'mobile': 600px,
   'tablet': 960px,
   'desktop': 1280px,
-  'bigger': 1800px) !default;
+  'bigger': 1600px) !default;
 
 
 ///

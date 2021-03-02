@@ -17,15 +17,60 @@ $product-size-medium: 14px
 .section-gallery
   width: 100%
   position: relative
+  @include media(">tablet")
+    padding-left: 40px
+  @include media(">desktop")
+    padding-left: 60px
+
 .section-sidebar
   position: relative
   margin-top: 24px
-  flex: 0 0 520px
-  max-width: 520px
+  max-width: 100%
   padding-bottom: 40px
+  @include media(">tablet")
+    flex: 0 0 420px
+    max-width: 420px
+    padding-left: 40px
+    padding-right: 40px
+  @include media(">desktop")
+    flex: 0 0 550px
+    max-width: 550px
+    padding-right: 60px
 
 
-  
+// section-gallery
+.section-gallery
+  position: relative
+  margin-left: -8px
+  &__desktop
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    &-block
+      flex: 0 1 calc(50% - 16px)
+      display: flex
+      margin: 8px
+      position: relative
+      overflow: hidden
+      align-items: center
+      border: 1px solid var(--color-border)
+
+      &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+        background-color: var(--color-accent-red)
+
+  .ib-product-image
+    display: block
+    width: 100%
+    height: auto
+    position: absolute
+    object-fit: cover
+    left: 0
+    transition: .8s cubic-bezier(.75,.25,.25,.75)
+
+
 // product blocks
 .ib-product-section
   display: block
@@ -49,11 +94,20 @@ $product-size-medium: 14px
   display: block
 
 .ib-product-title-group
-  display: flex
+  @include media(">tablet")
+    display: block
+    margin-bottom: 24px
+  @include media(">desktop")
+    display: flex
 
 .ib-product-title
   width: 100%
   padding-right: 24px
+  @include media(">tablet")
+    .ib-product-title
+      font-size: calc(1.75rem * var(--scale))
+      padding-right: 0
+
 
 .ib-product-pricing
   flex: 0 0 100px
@@ -63,6 +117,8 @@ $product-size-medium: 14px
 .ib-product-summary
   width: calc(100% - 100px)
   margin-bottom: 8px
+  @include media(">tablet")
+    width: 100%
   
 
 // ib-product-section-header
@@ -167,8 +223,9 @@ $product-size-medium: 14px
     &:last-child
       margin-bottom: 0
       border-bottom: 0
+    &:hover,
     &.selected
-      background-color: var(--color-state-selected)
+      background-color: var(--color-grey-selected)
       font-weight: var(--font-medium)
 
 .radio-wrapper
@@ -213,6 +270,8 @@ $product-size-medium: 14px
   display: grid
   grid-template-columns: repeat(auto-fill, minmax(65px, 1fr))
   border-left: 1px solid var(--color-border)
+  @include media(">tablet")
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr))
   *
     box-sizing: border-box
   
@@ -318,7 +377,11 @@ $product-size-medium: 14px
           margin-left: auto
     .ib-tooltip-button
       opacity: 0.75
-
+  &__details
+    display: flex
+    flex-wrap: wrap
+    .ib-product-attribute-info
+      flex: 1 0 50%
 
 //ib-product-attribute-info
 .ib-product-attribute-info
@@ -342,31 +405,55 @@ $product-size-medium: 14px
   display: block
   color: var(--color-accent-red)
 
-// tools
-.tooltiptext
-  visibility: visible
-  width: 240px
-  background-color: white
-  color: black
-  font-size: 0.9em
+// tooltips
+#tooltip
   text-align: left
-  border-radius: 5px
-  padding: 25px
+  color: #000000
+  background: #FFFFFF
   position: absolute
-  z-index: 1
-  top: 100%
-  left: 0
-  box-shadow: 0px 4px 12px 0px rgba(97, 82, 244, 0.1)
+  z-index: 100
+  padding: 16px
+  font-size: 12px
+  border: 1px solid rgba(34, 34, 34, 0.15)
+  border-radius: 12px
+  box-shadow: 0 6px 36px rgba(34, 34, 34, 0.3)
 
-  &::after
-    content: ""
-    position: absolute
+  &:after
     width: 0
     height: 0
-    border-style: solid
-    border-width: 12px
-    border-color: white transparent transparent white
-    transform: rotate(45deg)
-    top: -12px
-    left: 40px
-    border-radius: 6px 0px 0px 0px
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-top: 10px solid #FFFFFF
+    content: ''
+    position: absolute
+    left: 50%
+    bottom: -10px
+    margin-left: -10px
+
+  &.top:after
+    border-top-color: transparent
+    border-bottom: 10px solid #FFFFFF
+    top: -20px
+    bottom: auto
+
+  &.left:after
+    left: 10px
+    margin: 0
+
+  &.right:after
+    right: 10px
+    left: auto
+    margin: 0
+
+
+//section-fix-content
+.section-fix-content
+  position: relative
+  width: 100%
+
+// ib-delivery-values
+.ib-delivery-values
+  display: flex
+  .col-3
+    padding: 0
+
