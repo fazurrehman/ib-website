@@ -20,3 +20,11 @@
   cursor: pointer
   &:hover
     opacity: 1;
+
+// hidden class
+.ib-hidden-on
+  &--mobile
+    @include media("<tablet")
+      display: none!important
+
+

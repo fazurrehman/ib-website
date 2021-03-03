@@ -1,8 +1,19 @@
+// tools
 @import "01-tools/tools.mixin.scss";
 @import "01-tools/tools.gridsystem";
+
+// elements
 @import "03-elements/elements.button";
 @import "03-elements/elements.checkbox";
 @import "sass/03-elements/elements.icon";
 @import "sass/03-elements/elements.accordion";
+@import "sass/03-elements/elements.media";
+
+// trumps
 @import "sass/07-trumps/trumps.utilities";
+
+// vendors
+@import "sass/06-vendor/flickity";
+
+// pages
 @import "sass/productpage";

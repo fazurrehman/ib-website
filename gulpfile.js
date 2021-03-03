@@ -70,7 +70,7 @@ const paths = {
     distCss: 'dist/css/',
   },
 
-  
+  //old
   lib: {
     jquery: 'node_modules/jquery/dist/jquery.js', //@version 3.5.0 downgraded to 3.4.1
     popperJs: 'node_modules/popper.js/dist/umd/popper.js', //@version 1.15.0
@@ -94,6 +94,15 @@ const paths = {
     lightSlider: 'node_modules/lightslider/dist/js/lightslider.js', //@version 1.1.6
     jQuerySteps: 'node_modules/jquery-steps/build/jquery.steps.js', //@version 1.1.0
   },
+  
+  libraries: {
+    jquery: 'node_modules/jquery/dist/jquery.js',
+    accordionJS: 'node_modules/accordionjs/accordion.js',
+    imageLoaded: 'node_modules/imagesloaded/imagesloaded.pkgd.js',
+    lazysizes: 'node_modules/vanilla-lazyload/dist/lazyload.js',
+    flickity: 'node_modules/flickity/dist/flickity.pkgd.js'
+  }
+  
 };
 
 // browsersync
@@ -253,8 +262,14 @@ gulp.task('twigTemplate', () => {
 
 gulp.task('js-productpage-v2', () => {
   return gulp
-    .src([paths.root.js + 'productpage-v2.js'])
-    .pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, 'umd'))
+    .src([
+        paths.libraries.jquery,
+        paths.libraries.imageLoaded,
+        paths.libraries.accordionJS,
+        paths.libraries.lazysizes,
+        paths.libraries.flickity,
+        paths.root.js + 'productpage-v2.js',
+    ])
     .pipe(concat('productpage-v2.min.js'))
     .on('error', function (error) {
       gutil.log(gutil.colors.red(error.message));
