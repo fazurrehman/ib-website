@@ -1,8 +1,8 @@
 // setting
 :root {
-  --input-primary: #14a9dd;
+  --input-primary: #2342c6;
   --input-border: #cdd9ed;
-  --input-border-hover: #14a9dd;
+  --input-border-hover: #2342c6;
   --input-focus: 2px rgba(39, 94, 254, 0.3);
   --active-inner: #fff;
   --input-background: #fff;
@@ -23,30 +23,30 @@
 .ib-radioGroup label {
   cursor: pointer;
 }
-.ib-radioGroup label {
+.ib-radioGroup label input{
   display: none;
 }
-.ib-radioGroup label + span {
+.ib-radioGroup label input + span {
   display: block;
   position: relative;
   padding: 7px 20px;
   border: var(--input-border-width) solid var(--input-border);
   transition: background 0.3s ease, border-color 0.3s ease;
 }
-.ib-radioGroup label:checked + span {
+.ib-radioGroup label input:checked + span {
   z-index: 2;
   background: var(--input-primary);
   border-color: var(--input-primary);
   color: #fff;
 }
-.ib-radioGroup label:hover + span {
+.ib-radioGroup label:hover input + span {
   z-index: 1;
   border-color: var(--input-primary);
 }
-.ib-radioGroup label:first-child + span {
+.ib-radioGroup label:first-child input + span {
   border-radius: 6px 0 0 6px;
 }
-.ib-radioGroup label:last-child + span {
+.ib-radioGroup label:last-child input + span {
   border-radius: 0 6px 6px 0;
 }
 .ib-radioGroup label:not(:first-child) {
