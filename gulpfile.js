@@ -44,7 +44,7 @@ gulp.task('svgstore', function() {
       prefix: 'icon-',
       inlineSvg: true
   }))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/icons/'));
 });
 
 

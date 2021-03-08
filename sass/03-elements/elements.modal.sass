@@ -129,7 +129,7 @@
         margin-bottom: 12px
 
 .ib-modal-section__content-wrapper
-  background-color: #F4F6F8
+  background-color: var(--color-fill)
   padding: 16px
   border-radius: 16px
   @include media("<mobile")
@@ -138,7 +138,8 @@
 
 .ib-modal-section.ib-modal-section--full
   @include media("<mobile")
-    padding: 0
+    padding-left: 0
+    padding-right: 0
     .headline
       padding-left: 12px
     .ib-modal-section__content-wrapper
