@@ -26,35 +26,35 @@
 
   <main class="">
     <div class="ib-container">
-      <button class="ib-btn ib-btn--primary ib-modal-cta js-triggerModalFilter">open filter popup</button>
+      <button class="ib-btn ib-btn--primary ib-modalbox-cta js-triggerModalFilter">open filter popup</button>
     </div>
-    <div class="ib-modal ib-modal--search-filter">
-      <div class="ib-modal-dialog">
-        <div class="ib-modal-container">
+    <div class="ib-modalbox ib-modalbox--search-filter">
+      <div class="ib-modalbox-dialog">
+        <div class="ib-modalbox-container">
           <button class="ib-btn-close ib-btn-icon ib-btn--rounded ib-btn--transparent" onclick="popupFilterClose();">
             <svg class="svgIcon-root">
               <use xlink:href="icons/icons.svg#icon-close" />
             </svg>
           </button>
-          <div class="ib-modal-content">
-            <div class="ib-modal-section">
-              <div class="ib-modal-section__header">
+          <div class="ib-modalbox-content">
+            <div class="ib-modalbox-section">
+              <div class="ib-modalbox-section__header">
                 <h5 class="headline bold">What are you shopping for?</h5>
               </div>
-              <div class="ib-modal-section__content">
-                <div class="ib-radioGroup ib-modal-gender">
+              <div class="ib-modalbox-section__content">
+                <div class="ib-radioGroup ib-modalbox-gender">
                   <label><input type="radio" name="r2" value="1" checked="checked"> <span>Men</span></label>
                   <label><input type="radio" name="r2" value="2"> <span>Women</span></label>
                   <label><input type="radio" name="r2" value="3"> <span>Unisex</span></label>
                 </div>
               </div>
             </div>
-            <div class="ib-modal-section ib-modal-section--full">
-              <div class="ib-modal-section__header">
+            <div class="ib-modalbox-section ib-modalbox-section--full">
+              <div class="ib-modalbox-section__header">
                 <h5 class="headline bold">What type of item?</h5>
               </div>
-              <div class="ib-modal-section__content">
-                <div class="ib-modal-section__content-wrapper">
+              <div class="ib-modalbox-section__content">
+                <div class="ib-modalbox-section__content-wrapper">
                   <div class="ib-btn-category js-ib-btn-category">
                     <div class="ib-btn-category__option">
                       <span class="radio__label__primary">Gold Chains</span>
@@ -87,12 +87,12 @@
                 </div>
               </div>
             </div>
-            <div class="ib-modal-section ib-modal-section--full">
-              <div class="ib-modal-section__header">
+            <div class="ib-modalbox-section ib-modalbox-section--full">
+              <div class="ib-modalbox-section__header">
                 <h5 class="headline bold">What is your price range ?</h5>
               </div>
-              <div class="ib-modal-section__content">
-                <div class="ib-modal-section__content-wrapper">
+              <div class="ib-modalbox-section__content">
+                <div class="ib-modalbox-section__content-wrapper">
                   <div class="ib-btn-category ib-btn-category--modifier-price js-ib-btn-price-select ">
                     <div class="ib-btn-category__option">
                       <span class="radio__label__price-currency">$</span>
@@ -123,11 +123,11 @@
                 </div>
               </div>
             </div>
-            <div class="ib-modal-section">
-              <div class="ib-modal-section__header">
+            <div class="ib-modalbox-section">
+              <div class="ib-modalbox-section__header">
                 <h5 class="headline bold">What color gold?</h5>
               </div>
-              <div class="ib-modal-section__content">
+              <div class="ib-modalbox-section__content">
                 <ul class="ib-colornav-items">
                   <li class="ib-colornav-item selected">
                     <input value="color-1" class="ib-colornav-value" type="radio" name="" id="color-rose" checked="true">
@@ -176,27 +176,27 @@
               </div>
             </div>
           </div>
-          <div class="ib-modal-footer">
-            <button class="ib-btn ib-btn--primary ib-modal-cta">Search</button>
+          <div class="ib-modalbox-footer">
+            <button class="ib-btn ib-btn--primary ib-modalbox-cta">Search</button>
           </div>
         </div>
       </div>
     </div>
   </main>
 
-  <div class="ib-modal-backdrop"></div>
+  <div class="ib-modalbox-backdrop"></div>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script>
     $('.js-triggerModalFilter').click(function() {
-      $('.ib-modal').addClass('show fade');
-      $('.ib-modal').css('display', 'block');
-      $('.ib-modal-backdrop').addClass('show');
+      $('.ib-modalbox').addClass('show fade');
+      $('.ib-modalbox').css('display', 'block');
+      $('.ib-modalbox-backdrop').addClass('show');
     });
 
     function popupFilterClose() {
-      $('.ib-modal').removeClass('show fade');
-      $('.ib-modal').removeAttr("style");
-      $('.ib-modal-backdrop').removeClass('show');
+      $('.ib-modalbox').removeClass('show fade');
+      $('.ib-modalbox').removeAttr("style");
+      $('.ib-modalbox-backdrop').removeClass('show');
     }
 
     $('.js-ib-btn-category .ib-btn-category__option').click(function() {

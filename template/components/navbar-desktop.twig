@@ -1,14 +1,65 @@
-<div class="ib-header-top">
+<div class="ib-header__top">
   <div class="ib-header__inner">
-    top buttons
+    <div class="ib-btn-group">
+      <button class="ib-btn-group__item">Need Help</button>
+      <button class="ib-btn-group__item">Track Order</button>
+      <button class="ib-btn-group__item ib-btn--has-icon">Currency
+        <span class="bold ml-h">$USD</span>
+        <aside class="icon-right"><svg class="ib-accordion-icon" fill="none" viewBox="0 0 8 6">
+            <path stroke="#000000" stroke-width="1.5" d="M.667.986L4 4.333 7.333.986"></path>
+          </svg></aside>
+      </button>
+      <button class="ib-btn-group__item">Sign In</button>
+    </div>
   </div>
 </div>
 
-<div class="ib-header-bottom">
+<div class="ib-header__bottom">
   <div class="ib-header__inner">
-    <div class="ib-header-logo">logo</div>
-    <div class="ib-header-navbar">navbar</div>
-    <div class="ib-header-rightside-menu">right menu</div>
+    <a class="ib-header-logo" href="#">
+      {% include "../components/atoms/logo.twig" %}
+    </a>
+
+    <div class="ib-header-main-menu">
+      <a href="#" class="ib-rootLink">Jewelry</a>
+      <a href="#" class="ib-rootLink">Gold Chains</a>
+      <a href="#" class="ib-rootLink">Watches</a>
+      <a href="#" class="ib-rootLink">Accessories</a>
+      <a href="#" class="ib-rootLink">Custom</a>
+      <a href="#" class="ib-rootLink">Under $1000</a>
+    </div>
+
+    <div class="ib-header-right-options">
+      <div class="ib-header-search">
+        <div class="ib-header-search__wrapper">
+          <form action=""><input type="text" placeholder="Search"></form>
+        <svg class="svgIcon-root ib-search-icon"><use xlink:href="icons/icons.svg#icon-search" /></svg>
+        </div>
+      </div>
+      <div class="ib-profile-icon">
+        <button class="ib-header-right-options__item">
+          <svg class="svgIcon-root">
+            <use xlink:href="icons/icons.svg#icon-user" />
+          </svg>
+        </button>
+      </div>
+      <div class="ib-wishlist-icon">
+        <button class="ib-header-right-options__item">
+          <svg class="svgIcon-root">
+            <use xlink:href="icons/icons.svg#icon-like" />
+          </svg>
+        </button>
+      </div>
+      <div class="ib-cart-icon">
+        <button class="ib-header-right-options__item">
+          <svg class="svgIcon-root">
+            <use xlink:href="icons/icons.svg#icon-bag" />
+          </svg>
+          <span class="ib-counter-bag-items">2</span>
+        </button>
+      </div>
+    
+    </div>
   </div>
-</div>
+</div
 

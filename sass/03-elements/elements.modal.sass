@@ -1,4 +1,4 @@
-.ib-modal-backdrop
+.ib-modalbox-backdrop
   position: fixed
   top: 0
   right: 0
@@ -15,8 +15,8 @@
 
 
 
-// ib-modal
-.ib-modal
+// ib-modalbox
+.ib-modalbox
   position: fixed
   top: 0
   right: 0
@@ -28,13 +28,13 @@
   overflow: hidden
   outline: 0
   background-color: transparent
-  display: unset
+  display: none
   transition: unset
   &.fade.show
     opacity: 1
     visibility: visible
     transition: transform 240ms cubic-bezier(.165,.84,.44,1)
-    .ib-modal-dialog
+    .ib-modalbox-dialog
       transform: translate(0,0px)
       transition: transform 240ms cubic-bezier(.165,.84,.44,1)
 
@@ -81,11 +81,12 @@
     border-top: 1px solid var(--color-border)
     padding-left: 12px
     padding-right: 12px
-  .ib-modal-cta
-    max-width: 240px
+  .ib-modalbox-cta
+    width: 240px
     border-radius: 8px
     margin: 16px 0 0 auto
     height: 52px
+    color: #fff
     @include media("<mobile")
       max-width: 100%
 
@@ -94,16 +95,16 @@
 
 
 
-// .ib-modal
-.ib-modal
+// .ib-modalbox
+.ib-modalbox
   &--search-filter
-    .ib-modal-container
+    .ib-modalbox-container
       padding: 32px
       padding-bottom: 16px
       @include media("<mobile")
         padding: 32px 0
         border-radius: 16px 16px 0 0
-    .ib-modal-dialog
+    .ib-modalbox-dialog
       max-width: 680px
       @include media("<mobile")
         justify-content: flex-end
@@ -128,7 +129,7 @@
       @include media("<mobile")
         margin-bottom: 12px
 
-.ib-modal-section__content-wrapper
+.ib-modalbox-section__content-wrapper
   background-color: var(--color-fill)
   padding: 16px
   border-radius: 16px
@@ -136,17 +137,17 @@
     padding: 12px
 
 
-.ib-modal-section.ib-modal-section--full
+.ib-modalbox-section.ib-modalbox-section--full
   @include media("<mobile")
     padding-left: 0
     padding-right: 0
     .headline
       padding-left: 12px
-    .ib-modal-section__content-wrapper
+    .ib-modalbox-section__content-wrapper
       border-radius: 0
 
 
-.ib-modal-gender
+.ib-modalbox-gender
   border: var(--input-border-width) solid var(--input-border)
   box-shadow: var(--input-shadow)
   border-radius: 8px
